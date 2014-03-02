@@ -13,6 +13,6 @@ In work
 Outstanding Tasks
 -----------------
 
-*TODO: Top layer
-*TODO: Music Manager
-*TODO: Transition between two world
+* TODO: Top layer
+* TODO: Music Manager
+* TODO: Transition between two world
