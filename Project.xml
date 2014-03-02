@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<meta title="NectoProject" package="ch.nectoria.nectoproject" version="1.0.0" company="ScanixGames" />
+
+ 	<app file="NectoProject" main="ch.nectoria.Main" path="bin" />
+
+	<window fps="60" background="0x000000" />
+	<window width="1280" height="720" resizable="false" unless="mobile" />
+	<window fullscreen="true" if="mobile" />
+	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />
+
+	<source path="src" />
+
+	<haxelib name="HaxePunk" />
+	<haxelib name="HaxePunkTmx" />
+
+	<assets path="assets/graphics" rename="graphics" include="*.png|*.jpg" />
+	<assets path="assets/audio" rename="audio" include="*.mp3" if="flash" />
+	<assets path="assets/audio" rename="audio" include="*.wav|*.ogg" unless="flash" />
+	<assets path="assets/font" rename="font" include="*.ttf" />
+	<assets path="assets/maps" rename="maps" include="*.tmx" />
+
+	<icon path="assets/HaxePunk.svg" />
+</project>
