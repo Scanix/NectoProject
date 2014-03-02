@@ -3,7 +3,7 @@
 NectoProject
 ============
 
-An action-platformer game
+An action-platformer game with [HaxePunk](http://haxepunk.com/)
 
 Change Log
 ----------
