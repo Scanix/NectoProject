@@ -1,11 +1,15 @@
 package ch.nectoria.entities;
 
+import ch.nectoria.entities.Physics;
+import ch.nectoria.NP;
+import ch.nectoria.scenes.GameScene;
+import flash.geom.Point;
+
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.haxepunk.HXP;
-import ch.nectoria.entities.Physics;
 
 /**
  * ...
@@ -20,12 +24,11 @@ class Player extends Physics
 	public var climbing:Bool = false;
 	public var hasKey:Bool = false;
 
-	public function new(x:Float, y:Float, flip:Bool = false) 
+	public function new(pos:Point, flip:Bool = false) 
 	{
-		super(x, y);
+		super(pos.x, pos.y);
 		
 		//Debug functions
-		//HXP.console.watch(["Player.vx", "Player.vy"]);
 		
 		//Animations & Graphics
 		spPlayer = new Spritemap("graphics/entity/player.png", 16, 16);
@@ -40,7 +43,7 @@ class Player extends Physics
 		
 		setHitbox(8, 13, -4, -3);
 		type = "player";
-		layer = -1;
+		//layer = -1;
 	}
 	
 	override public function update():Void {
@@ -54,7 +57,9 @@ class Player extends Physics
 			spPlayer.play("idle");
 		}
 		
-		handleInput();
+		if (!NP.forzenPlayer) {
+			handleInput();
+		}
 		super.update();
 	}
 	
@@ -71,6 +76,22 @@ class Player extends Physics
 		{
 			this.moveRight();
 		}
+		if ( Input.pressed(Key.NUMPAD_8))
+		{
+			gainHealth();
+		}
+		if ( Input.pressed(Key.NUMPAD_7))
+		{
+			looseHealth();
+		}
+		
+		var game:GameScene = cast(scene, GameScene);
+		var e:Entity = collide("door", x, y);
+        if (e != null && Input.pressed(Key.SPACE))
+        {
+            var d:Door = cast(e, Door);
+			game.switchLevel(d.xTo, d.yTo, d.levelTo);
+        }
 	}
 	
 	public function jump():Void
@@ -97,4 +118,22 @@ class Player extends Physics
 		spPlayer.flipped = false;
 	}
 	
+	public function gainHealth():Void {
+		if (NP.currentPlayerHealth < NP.maxPlayerHealth) {
+			NP.currentPlayerHealth++;
+		}
+	}
+	
+	public function looseHealth():Void {
+		if (NP.currentPlayerHealth > 1) {
+			NP.currentPlayerHealth--;
+		} else {
+			this.kill();
+		}
+	}
+	
+	public function kill():Void {
+		NP.deadPlayer = true;
+		scene.remove(this);
+	}
 }

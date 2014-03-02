@@ -21,9 +21,9 @@ class Main extends Engine
 
 	override public function init()
 	{
-#if debug
+//#if debug
 		HXP.console.enable();
-#end
+//#end
 #if (html5 || flash)
 		HXP.screen.color = 0x000000;
 #end
