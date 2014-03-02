@@ -1,4 +1,4 @@
-![Nectoria Logo](http://2.bp.blogspot.com/-XNplDHgxjFk/UcstdVf3tkI/AAAAAAAAAic/dGaaTdvh1v8/s1600/header-01.png)
+![ScanixGame Logo](https://dl.dropbox.com/s/aey1jjcf8zlw0yd/scanixgames.png)
 
 NectoProject
 ============
