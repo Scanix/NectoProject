@@ -22,6 +22,7 @@ class HUD extends Entity
 		type = "HUD";
 		collidable = false;
 		visible = true;
+		layer = 1;
 		
 		text = new Text(NP.currentCoinsCount + " x Coins | " + NP.currentPlayerHealth + "/" + NP.maxPlayerHealth + " | " + NP.deadPlayer, 5, 5);
 		text.font = "font/04B_03__.ttf";

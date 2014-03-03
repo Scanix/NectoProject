@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="70" height="20" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tilemap" tilewidth="16" tileheight="16">
+  <image source="../graphics/tilemap.png" width="256" height="256"/>
+ </tileset>
+ <layer name="front" width="70" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAHg0FeAAAQ==
+  </data>
+ </layer>
+ <layer name="collide" width="70" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0sEJwCAQRNE1HagVpQT7b0aPOSwLIWpG+B/e1UQZMyIiIjqp+vcPONWHWaXhenGm4rusKA/FtN7F+8aKTUQp7kVhk7P38vVOOzcRFe3lhqsBAABZHSjurq8=
+  </data>
+ </layer>
+ <layer name="background" width="70" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0LEJAAAIA0GHcf8ZLRWxtbuDJ30iAADgX45ofrnlWgAAbgXTZQEh
+  </data>
+ </layer>
+ <objectgroup name="objects" width="70" height="20">
+  <object type="coin" x="368" y="176" width="16" height="16"/>
+  <object type="coin" x="336" y="176" width="16" height="16"/>
+  <object type="coin" x="304" y="176" width="16" height="16"/>
+  <object type="door" x="656" y="176" width="16" height="16">
+   <properties>
+    <property name="level" value="level0"/>
+    <property name="xTo" value="59"/>
+    <property name="yTo" value="11"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -17,7 +17,7 @@ import com.haxepunk.utils.Key;
 class Door extends Entity
 {
 	private var spPlayer:Spritemap;
-	public var levelTo(default,null):Int;
+	public var levelTo(default,null):String;
 	public var xTo(default,null):Int;
 	public var yTo(default,null):Int;
 
@@ -30,12 +30,13 @@ class Door extends Entity
 		spPlayer.add("close", [34], 0, false);
 		spPlayer.play("close");
 		
-		levelTo = Std.parseInt(obj.custom.resolve("level"));
+		levelTo = obj.custom.resolve("level");
 		xTo = Std.parseInt(obj.custom.resolve("xTo"))*16;
 		yTo = Std.parseInt(obj.custom.resolve("yTo"))*16;
 		
 		type = "door";
 		setHitboxTo(graphic);
+		layer = 4;
 	}
 	
 }

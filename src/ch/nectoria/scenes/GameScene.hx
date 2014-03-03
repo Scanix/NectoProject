@@ -19,6 +19,10 @@ import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.haxepunk.graphics.atlas.AtlasData;
 import com.haxepunk.tweens.misc.NumTween;
+import com.haxepunk.utils.Data;
+import com.haxepunk.Entity;
+
+import openfl.Assets;
 
 /**
  * ...
@@ -28,28 +32,37 @@ import com.haxepunk.tweens.misc.NumTween;
 class GameScene extends Scene
 {	
 	private var player:Player;
-	private var music:Sfx;
+	public static var levelWidth:Int;
+	public static var levelHeight:Int;
 	
 	private var paused : Bool = false;
 	
 	private var counter:Text;
 	private var backdrop1:Backdrop;
 	
-	//Fade Black
-	private var fade:Image;
-	private var fadeTween:NumTween;
+	public function new() {
+		super();
+		
+		// TODO: MUSIC MANAGER
+	}
+	
+	public function fadeComplete(_):Void {
+		if (fadeTween.value == 1)
+		{
+			// Load next level
+			loadLevel(currentLvl);
+			fadeTween.tween(1, 0, 0.5);
+		}
+	}
 	
 	override public function begin():Void {
 		// DON'T FORGET TO REMOVE BITCH !
-		HXP.screen.scale = 4;
-		
-		// Set level to 0
-		NP.currentLvl = 0;
+		HXP.screen.scale = 5;
 		
 		load();
 		
 		// Fade to black
-		fade = Image.createRect(HXP.screen.width, HXP.screen.height, 0);
+		fade = Image.createRect(HXP.screen.width, HXP.screen.height, 0, 1);
 		fade.scrollX = fade.scrollY = 0;
 		addGraphic(fade, 0).type = "keep";
 		fadeTween = new NumTween(fadeComplete);
@@ -57,19 +70,51 @@ class GameScene extends Scene
 		fadeTween.tween(1, 0, 2);
 	}
 	
-	private function load():Void {
-		removeAll();
+	public function restart():Void {
 		
-		//Backdrop
+	}
+	
+	private function load():Void {
+		Data.load("Current");
+		currentLvl = Data.readString("level", "level0");
+		loadLevel(currentLvl);
+	}
+	
+	public function save()
+	{
+		Data.write("level", currentLvl);
+//		player.saveData();
+		Data.save("Current");
+	}
+	
+	private function getLevelData(id:String):String {
+		var level:String = Assets.getText("maps/" + id + "level.tmx");
+		if (level != null)
+			return level;
+		return Assets.getText("maps/" + id + "/level.tmx");
+	}
+	
+	private function loadLevel(id:String):Void {
+		var entities:Array<Entity> = new Array<Entity>();
+		getAll(entities);
+		for (entity in entities) {
+			if (entity.type != "keep")
+				remove(entity);
+		}
+		
+		// Backdrop
 		backdrop1 = new Backdrop("graphics/back.png", true, false);
-		addGraphic(backdrop1);
+		addGraphic(backdrop1, 6);
+		
+		var data:String = getLevelData(currentLvl);
 		
 		// Map
-		var map:TmxMap = new TmxMap(openfl.Assets.getText("maps/" + NP.levels[NP.currentLvl] + ".tmx"));
+		var map:TmxMap = new TmxMap(data);
 		var order:Array<String> = ["background", "collide"];
 		var map_e = new TmxEntity(map);
 		map_e.loadGraphic("graphics/tilemap.png", order);
 		map_e.loadMask("collide", "solid");
+		map_e.layer = 5;
 		
 		add(map_e);
 		
@@ -89,7 +134,7 @@ class GameScene extends Scene
 		
 		add(player = new Player(NP.posPlayer));
 		
-		//TODO: LOAD THIS IN FRONT
+		// TODO: LOAD THIS IN FRONT
 		//map_e.loadGraphic("graphics/tilemap.png", ["front"]);
 		
 		// Add HUD
@@ -111,32 +156,15 @@ class GameScene extends Scene
 		}
 	}
 	
-	public function fadeComplete(_):Void {
-		if (fadeTween.value == 1)
-		{
-			// load next level
-			fadeTween.tween(1, 0, 0.5);
-			//loadLevel();
-		}
-	}
-	
-	public function switchLevel(xTo:Int, yTo:Int, levelTo:Int):Void {
-		if (NP.currentLvl == levelTo) {
+	public function switchLevel(xTo:Int, yTo:Int, levelTo:String):Void {
+		if (currentLvl == levelTo) {
 			player.x = xTo;
 			player.y = yTo;
 		} else {
+			currentLvl = levelTo;
 			NP.posPlayer.x = xTo;
 			NP.posPlayer.y = yTo;
-			toggleLevel(levelTo);
-		}
-	}
-	
-	public function loadLevel():Void {
-		if (NP.currentLvl < NP.levels.length) {
-			load();
-		} else {
-			NP.currentLvl = 0;
-			load();
+			fadeTween.tween(0, 1, 0.5);
 		}
 	}
 	
@@ -144,15 +172,12 @@ class GameScene extends Scene
 		paused = !paused;
 	}
 	
-	public function toggleLevel(levelTo:Int):Void {
-		NP.currentLvl = levelTo;
-		
-		/*if (NP.currentLvl < NP.levels.length) {
-			load();
-		} else {
-			NP.currentLvl = 0;
-			load();
-		}*/
-		fadeTween.tween(0, 1, 0.3);
-	}
+	// Level Info
+	private var currentLvl:String;
+	// Switch Level
+	private var nextLevel:String;
+	
+	// Fade Black
+	private var fade:Image;
+	private var fadeTween:NumTween;
 }

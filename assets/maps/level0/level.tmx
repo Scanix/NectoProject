@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="70" height="20" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tilemap" tilewidth="16" tileheight="16">
+  <image source="../graphics/tilemap.png" width="256" height="256"/>
+ </tileset>
+ <layer name="front" width="70" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAIA7CJwL9WLOwltEkTAACAG6YIAPDJAnV6ALU=
+  </data>
+ </layer>
+ <layer name="collide" width="70" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztkssJgDAQBVc70FSkVqD234vPm4GwICa6wgzMNZ/hmQEAAMCfSF8/oEC6WItO9jfOjNilBYMcLVaX0h0tNuERcS8RNll7L0//9OYmPLy9THLGzEWucsPMnS50oQtd6EKXAJ5dDrc1sN8=
+  </data>
+ </layer>
+ <layer name="background" width="70" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0MEJAAAIAzGH6f4zuoD+RRI4+m8VAADclyH8ssmyAADfNLxOAdU=
+  </data>
+ </layer>
+ <objectgroup name="objects" width="70" height="20">
+  <object type="chest" x="704" y="96" width="16" height="16">
+   <properties>
+    <property name="contain" value="coin"/>
+   </properties>
+  </object>
+  <object type="coin" x="368" y="176" width="16" height="16"/>
+  <object type="coin" x="336" y="176" width="16" height="16"/>
+  <object type="coin" x="304" y="176" width="16" height="16"/>
+  <object type="coin" x="176" y="176" width="16" height="16"/>
+  <object type="chest" x="208" y="160" width="16" height="16">
+   <properties>
+    <property name="contain" value="coin"/>
+   </properties>
+  </object>
+  <object type="door" x="912" y="176" width="16" height="16">
+   <properties>
+    <property name="level" value="level0"/>
+    <property name="xTo" value="44"/>
+    <property name="yTo" value="11"/>
+   </properties>
+  </object>
+  <object type="door" x="944" y="176" width="16" height="16">
+   <properties>
+    <property name="level" value="level1"/>
+    <property name="xTo" value="41"/>
+    <property name="yTo" value="11"/>
+   </properties>
+  </object>
+  <object type="door" x="704" y="176" width="16" height="16">
+   <properties>
+    <property name="level" value="level0"/>
+    <property name="xTo" value="57"/>
+    <property name="yTo" value="11"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

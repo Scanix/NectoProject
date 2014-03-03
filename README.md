@@ -8,14 +8,16 @@ An action-platformer game with [HaxePunk](http://haxepunk.com/)
 Change Log
 ----------
 
-In work
+* Better graphics management with the layer
+* Transition between two world
 
 Outstanding Tasks
 -----------------
 
+* TODO: Inventory System
 * TODO: Top layer
 * TODO: Music Manager
-* TODO: Transition between two world
+* TODO: Clean-up code
 
 The MIT License (MIT)
 --------------------

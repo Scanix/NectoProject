@@ -24,6 +24,7 @@ class Coin extends Entity
 		spPlayer.play("turn");
 		
 		setHitboxTo(graphic);
+		layer = 4;
 	}
 	
 	override public function update():Void {

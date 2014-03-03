@@ -43,7 +43,7 @@ class Player extends Physics
 		
 		setHitbox(8, 13, -4, -3);
 		type = "player";
-		//layer = -1;
+		layer = 3;
 	}
 	
 	override public function update():Void {

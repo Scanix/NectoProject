@@ -26,6 +26,7 @@ class Chest extends Entity
 		spPlayer.play("close");
 		
 		setHitboxTo(graphic);
+		layer = 4;
 	}
 	
 }
