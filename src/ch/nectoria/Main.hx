@@ -8,10 +8,18 @@ import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 
+import flash.display.Stage;
+
 class Main extends Engine
 {
 	public function new():Void {
 		super(1280, 720, 60, false);
+#if ios
+		Stage.setFixedOrientation( -1);
+		Stage.shouldRotateInterface = function (orientation:Int):Bool {
+			return (orientation == Stage.OrientationLandscapeLeft || orientation == Stage.OrientationLandscapeRight);
+		}	
+#end
 	}
 	
 	override public function update():Void {
