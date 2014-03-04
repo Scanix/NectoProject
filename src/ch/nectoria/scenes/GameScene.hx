@@ -88,7 +88,7 @@ class GameScene extends Scene
 	}
 	
 	private function getLevelData(id:String):String {
-		var level:String = Assets.getText("maps/" + id + "level.tmx");
+		var level:String = Assets.getText("maps/" + id + "/level.tmx");
 		if (level != null)
 			return level;
 		return Assets.getText("maps/" + id + "/level.tmx");
