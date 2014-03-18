@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="12" height="7" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tilemap" tilewidth="16" tileheight="16">
+  <image source="../../graphics/tilemap.png" width="256" height="256"/>
+ </tileset>
+ <layer name="background" width="12" height="7">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAdKBGJYcCQSEysejUS1aObb0QkJgcAALzjCPw=
+  </data>
+ </layer>
+ <layer name="between" width="12" height="7">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgeQAWIVaHsaCLUmwCxKRCbAXE2FnllMt0BAK8oAdI=
+  </data>
+ </layer>
+ <layer name="collide" width="12" height="7">
+  <data encoding="base64" compression="zlib">
+   eJzjY2Bg4CcSCwCxHAPxQGEYqNcDYn0isQEQAwDkFwQf
+  </data>
+ </layer>
+ <layer name="front" width="12" height="7">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1AQAAVAAAQ==
+  </data>
+ </layer>
+ <objectgroup name="objects" width="12" height="7">
+  <object type="door" x="80" y="80" width="16" height="16">
+   <properties>
+    <property name="level" value="corcelles"/>
+    <property name="xTo" value="56"/>
+    <property name="yTo" value="11"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

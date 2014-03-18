@@ -21,8 +21,8 @@ class Chest extends Entity
 		
 		spPlayer = new Spritemap("graphics/tilemap.png", 16, 16);
 		graphic = spPlayer;
-		spPlayer.add("close", [2], 0, false);
-		spPlayer.add("open", [19], 0, false);
+		spPlayer.add("close", [34], 0, false);
+		spPlayer.add("open", [50], 0, false);
 		spPlayer.play("close");
 		
 		setHitboxTo(graphic);

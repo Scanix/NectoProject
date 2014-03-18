@@ -76,7 +76,7 @@ class GameScene extends Scene
 	
 	private function load():Void {
 		Data.load("Current");
-		currentLvl = Data.readString("level", "level0");
+		currentLvl = Data.readString("level", "corcelles");
 		loadLevel(currentLvl);
 	}
 	
@@ -103,18 +103,22 @@ class GameScene extends Scene
 		}
 		
 		// Backdrop
-		backdrop1 = new Backdrop("graphics/back.png", true, false);
-		addGraphic(backdrop1, 6);
+		/*backdrop1 = new Backdrop("graphics/back.png", true, true);
+		backdrop1.scrollX = 0.5;
+		addGraphic(backdrop1, 6);*/
 		
 		var data:String = getLevelData(currentLvl);
 		
 		// Map
 		var map:TmxMap = new TmxMap(data);
-		var order:Array<String> = ["background", "collide"];
+		var order:Array<String> = ["background", "between", "collide"];
 		var map_e = new TmxEntity(map);
 		map_e.loadGraphic("graphics/tilemap.png", order);
 		map_e.loadMask("collide", "solid");
 		map_e.layer = 5;
+		
+		mapWidth = map_e.width;
+		mapHeight = map_e.height;
 		
 		add(map_e);
 		
@@ -134,8 +138,10 @@ class GameScene extends Scene
 		
 		add(player = new Player(NP.posPlayer));
 		
-		// TODO: LOAD THIS IN FRONT
-		//map_e.loadGraphic("graphics/tilemap.png", ["front"]);
+		var map_f = new TmxEntity(map);
+		map_f.loadGraphic("graphics/tilemap.png", ["front"]);
+		map_f.layer = 2;
+		add(map_f);
 		
 		// Add HUD
 		add(new HUD());
@@ -143,7 +149,11 @@ class GameScene extends Scene
 	
 	override public function update():Void {
 		// Camera
-		HXP.setCamera(player.x + player.halfWidth - HXP.halfWidth, 60);
+		if (mapHeight > HXP.height) {
+			HXP.setCamera(player.x + player.halfWidth - HXP.halfWidth, 60);
+		} else {
+			HXP.setCamera((HXP.halfWidth - mapWidth) / 2, (HXP.halfHeight - mapHeight) / 2);
+		}
 		
 		if (fadeTween != null) {
 			fade.alpha = fadeTween.value;
@@ -174,6 +184,8 @@ class GameScene extends Scene
 	
 	// Level Info
 	private var currentLvl:String;
+	private var mapWidth:Int;
+	private var mapHeight:Int;
 	// Switch Level
 	private var nextLevel:String;
 	

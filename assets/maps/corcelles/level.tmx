@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="70" height="20" tilewidth="16" tileheight="16">
  <tileset firstgid="1" name="tilemap" tilewidth="16" tileheight="16">
-  <image source="../graphics/tilemap.png" width="256" height="256"/>
+  <image source="../../graphics/tilemap.png" width="256" height="256"/>
  </tileset>
- <layer name="front" width="70" height="20">
+ <layer name="background" width="70" height="20">
   <data encoding="base64" compression="zlib">
-   eJztwzENAAAIA7CJwL9WLOwltEkTAACAG6YIAPDJAnV6ALU=
+   eJztzjkSglAABFHu4QlUjF1ACF3BVECIVcT7h/Qlfs0Ppqte3kninHPOudAt1AORtcQKa6TYaHfkbbHDHgdkyHFEgVK3Ju2EMy644oY7KtR46NbkPdGgRYcXegzKqQh644MvRvww4a+ccs4555wL3AzvOgsT
+  </data>
+ </layer>
+ <layer name="between" width="70" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAHg0FeAAAQ==
   </data>
  </layer>
  <layer name="collide" width="70" height="20">
   <data encoding="base64" compression="zlib">
-   eJztkssJgDAQBVc70FSkVqD234vPm4GwICa6wgzMNZ/hmQEAAMCfSF8/oEC6WItO9jfOjNilBYMcLVaX0h0tNuERcS8RNll7L0//9OYmPLy9THLGzEWucsPMnS50oQtd6EKXAJ5dDrc1sN8=
+   eJztkjkKwDAQxLbI9YBcrf//yWwZg1kIsZ0JSKDWhxgzAAAA+BPp6wcUSDdrMbvLgzMVu7TgcE/T6lK6o8UmIhT3orDJ2nt5+6eem4iI9jK4I2ZO7upumLkLvEFRutCFLnShS/8uF5LmLNc=
   </data>
  </layer>
- <layer name="background" width="70" height="20">
+ <layer name="front" width="70" height="20">
   <data encoding="base64" compression="zlib">
-   eJzt0MEJAAAIAzGH6f4zuoD+RRI4+m8VAADclyH8ssmyAADfNLxOAdU=
+   eJztzjEKACAMA8CuVv//XjsWH6AIdxBItkQAAAD8YVSyMo+eba9n7wAA7tuoaQBm
   </data>
  </layer>
  <objectgroup name="objects" width="70" height="20">
@@ -33,25 +38,11 @@
     <property name="contain" value="coin"/>
    </properties>
   </object>
-  <object type="door" x="912" y="176" width="16" height="16">
+  <object type="door" x="896" y="176" width="16" height="16">
    <properties>
-    <property name="level" value="0"/>
-    <property name="xTo" value="44"/>
-    <property name="yTo" value="11"/>
-   </properties>
-  </object>
-  <object type="door" x="944" y="176" width="16" height="16">
-   <properties>
-    <property name="level" value="1"/>
-    <property name="xTo" value="41"/>
-    <property name="yTo" value="11"/>
-   </properties>
-  </object>
-  <object type="door" x="704" y="176" width="16" height="16">
-   <properties>
-    <property name="level" value="0"/>
-    <property name="xTo" value="57"/>
-    <property name="yTo" value="11"/>
+    <property name="level" value="house01"/>
+    <property name="xTo" value="5"/>
+    <property name="yTo" value="5"/>
    </properties>
   </object>
  </objectgroup>
