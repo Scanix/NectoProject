@@ -5,6 +5,8 @@ import com.haxepunk.Graphic;
 import com.haxepunk.Mask;
 import com.haxepunk.tmx.TmxObject;
 import com.haxepunk.graphics.Spritemap;
+import com.haxepunk.utils.Input;
+import com.haxepunk.utils.Key;
 
 /**
  * ...
@@ -27,6 +29,14 @@ class Chest extends Entity
 		
 		setHitboxTo(graphic);
 		layer = 4;
+	}
+	
+	override public function update():Void {
+		var e:Entity = collide("player", x, y);
+        if (e != null && Input.pressed(Key.SPACE))
+        {
+            spPlayer.play("open");
+        }
 	}
 	
 }
