@@ -26,7 +26,7 @@ class NP
 	public static var maxPlayerHealth:Int = 3;
 	public static var deadPlayer:Bool = false;
 	public static var posPlayer:Point = new Point(100, 100);
-	public static var forzenPlayer:Bool = false;
+	public static var frozenPlayer:Bool = false;
 	
 	//HUD
 	public static var currentCoinsCount:Int = 0;
