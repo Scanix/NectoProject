@@ -57,7 +57,7 @@ class Player extends Physics
 			spPlayer.play("idle");
 		}
 		
-		if (!NP.forzenPlayer) {
+		if (!NP.frozenPlayer) {
 			handleInput();
 		}
 		super.update();
