@@ -52,6 +52,7 @@ class GameScene extends Scene
 			// Load next level
 			loadLevel(currentLvl);
 			fadeTween.tween(1, 0, 0.5);
+			NP.frozenPlayer = false;
 		}
 	}
 	
@@ -104,7 +105,7 @@ class GameScene extends Scene
 		
 		// Backdrop
 		/*backdrop1 = new Backdrop("graphics/back.png", true, true);
-		backdrop1.scrollX = 0.5;
+		backdrop1.relative;
 		addGraphic(backdrop1, 6);*/
 		
 		var data:String = getLevelData(currentLvl);
@@ -174,6 +175,7 @@ class GameScene extends Scene
 			currentLvl = levelTo;
 			NP.posPlayer.x = xTo;
 			NP.posPlayer.y = yTo;
+			NP.frozenPlayer = true;
 			fadeTween.tween(0, 1, 0.5);
 		}
 	}
