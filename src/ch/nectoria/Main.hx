@@ -7,6 +7,7 @@ import com.haxepunk.Engine;
 import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import openfl.display.StageQuality;
 
 import flash.display.Stage;
 
@@ -36,6 +37,8 @@ class Main extends Engine
 		HXP.screen.color = 0x000000;
 #end
 		HXP.screen.scale = 1;
+		HXP.stage.quality = StageQuality.LOW;
+		HXP.screen.smoothing = false;
 		
 		//Replace to SplashScene at the end
 		HXP.scene = new GameScene();
