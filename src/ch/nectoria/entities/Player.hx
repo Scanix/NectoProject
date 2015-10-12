@@ -31,7 +31,7 @@ class Player extends Physics
 		//Debug functions
 		
 		//Animations & Graphics
-		spPlayer = new Spritemap("graphics/entity/player.png", 16, 16);
+		spPlayer = new Spritemap("graphics/entity/player32.png", 16, 32);
 		spPlayer.add("idle", [8], 0, false);
 		spPlayer.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
 		spPlayer.add("jump", [1], 0, false);
@@ -41,7 +41,7 @@ class Player extends Physics
 		graphic = spPlayer;
 		spPlayer.flipped = flip;
 		
-		setHitbox(8, 13, -4, -3);
+		setHitbox(8, 23, -4, -9);
 		type = "player";
 		layer = 3;
 	}
