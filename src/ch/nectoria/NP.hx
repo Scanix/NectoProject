@@ -30,6 +30,7 @@ class NP
 	
 	//HUD
 	public static var currentCoinsCount:Int = 0;
+	public static var displayingMessage:Bool = false;
 	
 	//global access
 	//public static var objectsSprite:Spritemap = new Spritemap("graphics/tilemap.png", 16, 16);
