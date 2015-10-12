@@ -23,16 +23,16 @@ class Door extends Entity
 
 	public function new(obj:TmxObject) 
 	{
-		super(obj.x, obj.y);
+		super(obj.x, obj.y-16);
 		
 		spPlayer = new Spritemap("graphics/tilemap.png", 16, 16);
 		graphic = spPlayer;
-		spPlayer.add("close", [12], 0, false);
+		spPlayer.add("close", [106], 0, false);
 		spPlayer.play("close");
 		
 		levelTo = obj.custom.resolve("level");
 		xTo = Std.parseInt(obj.custom.resolve("xTo"))*16;
-		yTo = Std.parseInt(obj.custom.resolve("yTo"))*16;
+		yTo = Std.parseInt(obj.custom.resolve("yTo"))*16-16;
 		
 		type = "door";
 		setHitboxTo(graphic);
