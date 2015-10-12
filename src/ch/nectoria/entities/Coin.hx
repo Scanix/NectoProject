@@ -16,7 +16,7 @@ class Coin extends Entity
 
 	public function new(x:Float, y:Float) 
 	{
-		super(x, y);
+		super(x, y-16);
 		
 		spPlayer = new Spritemap("graphics/tilemap.png", 16, 16);
 		graphic = spPlayer;

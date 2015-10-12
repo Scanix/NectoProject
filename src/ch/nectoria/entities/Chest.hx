@@ -19,7 +19,7 @@ class Chest extends Entity
 
 	public function new(obj:TmxObject) 
 	{
-		super(obj.x, obj.y);
+		super(obj.x, obj.y-16);
 		
 		spPlayer = new Spritemap("graphics/tilemap.png", 16, 16);
 		graphic = spPlayer;
