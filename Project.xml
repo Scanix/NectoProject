@@ -7,7 +7,7 @@
 	<window fps="60" background="0x000000" />
 	<window width="1280" height="720" resizable="false" unless="mobile" />
 	<window fullscreen="true" if="mobile" />
-	<window orientation="landscape" vsync="true" antialiasing="0" if="ccp" />
+	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />
 
 	<source path="src" />
 
