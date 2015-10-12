@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	<meta title="NectoProject" package="ch.nectoria.nectoproject" version="1.0.0" company="ScanixGames" />
+	<meta title="NectoProject" package="ch.nectoria" version="1.0.0" company="ScanixGames" />
 
  	<app file="NectoProject" main="ch.nectoria.Main" path="bin" />
 

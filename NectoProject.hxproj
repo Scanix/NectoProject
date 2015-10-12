@@ -29,7 +29,7 @@
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="False" />
-    <option additional="--remap flash:openfl&#xA;-debug #--macro keep(&quot;ch.nectoria.Main&quot;)" />
+    <option additional="--remap flash:openfl&#xA;#--macro keep(&quot;ch.nectoria.Main&quot;)" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
