@@ -7,6 +7,8 @@ import com.haxepunk.Mask;
 import com.haxepunk.tmx.TmxObject;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import ch.nectoria.scenes.GameScene;
+import ch.nectoria.NP;
 
 /**
  * ...
@@ -15,6 +17,7 @@ import com.haxepunk.utils.Key;
 class Sign extends Entity
 {
 	private var spPlayer:Spritemap;
+	public var text:String;
 
 	public function new(obj:TmxObject) 
 	{
@@ -27,13 +30,16 @@ class Sign extends Entity
 		
 		setHitboxTo(graphic);
 		layer = 4;
+		text = obj.custom.resolve("text");
 	}
 	
 	override public function update():Void {
 		var e:Entity = collide("player", x, y);
-		if (e != null && Input.pressed(Key.SPACE))
+		
+		var game:GameScene = cast(scene, GameScene);
+		if (e != null && Input.pressed(Key.SPACE) && !NP.displayingMessage)
 		{
-			
+			game.showMessageBox(text);
 		}
 	}
 	
