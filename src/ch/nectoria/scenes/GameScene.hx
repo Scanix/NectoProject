@@ -4,8 +4,10 @@ import ch.nectoria.entities.Chest;
 import ch.nectoria.entities.Door;
 import ch.nectoria.entities.Player;
 import ch.nectoria.entities.Coin;
+import ch.nectoria.entities.Sign;
 import ch.nectoria.NP;
 import ch.nectoria.ui.HUD;
+import ch.nectoria.ui.MessageBox;
 
 import com.haxepunk.graphics.Backdrop;
 import com.haxepunk.graphics.Image;
@@ -58,8 +60,6 @@ class GameScene extends Scene
 	
 	override public function begin():Void {
 		// DON'T FORGET TO REMOVE BITCH !
-		HXP.screen.scale = 5;
-		
 		load();
 		
 		// Fade to black
@@ -104,9 +104,9 @@ class GameScene extends Scene
 		}
 		
 		// Backdrop
-		/*backdrop1 = new Backdrop("graphics/back.png", true, true);
-		backdrop1.relative;
-		addGraphic(backdrop1, 6);*/
+		backdrop1 = new Backdrop("graphics/bg.png", true, false);
+		backdrop1.scrollX = 0.1;
+		addGraphic(backdrop1, 6);
 		
 		var data:String = getLevelData(currentLvl);
 		
@@ -125,13 +125,15 @@ class GameScene extends Scene
 		
 		// Load for objects
 		for (object in map.getObjectGroup("objects").objects) {
-			switch(object.type) {
-				case "coin":
+			switch(object.gid) {
+				case 254:
 					add(new Coin(object.x, object.y));
-				case "door":
+				case 107:
 					add(new Door(object));
-				case "chest":
+				case 35:
 					add(new Chest(object));
+				case 39:
+					add(new Sign(object));
 				default:
 					trace("unknow type: " + object.type);
 			}
@@ -146,6 +148,7 @@ class GameScene extends Scene
 		
 		// Add HUD
 		add(new HUD());
+		add(new MessageBox());
 	}
 	
 	override public function update():Void {
