@@ -23,7 +23,7 @@ class MessageBox extends Entity
 	private var test:String;
 	private var text:Text;
 	private var characterIndex:UInt = 0;
-	private var positionText:UInt = 1;
+	private var positionText:Int = 1;
 	private var numberLine:UInt = 1;
 	private var paused:Bool = false;
 	private var textTick:UInt = 0;

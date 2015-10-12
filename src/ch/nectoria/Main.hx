@@ -37,14 +37,14 @@ class Main extends Engine
 		HXP.console.enable(Key.DIGIT_9);
 //#end
 #if (html5 || flash)
-		HXP.screen.color = 0x000000;
+		HXP.screen.color = 0xffffff;
 #end
-		HXP.screen.scale = 5;
+		HXP.screen.scale = 1;
 		HXP.stage.quality = StageQuality.LOW;
 		HXP.screen.smoothing = false;
 		
 		//Replace to SplashScene at the end
-		HXP.scene = new GameScene();
+		HXP.scene = new SplashScene();
 	}
 
 	public static function main() { new Main(); }

@@ -39,6 +39,8 @@ class SplashScene extends Scene
 	
 	private function alarmComplete(_):Void {
 		HXP.scene = new GameScene();
+		HXP.screen.scale = 5;
+		HXP.screen.color = 0x000000;
 	}
 	
 	/*override public function end():Void {
