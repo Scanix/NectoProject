@@ -24,19 +24,22 @@ class Main extends Engine
 	}
 	
 	override public function update():Void {
-		/*if (Input.pressed(Key.F)) HXP.fullscreen = !HXP.fullscreen;*/
+		/*if (Input.pressed(Key.F)) {
+			HXP.screen.scale = 5;
+			HXP.fullscreen = !HXP.fullscreen;
+		}*/
 		super.update();
 	}
 
 	override public function init()
 	{
 //#if debug
-		HXP.console.enable();
+		HXP.console.enable(Key.DIGIT_9);
 //#end
 #if (html5 || flash)
 		HXP.screen.color = 0x000000;
 #end
-		HXP.screen.scale = 1;
+		HXP.screen.scale = 5;
 		HXP.stage.quality = StageQuality.LOW;
 		HXP.screen.smoothing = false;
 		
