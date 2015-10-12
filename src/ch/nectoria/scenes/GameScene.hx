@@ -34,6 +34,7 @@ import openfl.Assets;
 class GameScene extends Scene
 {	
 	private var player:Player;
+	private var messageBox:MessageBox;
 	public static var levelWidth:Int;
 	public static var levelHeight:Int;
 	
@@ -148,10 +149,28 @@ class GameScene extends Scene
 		
 		// Add HUD
 		add(new HUD());
-		add(new MessageBox());
+	}
+	
+	/**
+	 * Display dialogue to the text box.
+	 * @param	dialogue The dialogue to display.
+	 */
+	public function showMessageBox(text:String):Void
+	{
+		add(messageBox = new MessageBox());
+		messageBox.create(text);
+		NP.frozenPlayer = true;
+		NP.displayingMessage = true;
 	}
 	
 	override public function update():Void {
+		if (messageBox != null && messageBox.world == this )
+		{
+			if (Input.released(Key.SPACE))
+			{
+				messageBox.resume();
+			}
+		}
 		// Camera
 		if (mapHeight > HXP.height) {
 			HXP.setCamera(player.x + player.halfWidth - HXP.halfWidth, 60);

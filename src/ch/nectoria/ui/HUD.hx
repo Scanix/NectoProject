@@ -24,7 +24,7 @@ class HUD extends Entity
 		visible = true;
 		layer = 1;
 		
-		text = new Text(NP.currentCoinsCount + " x Coins | " + NP.currentPlayerHealth + "/" + NP.maxPlayerHealth + " | " + NP.deadPlayer, 5, 5);
+		text = new Text(NP.currentCoinsCount + " x Coins | " + NP.currentPlayerHealth + "/" + NP.maxPlayerHealth + " | " + NP.deadPlayer + "|" + NP.displayingMessage, 5, 5);
 		text.font = "font/04B_03__.ttf";
 		text.size = 8;
 		graphic = text;
@@ -36,10 +36,11 @@ class HUD extends Entity
 	
 	override public function update():Void {
 		if (coinsCount != NP.currentCoinsCount) {
-			text.text = NP.currentCoinsCount + " x Coins | " + NP.currentPlayerHealth + "/" + NP.maxPlayerHealth + " | " + NP.deadPlayer;
+			text.text = NP.currentCoinsCount + " x Coins | " + NP.currentPlayerHealth + "/" + NP.maxPlayerHealth + " | " + NP.deadPlayer + "|" + NP.displayingMessage;
 			text.updateBuffer();
 			coinsCount = NP.currentCoinsCount;
 		}
+		trace(NP.displayingMessage);
 		text.updateBuffer();
 		super.update();
 	}
