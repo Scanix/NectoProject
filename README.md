@@ -3,17 +3,19 @@
 NectoProject
 ============
 
-An action-platformer game with [HaxePunk](http://haxepunk.com/)
+An adventure-platformer game with [HaxePunk](http://haxepunk.com/)
 
 Change Log
 ----------
 
+* Add sign & MessageBox
 * Better graphics management with the layer
 * Transition between two world
 
 Outstanding Tasks
 -----------------
 
+* TODO: NPC & ennemies
 * TODO: Inventory System
 * TODO: Top layer
 * TODO: Music Manager
