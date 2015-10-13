@@ -20,7 +20,7 @@ class Player extends Physics
 {
 	private var spPlayer:Spritemap;
 	public var speed:Float = 1.0;
-	public var jumpSpeed:Float = 10.0;
+	public var jumpSpeed:Float = 7.0;
 	public var climbing:Bool = false;
 	public var hasKey:Bool = false;
 

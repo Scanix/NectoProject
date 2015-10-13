@@ -20,7 +20,7 @@ class Physics extends Entity
 	public var collideRight:Bool = false;
 	public var collideAbove:Bool = false;
 	public var collideBelow:Bool = false;
-	public var gravity:Float = 0.8;
+	public var gravity:Float = 0.5;
 	
 	public function new(x:Float, y:Float) 
 	{
