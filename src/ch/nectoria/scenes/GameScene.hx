@@ -23,6 +23,7 @@ import com.haxepunk.graphics.atlas.AtlasData;
 import com.haxepunk.tweens.misc.NumTween;
 import com.haxepunk.utils.Data;
 import com.haxepunk.Entity;
+import ch.nectoria.entities.NPC;
 
 import openfl.Assets;
 
@@ -140,6 +141,7 @@ class GameScene extends Scene
 			}
 		}
 		
+		add(new NPC(100, 100));
 		add(player = new Player(NP.posPlayer));
 		
 		var map_f = new TmxEntity(map);
