@@ -6,7 +6,7 @@ import com.haxepunk.graphics.Graphiclist;
 import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.graphics.Text;
 import com.haxepunk.Mask;
-import com.haxepunk.graphics.Tilemap;
+import com.haxepunk.graphics.AnimatedTilemap;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 
@@ -17,7 +17,7 @@ import com.haxepunk.utils.Key;
  */
 class MessageBox extends Entity
 {
-	private var tilemap:Tilemap;
+	private var tilemap:AnimatedTilemap;
 	private var message:String;
 	private var typewriter:String;
 	private var test:String;
@@ -49,7 +49,7 @@ class MessageBox extends Entity
 		
 		test = "bla\nbla";
 		
-		tilemap = new Tilemap("graphics/tilemap.png", 256, 48, 16, 16);
+		tilemap = new AnimatedTilemap("graphics/tilemap.png", 256, 48, 16, 16);
 		tilemap.x = 0;
 		tilemap.y = 0;
 		tilemap.scrollX = 0;
@@ -89,8 +89,10 @@ class MessageBox extends Entity
 			}
 			else
 			{
+				tilemap.setTile(tilemap.columns - 1, tilemap.rows - 1, 98);
 				typewriter = "";
 				positionText++;
+				numberLine = 0;
 				paused = false;
 				textTick = 0;
 			}
@@ -125,7 +127,8 @@ class MessageBox extends Entity
 				if (numberLine == 4)
 				{
 					// There is more dialog. Show the indicator and wait.
-					tilemap.setTile(tilemap.columns - 1, tilemap.rows - 1, 114);
+					tilemap.setTile(tilemap.columns - 1, tilemap.rows - 1, 113);
+					tilemap.animate([113, 114], 5);
 					paused = true;
 				}
 				else
