@@ -70,6 +70,11 @@ class NPC extends Physics
 			spPlayer.play("speak");
 		}
 		
+		if( !inAir && collideBelow)
+		{
+			this.jump();
+		}
+		
 		if (!NP.frozenPlayer) {
 			if(!hasCollideRight){
 				moveRight();
