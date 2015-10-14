@@ -136,12 +136,13 @@ class GameScene extends Scene
 					add(new Chest(object));
 				case 39:
 					add(new Sign(object));
+				case 240:
+					add(new NPC(object));
 				default:
 					trace("unknow type: " + object.type);
 			}
 		}
 		
-		add(new NPC(100, 100));
 		add(player = new Player(NP.posPlayer));
 		
 		var map_f = new TmxEntity(map);

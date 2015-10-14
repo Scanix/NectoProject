@@ -40,7 +40,6 @@ class HUD extends Entity
 			text.updateBuffer();
 			coinsCount = NP.currentCoinsCount;
 		}
-		trace(NP.displayingMessage);
 		text.updateBuffer();
 		super.update();
 	}

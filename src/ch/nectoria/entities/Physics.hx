@@ -2,6 +2,7 @@ package ch.nectoria.entities;
 
 import com.haxepunk.Entity;
 import com.haxepunk.HXP;
+import openfl.geom.Point;
 
 /**
  * ...
@@ -20,16 +21,19 @@ class Physics extends Entity
 	public var collideRight:Bool = false;
 	public var collideAbove:Bool = false;
 	public var collideBelow:Bool = false;
+	public var hasCollideRight:Bool = false;
+	public var hasCollideLeft:Bool = false;
 	public var gravity:Float = 0.5;
 	
 	public function new(x:Float, y:Float) 
 	{
+		previousPosition_ = new Point(x,y);
 		super(x, y);
 		
 	}
 	
 	public override function update()
-	{
+	{	
 		if(vx > maxVx)
 		{
 			vx = maxVx;
@@ -57,7 +61,7 @@ class Physics extends Entity
 		vx *= friction;
 		var i:Int = 0;
 		if(collide("solid", x, y) == null)
-		{
+		{	
 			inAir = true;
 			collideAbove = false;
 			collideRight = false;
@@ -79,10 +83,22 @@ class Physics extends Entity
 			}
 			if(collide("solid", x + offsetX, y) == null)
 			{
+				previousPosition_.x = x;
+				previousPosition_.y = y;
 				x += offsetX;
-			}else{
+				
+			}else {
 				vx = 0;
-
+				
+				if (previousPosition_.x <= x) {
+					collideRight = true;
+					hasCollideRight = true;
+					hasCollideLeft = false;
+				} else if (previousPosition_.x >= x) {
+					collideLeft = true;
+					hasCollideRight = false;
+					hasCollideLeft = true;
+				}
 			}
 			i ++;
 		}
@@ -119,7 +135,8 @@ class Physics extends Entity
 		if(inAir)
 		{
 			vy += gravity;
-		}	
+		}
 	}
 	
+	private var previousPosition_:Point; 
 }
