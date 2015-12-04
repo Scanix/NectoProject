@@ -10,7 +10,7 @@ import com.haxepunk.graphics.Spritemap;
  * @author Bianchi Alexandre
 
  */
-class Coin extends Entity
+class Coin extends Physics
 {
 	private var spPlayer:Spritemap;
 
@@ -22,8 +22,9 @@ class Coin extends Entity
 		graphic = spPlayer;
 		spPlayer.add("turn", [251, 252, 253, 254], 10, true);
 		spPlayer.play("turn");
+		type = "coin";
 		
-		setHitboxTo(graphic);
+		setHitbox(7, 9, -4, -4);
 		layer = 4;
 	}
 	
@@ -32,6 +33,8 @@ class Coin extends Entity
 			NP.currentCoinsCount++;
 			scene.remove(this);
 		}
+		
+		super.update();
 	}
 	
 }

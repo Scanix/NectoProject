@@ -205,6 +205,13 @@ class GameScene extends Scene
 		}
 	}
 	
+	public function objectPoping(x:Float, y:Float) {
+		for (i in 0...20)
+		{
+			add(new Coin(x, y));
+		}
+	}
+	
 	private function togglePause():Void {
 		paused = !paused;
 	}
