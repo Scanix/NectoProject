@@ -30,6 +30,18 @@ class Main extends Engine
 		}*/
 		super.update();
 	}
+	
+	override public function resize()
+    {
+        super.resize();
+        if (post != null) post.rebuild(); // must be after super.resize
+    }
+	
+	override public function render()
+    {
+        post.capture(); // must be before super.render
+        super.render();
+    }
 
 	override public function init()
 	{
@@ -43,9 +55,14 @@ class Main extends Engine
 		HXP.stage.quality = StageQuality.LOW;
 		HXP.screen.smoothing = false;
 		
+		post = new PostProcess("shaders/scanline.frag");
+		post.enable();
+		
 		//Replace to SplashScene at the end
 		HXP.scene = new SplashScene();
 	}
+	
+	private var post:PostProcess;
 
 	public static function main() { new Main(); }
 

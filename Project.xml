@@ -20,6 +20,7 @@
 	<assets path="assets/audio" rename="audio" include="*.wav|*.ogg" unless="flash" />
 	<assets path="assets/font" rename="font" include="*.ttf" />
 	<assets path="assets/maps" rename="maps" include="*.tmx" />
+	<assets path="assets/shaders" rename="shaders" include="*.vert|*.frag" />
 
 	<icon path="assets/HaxePunk.svg" />
 </project>
