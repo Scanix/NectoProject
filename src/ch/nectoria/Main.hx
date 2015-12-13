@@ -55,7 +55,7 @@ class Main extends Engine
 		HXP.stage.quality = StageQuality.LOW;
 		HXP.screen.smoothing = false;
 		
-		post = new PostProcess("shaders/scanline.frag");
+		post = new PostProcess("shaders/grain.frag");
 		post.enable();
 		
 		//Replace to SplashScene at the end
