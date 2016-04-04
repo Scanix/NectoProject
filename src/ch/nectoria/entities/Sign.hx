@@ -28,6 +28,8 @@ class Sign extends Entity
 		spPlayer.add("idle", [38], 0, false);
 		spPlayer.play("idle");
 		
+		type = "sign";
+		
 		setHitboxTo(graphic);
 		layer = 4;
 		text = obj.custom.resolve("text");

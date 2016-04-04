@@ -34,12 +34,12 @@ class Main extends Engine
 	override public function resize()
     {
         super.resize();
-        if (post != null) post.rebuild(); // must be after super.resize
+        //if (post != null) post.rebuild(); // must be after super.resize
     }
 	
 	override public function render()
     {
-        post.capture(); // must be before super.render
+        //post.capture(); // must be before super.render
         super.render();
     }
 
@@ -54,10 +54,10 @@ class Main extends Engine
 		HXP.screen.scale = 1;
 		HXP.stage.quality = StageQuality.LOW;
 		HXP.screen.smoothing = false;
-		
+		/*
 		post = new PostProcess("shaders/grain.frag");
 		post.enable();
-		
+		*/
 		//Replace to SplashScene at the end
 		HXP.scene = new SplashScene();
 	}

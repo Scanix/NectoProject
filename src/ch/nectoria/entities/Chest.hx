@@ -30,6 +30,8 @@ class Chest extends Physics
 		spPlayer.add("open", [50], 0, false);
 		spPlayer.play("close");
 		
+		type = 'chest';
+		
 		setHitboxTo(graphic);
 		layer = 4;
 	}

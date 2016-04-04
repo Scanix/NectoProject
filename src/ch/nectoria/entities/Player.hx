@@ -10,7 +10,8 @@ import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.haxepunk.HXP;
-
+import com.haxepunk.graphics.Graphiclist;
+import com.haxepunk.graphics.Text;
 /**
  * ...
  * @author Bianchi Alexandre
@@ -19,10 +20,13 @@ import com.haxepunk.HXP;
 class Player extends Physics
 {
 	private var spPlayer:Spritemap;
+	private var actionSign:Spritemap;
 	public var speed:Float = 1.0;
 	public var jumpSpeed:Float = 7.0;
 	public var climbing:Bool = false;
 	public var hasKey:Bool = false;
+	private var text:Text;
+	private var message:String;
 
 	public function new(pos:Point, flip:Bool = false) 
 	{
@@ -38,7 +42,16 @@ class Player extends Physics
 		spPlayer.add("fall", [3], 0, false);
 		spPlayer.add("hurt", [4], 0, false);
 		
-		graphic = spPlayer;
+		//Action Mark
+		actionSign = new Spritemap("graphics/tilemap.png", 16, 16);
+		actionSign.add("actionSign", [241], 0, false);
+		actionSign.play("actionSign");
+		actionSign.y = -10; 
+		
+		graphic = new Graphiclist( );
+		cast( graphic, Graphiclist ).add( spPlayer );
+		cast( graphic, Graphiclist ).add( actionSign );
+		
 		spPlayer.flipped = flip;
 		
 		setHitbox(8, 23, -4, -9);
@@ -47,6 +60,17 @@ class Player extends Physics
 	}
 	
 	override public function update():Void {
+		var n:Entity = collide("npc", x, y);
+		var s:Entity = collide("sign", x, y);
+		var c:Entity = collide("chest", x, y);
+		var d:Entity = collide("door", x, y);
+		if (s != null || n !=null || c !=null || d !=null)
+		{
+			actionSign.visible = true;
+		} else {
+			actionSign.visible = false;
+		}
+		
 		if (vx != 0) {
 			spPlayer.play("walk");
 		} else if (vy > 1) {
