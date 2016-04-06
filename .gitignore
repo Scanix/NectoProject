@@ -215,3 +215,9 @@ pip-log.txt
 .mr.developer.cfg
 
 src/UInt.hx
+
+.idea/
+
+out/
+
+NectoProject.iml
