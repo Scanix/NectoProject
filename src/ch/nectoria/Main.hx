@@ -61,8 +61,6 @@ class Main extends Engine
 		//Replace to SplashScene at the end
 		HXP.scene = new SplashScene();
 	}
-	
-	private var post:PostProcess;
 
 	public static function main() { new Main(); }
 
