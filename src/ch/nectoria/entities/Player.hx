@@ -2,7 +2,9 @@ package ch.nectoria.entities;
 
 import ch.nectoria.entities.Physics;
 import ch.nectoria.NP;
+import ch.nectoria.scenes.FightScene;
 import ch.nectoria.scenes.GameScene;
+import ch.nectoria.scenes.SplashScene;
 import flash.geom.Point;
 
 import com.haxepunk.Entity;
@@ -64,6 +66,7 @@ class Player extends Physics
 		var s:Entity = collide("sign", x, y);
 		var c:Entity = collide("chest", x, y);
 		var d:Entity = collide("door", x, y);
+		
 		if (s != null || n !=null || c !=null || d !=null)
 		{
 			actionSign.visible = true;
@@ -108,14 +111,6 @@ class Player extends Physics
 		{
 			looseHealth();
 		}
-		
-		var game:GameScene = cast(scene, GameScene);
-		var e:Entity = collide("door", x, y);
-        if (e != null && Input.pressed(Key.SPACE))
-        {
-            var d:Door = cast(e, Door);
-			game.switchLevel(d.xTo, d.yTo, d.levelTo);
-        }
 	}
 	
 	public function jump():Void
