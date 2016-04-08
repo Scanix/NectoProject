@@ -2,6 +2,7 @@ package ch.nectoria.entities;
 
 import ch.nectoria.NP;
 import ch.nectoria.scenes.GameScene;
+import com.haxepunk.Graphic;
 
 import com.haxepunk.Entity;
 import com.haxepunk.tmx.TmxObject;
@@ -37,6 +38,22 @@ class Door extends Entity
 		type = "door";
 		setHitboxTo(graphic);
 		layer = 4;
+	}
+	
+	override public function update():Void {
+		if (!NP.frozenPlayer) {
+			handleInput();
+		}
+		super.update();
+	}
+	
+	public function handleInput():Void {
+		var game:GameScene = cast(scene, GameScene);
+		var e:Entity = collide("player", x, y);
+        if (e != null && Input.pressed(Key.SPACE))
+        {
+			game.switchLevel(this.xTo, this.yTo, this.levelTo);
+        }
 	}
 	
 }
