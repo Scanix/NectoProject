@@ -8,6 +8,7 @@ An adventure-platformer game with [HaxePunk](http://haxepunk.com/)
 Change Log
 ----------
 
+* Add NPC & Begin Fighting System
 * Add sign & MessageBox
 * Better graphics management with the layer
 * Transition between two world
@@ -15,9 +16,13 @@ Change Log
 Outstanding Tasks
 -----------------
 
-* TODO: NPC & ennemies
+* TODO: Enemies
+* TODO: Fighting System
+* TODO: Saving System
+* TODO: Shop System
+* TODO: Quest Manager
+* TODO: Text with Answer
 * TODO: Inventory System
-* TODO: Top layer
 * TODO: Music Manager
 * TODO: Clean-up code
 
