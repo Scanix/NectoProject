@@ -2,6 +2,7 @@ package ch.nectoria.scenes;
 
 import ch.nectoria.entities.Chest;
 import ch.nectoria.entities.Door;
+import ch.nectoria.entities.Enemy;
 import ch.nectoria.entities.Player;
 import ch.nectoria.entities.Coin;
 import ch.nectoria.entities.Sign;
@@ -164,6 +165,11 @@ class GameScene extends Scene
 		messageBox.create(text);
 		NP.frozenPlayer = true;
 		NP.displayingMessage = true;
+	}
+	
+	public function beginFight():Void
+	{
+		HXP.scene = new FightScene();
 	}
 	
 	override public function update():Void {

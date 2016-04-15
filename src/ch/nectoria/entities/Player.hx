@@ -14,6 +14,9 @@ import com.haxepunk.utils.Key;
 import com.haxepunk.HXP;
 import com.haxepunk.graphics.Graphiclist;
 import com.haxepunk.graphics.Text;
+import com.haxepunk.masks.Masklist;
+import com.haxepunk.masks.Hitbox;
+
 /**
  * ...
  * @author Bianchi Alexandre
@@ -27,6 +30,7 @@ class Player extends Physics
 	public var jumpSpeed:Float = 7.0;
 	public var climbing:Bool = false;
 	public var hasKey:Bool = false;
+	public var swordHitbox:Hitbox;
 	private var text:Text;
 	private var message:String;
 
