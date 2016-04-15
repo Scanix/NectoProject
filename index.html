@@ -11,15 +11,25 @@
 			params.bgcolor="#000000"; 
 			
 			attributes.name = "";
-			attributes.styleclass = "";
-			attributes.align = "";			
+			attributes.styleclass = "col-xs-12";
+			attributes.align = "middle";			
 			swfobject.embedSWF("NectoProject.swf", "flashContent", "1280", "720", "9.0.0", false, flashvars, params, attributes);
 		</script>
 	</head>
 	<body>
 		<style>
+			html{
+				background-color: #000;
+                padding: 0px;
+			}
+            body {
+                text-align: center;
+                margin: 0px;
+                color: white;
+                font-family: sans-serif;
+            }
 			#flashContent {
-				margin: auto;
+				margin: 0 auto;
 				height: 720px;
 				width: 1280px;
 			}
@@ -27,11 +37,22 @@
 				text-align: center;
 				font-family: sans-serif;
 				color: white;
+                font-size: 40px;
+                margin-top: 20px;
 			}
+            a{
+                color: white;
+            }
+            a:hover{
+                color: darkgrey;
+            }
 		</style>
-		<h1>NectoProject</h1>
-		<div id="flashContent">
-			Get <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Embedded with the help of <a href="http://embed-swf.org">embed-swf.org</a>.
-		</div>
+        <h1>NectoProject</h1>
+        <div id="flashContent" class="col-xs-12">
+            Get <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Embedded with the help of <a href="http://embed-swf.org">embed-swf.org</a>.
+        </div>
+        <footer>
+        <p>© Scanix | Alexandre Bianchi | 2015-2016 | <a href="https://github.com/Scanix/NectoProject">See on GitHub</a></p>
+        </footer>
 	</body>
 </html>
