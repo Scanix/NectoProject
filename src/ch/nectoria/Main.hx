@@ -45,9 +45,9 @@ class Main extends Engine
 
 	override public function init()
 	{
-//#if debug
+#if debug
 		HXP.console.enable(Key.DIGIT_9);
-//#end
+#end
 #if (html5 || flash)
 		HXP.screen.color = 0xffffff;
 #end
