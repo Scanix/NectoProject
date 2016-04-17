@@ -116,11 +116,15 @@ class MessageBox extends Entity
 	override public function update():Void
 	{
 		text.richText = typewriter;
+		var char:String = message.charAt(positionText);
 		if (textTick == 0 && !paused && positionText < message.length)
 		{
 			textTick = TEXT_SPEED;
-			var char:String = message.charAt(positionText); 
 			trace(char);
+			if(char == "<"){
+				typewriter += message.substring(positionText,message.indexOf('</red>')+5);
+				positionText = typewriter.length;
+			}
 			if (char == '*')
 			{
 				// New line.
