@@ -37,7 +37,6 @@ class Player extends Physics
 	public function new(pos:Point, flip:Bool = false) 
 	{
 		super(pos.x, pos.y);
-		
 		//Debug functions
 		
 		//Animations & Graphics

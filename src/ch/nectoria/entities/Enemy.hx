@@ -7,9 +7,6 @@ import flash.geom.Point;
 
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Spritemap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
-import com.haxepunk.HXP;
 import com.haxepunk.tmx.TmxObject;
 
 /**
@@ -24,7 +21,7 @@ class Enemy extends Physics
 	public var text:String;
 	private var speaking:Bool = false;
 
-	public function new(obj:TmxObject) 
+	public function new(obj:TmxObject)
 	{
 		super(obj.x, obj.y);
 		
@@ -37,7 +34,6 @@ class Enemy extends Physics
 		spPlayer.add("hurt", [4], 0, false);
 		
 		graphic = spPlayer;
-		text = obj.custom.resolve("text");
 		spPlayer.flipped = false;
 		
 		setHitbox(16, 7, 0, -9);

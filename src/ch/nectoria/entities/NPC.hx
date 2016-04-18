@@ -47,7 +47,6 @@ class NPC extends Physics
 	}
 	
 	override public function update():Void {
-		
 		var e:Entity = collide("player", x, y);
 		
 		var game:GameScene = cast(scene, GameScene);

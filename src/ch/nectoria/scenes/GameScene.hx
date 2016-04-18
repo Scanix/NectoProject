@@ -1,5 +1,6 @@
 package ch.nectoria.scenes;
 
+import ch.nectoria.entities.EntityManager;
 import ch.nectoria.entities.Chest;
 import ch.nectoria.entities.Door;
 import ch.nectoria.entities.Enemy;
@@ -44,10 +45,11 @@ class GameScene extends Scene
 	
 	private var counter:Text;
 	private var backdrop1:Backdrop;
+
+	private var entityList:EntityManager;
 	
 	public function new() {
 		super();
-		
 		// TODO: MUSIC MANAGER
 	}
 	
@@ -99,6 +101,7 @@ class GameScene extends Scene
 	}
 	
 	private function loadLevel(id:String):Void {
+		entityList = new EntityManager();
 		var entities:Array<Entity> = new Array<Entity>();
 		getAll(entities);
 		for (entity in entities) {
@@ -138,12 +141,12 @@ class GameScene extends Scene
 				case 39:
 					add(new Sign(object));
 				case 240:
-					add(new NPC(object));
+					entityList.addEntity(object);
 				default:
 					trace("unknow type: " + object.type);
 			}
 		}
-		
+
 		add(player = new Player(NP.posPlayer));
 		
 		var map_f = new TmxEntity(map);
