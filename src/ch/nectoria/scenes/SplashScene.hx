@@ -26,6 +26,14 @@ class SplashScene extends Scene
 	override public function begin():Void {
 		versionText = new Text("Version 0.2",2,2);
 		versionText.color = 0x000000;
+
+#if !flash
+		var base = Image.createRect(HXP.width, HXP.height, 0xFFFFFF, 1);
+		base.color = 0xFFFFFF;
+		base.scrollX = base.scrollY = 0;
+		addGraphic(base).layer = 100;    // set the layer to a value that's behind other onscreen objects
+#end
+
 		splashImage = new Image("graphics/splash/scanixgames.png");
 		splashImage.alpha = 0;
 		addGraphic(splashImage, -10, (HXP.screen.width - splashImage.width) / 2, (HXP.screen.height - splashImage.height) / 2);
