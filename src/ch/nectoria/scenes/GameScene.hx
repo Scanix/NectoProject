@@ -167,7 +167,7 @@ class GameScene extends Scene
 	}
 	
 	override public function update():Void {
-		if (messageBox != null && messageBox.world == this )
+		if (messageBox != null && messageBox.scene == this )
 		{
 			if (Input.released(Key.SPACE))
 			{

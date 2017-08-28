@@ -15,21 +15,22 @@
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
-    <class path="D:\Development\HaxeToolkit\haxe\lib\HaxePunk\2,5,6" />
-    <class path="D:\Development\HaxeToolkit\haxe\lib\openfl\3,3,8" />
-    <class path="D:\Development\HaxeToolkit\haxe\lib\lime\2,6,8" />
-    <class path="D:\Development\HaxeToolkit\haxe\lib\HaxePunkTmx\1,0,3" />
+    <class path="C:\HaxeToolkit\haxe\lib\HaxePunk\2,5,6" />
+    <class path="C:\HaxeToolkit\haxe\lib\openfl\3,6,1" />
+    <class path="C:\HaxeToolkit\haxe\lib\lime\2,9,1" />
+    <class path="C:\HaxeToolkit\haxe\lib\HaxePunkTmx\1,0,4" />
     <class path="src" />
-    <class path="bin\flash\haxe" />
+    <class path="C:\HaxeToolkit\haxe\lib\openfl\3,6,1\extern" />
+    <class path="bin\windows\neko\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="HaxePunk=2.5.6&#xA;openfl=3.3.8&#xA;lime=2.6.8&#xA;HaxePunkTmx=1.0.3&#xA;openfl-next&#xA;tools=2.6.8&#xA;no-compilation&#xA;openfl-flash&#xA;web&#xA;display" />
+    <option directives="HaxePunk=2.5.6&#xA;openfl=3.6.1&#xA;lime=2.9.1&#xA;HaxePunkTmx=1.0.4&#xA;openfl-next&#xA;tools=2.9.1&#xA;no-compilation&#xA;native&#xA;lime-native&#xA;openfl-native&#xA;windows&#xA;desktop&#xA;display" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="False" />
-    <option additional="-swf-version 11.2&#xA;-debug " />
+    <option additional="--remap flash:openfl" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
