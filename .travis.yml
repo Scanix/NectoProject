@@ -14,6 +14,7 @@ install:
   - if [[ $OPENFL ]]; then yes | haxelib install openfl $OPENFL > log.txt || cat log.txt; fi
   - if [[ $HAXEPUNKTMX ]]; then yes | haxelib install HaxePunkTmx $HAXEPUNKTMX > log.txt || cat log.txt; fi
   - if [[ $HAXEPUNK ]]; then yes | haxelib install HaxePunk $HAXEPUNK > log.txt || cat log.txt; fi
+  - haxelib install format > log.txt || cat log.txt; fi
   - haxelib list
 
 script:
