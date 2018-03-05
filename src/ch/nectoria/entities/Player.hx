@@ -49,7 +49,8 @@ class Player extends Physics
 		actionSign = new Spritemap("graphics/tilemap.png", 16, 16);
 		actionSign.add("actionSign", [241], 0, false);
 		actionSign.play("actionSign");
-		actionSign.y = -10; 
+		actionSign.y = -16;
+		actionSign.centerOrigin();
 		
 		graphic = new Graphiclist( );
 		cast( graphic, Graphiclist ).add( sprite );
