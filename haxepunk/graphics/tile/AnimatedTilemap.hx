@@ -16,21 +16,20 @@ class AnimatedTilemap extends Tilemap
 	 */
 	public var rate:Float;
 	
-	/**
+	 /**
 	 * Constructor.
 	 * @param	tileset				The source tileset image.
 	 * @param	width				Width of the tilemap, in pixels.
 	 * @param	height				Height of the tilemap, in pixels.
 	 * @param	tileWidth			Tile width.
 	 * @param	tileHeight			Tile height.
-	 * @param	tileSpacingWidth	Tile horizontal spacing.
-	 * @param	tileSpacingHeight	Tile vertical spacing.
-	 * @param	opaqueTiles			Indicates if this tileset contains only opaque tiles (defaults to true). Only used in Flash .
+	 * @param	tileMarginWidth		Tile horizontal spacing.
+	 * @param	tileMarginHeight	Tile vertical spacing.
 	 */
-	public function new(tileset:TileType, width:Int, height:Int, tileWidth:Int, tileHeight:Int, ?tileSpacingWidth:Int=0, ?tileSpacingHeight:Int=0, ?opaqueTiles:Bool=true) 
+	public function new(tileset:TileType, width:Int, height:Int, ?tileWidth:Int, ?tileHeight:Int, tileMarginWidth:Int=0, tileMarginHeight:Int=0, tileOffsetX:Int=0, tileOffsetY:Int=0) 
 	{
 		
-		super(tileset, width, height, tileWidth, tileHeight, tileSpacingWidth, tileSpacingHeight, opaqueTiles);
+		super(tileset, width, height, tileWidth, tileHeight, tileMarginWidth, tileMarginHeight, tileOffsetX, tileOffsetY);
 		
 		rate = 1;
 		
