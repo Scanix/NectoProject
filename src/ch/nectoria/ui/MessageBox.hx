@@ -1,14 +1,14 @@
 package ch.nectoria.ui;
 
-import com.haxepunk.Entity;
-import com.haxepunk.Graphic;
-import com.haxepunk.graphics.Graphiclist;
-import com.haxepunk.graphics.Spritemap;
-import com.haxepunk.graphics.Text;
-import com.haxepunk.Mask;
-import com.haxepunk.graphics.AnimatedTilemap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
+import haxepunk.Entity;
+import haxepunk.Graphic;
+import haxepunk.graphics.Graphiclist;
+import haxepunk.graphics.Spritemap;
+import haxepunk.graphics.text.Text;
+import haxepunk.Mask;
+import haxepunk.graphics.tile.AnimatedTilemap;
+import haxepunk.input.Input;
+import haxepunk.input.Key;
 
 /**
  * ...

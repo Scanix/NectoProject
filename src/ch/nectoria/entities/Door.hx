@@ -2,13 +2,13 @@ package ch.nectoria.entities;
 
 import ch.nectoria.NP;
 import ch.nectoria.scenes.GameScene;
-import com.haxepunk.Graphic;
+import haxepunk.Graphic;
 
-import com.haxepunk.Entity;
-import com.haxepunk.tmx.TmxObject;
-import com.haxepunk.graphics.Spritemap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
+import haxepunk.Entity;
+import haxepunk.tmx.TmxObject;
+import haxepunk.graphics.Spritemap;
+import haxepunk.input.Input;
+import haxepunk.input.Key;
 
 /**
  * ...
@@ -17,7 +17,7 @@ import com.haxepunk.utils.Key;
  */
 class Door extends Entity
 {
-	private var spPlayer:Spritemap;
+	private var sprite:Spritemap;
 	public var levelTo(default,null):String;
 	public var xTo(default,null):Int;
 	public var yTo(default,null):Int;
@@ -26,10 +26,10 @@ class Door extends Entity
 	{
 		super(obj.x, obj.y-16);
 		
-		spPlayer = new Spritemap("graphics/tilemap.png", 16, 16);
-		graphic = spPlayer;
-		spPlayer.add("close", [106], 0, false);
-		spPlayer.play("close");
+		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
+		graphic = sprite;
+		sprite.add("close", [106], 0, false);
+		sprite.play("close");
 		
 		levelTo = obj.custom.resolve("level");
 		xTo = Std.parseInt(obj.custom.resolve("xTo"))*16;
@@ -50,7 +50,7 @@ class Door extends Entity
 	public function handleInput():Void {
 		var game:GameScene = cast(scene, GameScene);
 		var e:Entity = collide("player", x, y);
-        if (e != null && Input.pressed(Key.SPACE))
+        if (e != null && Input.pressed("action"))
         {
 			game.switchLevel(this.xTo, this.yTo, this.levelTo);
         }

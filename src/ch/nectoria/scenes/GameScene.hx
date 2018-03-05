@@ -9,20 +9,22 @@ import ch.nectoria.NP;
 import ch.nectoria.ui.HUD;
 import ch.nectoria.ui.MessageBox;
 
-import com.haxepunk.graphics.Backdrop;
-import com.haxepunk.graphics.Image;
-import com.haxepunk.Sfx;
-import com.haxepunk.graphics.Text;
-import com.haxepunk.Scene;
-import com.haxepunk.HXP;
-import com.haxepunk.tmx.TmxEntity;
-import com.haxepunk.tmx.TmxMap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
-import com.haxepunk.graphics.atlas.AtlasData;
-import com.haxepunk.tweens.misc.NumTween;
-import com.haxepunk.utils.Data;
-import com.haxepunk.Entity;
+import haxepunk.graphics.tile.Backdrop;
+import haxepunk.graphics.Image;
+import haxepunk.Sfx;
+import haxepunk.graphics.text.Text;
+import haxepunk.Scene;
+import haxepunk.HXP;
+import haxepunk.tmx.TmxEntity;
+import haxepunk.tmx.TmxMap;
+import haxepunk.input.Input;
+import haxepunk.input.Key;
+import haxepunk.graphics.atlas.AtlasData;
+import haxepunk.tweens.misc.NumTween;
+import haxepunk.utils.Data;
+import haxepunk.Entity;
+import haxepunk.screen.UniformScaleMode;
+import haxepunk.screen.ScaleMode;
 import ch.nectoria.entities.NPC;
 
 import openfl.Assets;
@@ -50,7 +52,7 @@ class GameScene extends Scene
 		// TODO: MUSIC MANAGER
 	}
 	
-	public function fadeComplete(_):Void {
+	public function fadeComplete():Void {
 		if (fadeTween.value == 1)
 		{
 			// Load next level
@@ -63,12 +65,18 @@ class GameScene extends Scene
 	override public function begin():Void {
 		// DON'T FORGET TO REMOVE BITCH !
 		load();
-		
+
+		//New way to zoomIn
+		HXP.screen.scaleMode = new UniformScaleMode(UniformScaleType.ZoomIn, true);
+		HXP.screen.scaleMode.setBaseSize(256, 144);
+		HXP.resize(HXP.windowWidth, HXP.windowHeight);
+
 		// Fade to black
 		fade = Image.createRect(HXP.screen.width, HXP.screen.height, 0, 1);
 		fade.scrollX = fade.scrollY = 0;
 		addGraphic(fade, 0).type = "keep";
-		fadeTween = new NumTween(fadeComplete);
+		fadeTween = new NumTween();
+		fadeTween.onComplete.bind(fadeComplete);
 		addTween(fadeTween);
 		fadeTween.tween(1, 0, 2);
 	}
@@ -169,7 +177,7 @@ class GameScene extends Scene
 	override public function update():Void {
 		if (messageBox != null && messageBox.scene == this )
 		{
-			if (Input.released(Key.SPACE))
+			if (Input.released("action"))
 			{
 				messageBox.resume();
 			}
@@ -185,7 +193,7 @@ class GameScene extends Scene
 			fade.alpha = fadeTween.value;
 		}
 		
-		if (Input.pressed(Key.ESCAPE)) togglePause();
+		if (Input.pressed("pause")) togglePause();
 		
 		if (!paused) {
 			super.update();

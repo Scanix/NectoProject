@@ -7,13 +7,13 @@ import ch.nectoria.scenes.GameScene;
 import ch.nectoria.scenes.SplashScene;
 import flash.geom.Point;
 
-import com.haxepunk.Entity;
-import com.haxepunk.graphics.Spritemap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
-import com.haxepunk.HXP;
-import com.haxepunk.graphics.Graphiclist;
-import com.haxepunk.graphics.Text;
+import haxepunk.Entity;
+import haxepunk.graphics.Spritemap;
+import haxepunk.input.Input;
+import haxepunk.input.Key;
+import haxepunk.HXP;
+import haxepunk.graphics.Graphiclist;
+import haxepunk.graphics.text.Text;
 /**
  * ...
  * @author Bianchi Alexandre
@@ -21,7 +21,7 @@ import com.haxepunk.graphics.Text;
  */
 class Player extends Physics
 {
-	private var spPlayer:Spritemap;
+	private var sprite:Spritemap;
 	private var actionSign:Spritemap;
 	public var speed:Float = 1.0;
 	public var jumpSpeed:Float = 7.0;
@@ -37,12 +37,13 @@ class Player extends Physics
 		//Debug functions
 		
 		//Animations & Graphics
-		spPlayer = new Spritemap("graphics/entity/player32.png", 16, 32);
-		spPlayer.add("idle", [8], 0, false);
-		spPlayer.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
-		spPlayer.add("jump", [1], 0, false);
-		spPlayer.add("fall", [3], 0, false);
-		spPlayer.add("hurt", [4], 0, false);
+		sprite = new Spritemap("graphics/entity/player32.png", 16, 32);
+		sprite.add("idle", [8], 0, false);
+		sprite.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
+		sprite.add("jump", [1], 0, false);
+		sprite.add("fall", [3], 0, false);
+		sprite.add("hurt", [4], 0, false);
+		sprite.smooth = false;
 		
 		//Action Mark
 		actionSign = new Spritemap("graphics/tilemap.png", 16, 16);
@@ -51,12 +52,13 @@ class Player extends Physics
 		actionSign.y = -10; 
 		
 		graphic = new Graphiclist( );
-		cast( graphic, Graphiclist ).add( spPlayer );
+		cast( graphic, Graphiclist ).add( sprite );
 		cast( graphic, Graphiclist ).add( actionSign );
 		
-		spPlayer.flipped = flip;
+		sprite.scaleX = 1;
+		sprite.centerOrigin();
 		
-		setHitbox(8, 23, -4, -9);
+		setHitbox(8, 23, 4, 7);
 		type = "player";
 		layer = 3;
 	}
@@ -75,13 +77,13 @@ class Player extends Physics
 		}
 		
 		if (vx != 0) {
-			spPlayer.play("walk");
+			sprite.play("walk");
 		} else if (vy > 1) {
-			spPlayer.play("fall");
+			sprite.play("fall");
 		} else if (vy < -1) {
-			spPlayer.play("jump");
+			sprite.play("jump");
 		} else {
-			spPlayer.play("idle");
+			sprite.play("idle");
 		}
 		
 		if (!NP.frozenPlayer) {
@@ -91,26 +93,26 @@ class Player extends Physics
 	}
 	
 	public function handleInput():Void {
-		if( (Input.check(Key.UP) || Input.check(Key.W)) && !inAir && collideBelow)
+		if( Input.check("action") && !inAir && collideBelow)
 		{
 			this.jump();
 		}
-		if( (Input.check(Key.LEFT) || Input.check(Key.A)) && !collideLeft)
+		if( Input.check("left") && !collideLeft)
 		{
 			this.moveLeft();
 		}
-		if( (Input.check(Key.RIGHT) || Input.check(Key.D)) && !collideRight)
+		if( Input.check("right") && !collideRight)
 		{
 			this.moveRight();
 		}
-		if ( Input.pressed(Key.NUMPAD_8))
+		/*if ( Input.pressed(Key.NUMPAD_8))
 		{
 			gainHealth();
 		}
 		if ( Input.pressed(Key.NUMPAD_7))
 		{
 			looseHealth();
-		}
+		}*/
 	}
 	
 	public function jump():Void
@@ -125,7 +127,7 @@ class Player extends Physics
 		{
 			collideRight = false;
 		}
-		spPlayer.flipped = true;
+		sprite.scaleX = -1;
 	}
 	public function moveRight():Void
 	{
@@ -134,7 +136,7 @@ class Player extends Physics
 		{
 			collideLeft = false;
 		}
-		spPlayer.flipped = false;
+		sprite.scaleX = 1;
 	}
 	
 	public function gainHealth():Void {

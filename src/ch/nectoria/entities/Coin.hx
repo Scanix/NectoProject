@@ -2,8 +2,8 @@ package ch.nectoria.entities;
 
 import ch.nectoria.NP;
 
-import com.haxepunk.Entity;
-import com.haxepunk.graphics.Spritemap;
+import haxepunk.Entity;
+import haxepunk.graphics.Spritemap;
 
 /**
  * ...
@@ -12,16 +12,16 @@ import com.haxepunk.graphics.Spritemap;
  */
 class Coin extends Physics
 {
-	private var spPlayer:Spritemap;
+	private var sprite:Spritemap;
 
 	public function new(x:Float, y:Float) 
 	{
 		super(x, y-16);
 		
-		spPlayer = new Spritemap("graphics/tilemap.png", 16, 16);
-		graphic = spPlayer;
-		spPlayer.add("turn", [251, 252, 253, 254], 10, true);
-		spPlayer.play("turn");
+		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
+		graphic = sprite;
+		sprite.add("turn", [251, 252, 253, 254], 10, true);
+		sprite.play("turn");
 		type = "coin";
 		
 		setHitbox(7, 9, -4, -4);

@@ -2,9 +2,9 @@ package ch.nectoria.ui;
 
 import ch.nectoria.NP;
 
-import com.haxepunk.Entity;
-import com.haxepunk.graphics.Text;
-import com.haxepunk.HXP;
+import haxepunk.Entity;
+import haxepunk.graphics.text.Text;
+import haxepunk.HXP;
 
 /**
  * ...
