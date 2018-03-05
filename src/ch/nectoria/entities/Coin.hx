@@ -19,12 +19,13 @@ class Coin extends Physics
 		super(x, y-16);
 		
 		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
-		graphic = sprite;
+		sprite.smooth = false;
 		sprite.add("turn", [251, 252, 253, 254], 10, true);
 		sprite.play("turn");
-		type = "coin";
-		
+		graphic = sprite;
+
 		setHitbox(7, 9, -4, -4);
+		type = "coin";
 		layer = 4;
 	}
 	

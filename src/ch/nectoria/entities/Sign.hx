@@ -24,6 +24,7 @@ class Sign extends Entity
 		super(obj.x, obj.y-16);
 		
 		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
+		sprite.smooth = false;
 		graphic = sprite;
 		sprite.add("idle", [38], 0, false);
 		sprite.play("idle");

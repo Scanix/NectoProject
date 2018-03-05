@@ -25,14 +25,15 @@ class Chest extends Physics
 		super(obj.x, obj.y-16);
 		
 		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
-		graphic = sprite;
+		sprite.smooth = false;
 		sprite.add("close", [34], 0, false);
 		sprite.add("open", [50], 0, false);
 		sprite.play("close");
-		
-		type = 'chest';
+
+		graphic = sprite;
 		
 		setHitboxTo(graphic);
+		type = 'chest';
 		layer = 4;
 	}
 	

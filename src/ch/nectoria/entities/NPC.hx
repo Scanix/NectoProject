@@ -29,17 +29,18 @@ class NPC extends Physics
 		
 		//Animations & Graphics
 		sprite = new Spritemap("graphics/entity/npc1.png", 16, 32);
+		sprite.smooth = false;
 		sprite.add("idle", [8], 0, false);
 		sprite.add("speak", [8, 9], 5, true);
 		sprite.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
 		sprite.add("jump", [1], 0, false);
 		sprite.add("fall", [3], 0, false);
 		sprite.add("hurt", [4], 0, false);
+		sprite.centerOrigin();
+		sprite.scaleX = 1;
 		
 		graphic = sprite;
 		text = obj.custom.resolve("text");
-		sprite.scaleX = 1;
-		sprite.centerOrigin();
 		
 		setHitbox(16, 23, 8, 7);
 		type = "npc";

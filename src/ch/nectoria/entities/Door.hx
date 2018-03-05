@@ -27,16 +27,17 @@ class Door extends Entity
 		super(obj.x, obj.y-16);
 		
 		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
-		graphic = sprite;
+		sprite.smooth = false;
 		sprite.add("close", [106], 0, false);
 		sprite.play("close");
+		graphic = sprite;
 		
 		levelTo = obj.custom.resolve("level");
 		xTo = Std.parseInt(obj.custom.resolve("xTo"))*16;
 		yTo = Std.parseInt(obj.custom.resolve("yTo"))*16-16;
 		
-		type = "door";
 		setHitboxTo(graphic);
+		type = "door";
 		layer = 4;
 	}
 	

@@ -2,16 +2,11 @@ package ch.nectoria.entities;
 
 import ch.nectoria.entities.Physics;
 import ch.nectoria.NP;
-import ch.nectoria.scenes.FightScene;
-import ch.nectoria.scenes.GameScene;
-import ch.nectoria.scenes.SplashScene;
 import flash.geom.Point;
 
 import haxepunk.Entity;
 import haxepunk.graphics.Spritemap;
 import haxepunk.input.Input;
-import haxepunk.input.Key;
-import haxepunk.HXP;
 import haxepunk.graphics.Graphiclist;
 import haxepunk.graphics.text.Text;
 /**
@@ -38,26 +33,26 @@ class Player extends Physics
 		
 		//Animations & Graphics
 		sprite = new Spritemap("graphics/entity/player32.png", 16, 32);
+		sprite.smooth = false;
 		sprite.add("idle", [8], 0, false);
 		sprite.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
 		sprite.add("jump", [1], 0, false);
 		sprite.add("fall", [3], 0, false);
 		sprite.add("hurt", [4], 0, false);
-		sprite.smooth = false;
+		sprite.centerOrigin();
+		sprite.scaleX = 1;
 		
 		//Action Mark
 		actionSign = new Spritemap("graphics/tilemap.png", 16, 16);
+		actionSign.smooth = false;
 		actionSign.add("actionSign", [241], 0, false);
 		actionSign.play("actionSign");
-		actionSign.y = -16;
 		actionSign.centerOrigin();
+		actionSign.y = -16;
 		
 		graphic = new Graphiclist( );
 		cast( graphic, Graphiclist ).add( sprite );
 		cast( graphic, Graphiclist ).add( actionSign );
-		
-		sprite.scaleX = 1;
-		sprite.centerOrigin();
 		
 		setHitbox(8, 23, 4, 7);
 		type = "player";
