@@ -16,6 +16,7 @@ Change Log
 Outstanding Tasks
 -----------------
 
+* TODO: Use BitmapText instead of Text
 * TODO: Enemies
 * TODO: Fighting System
 * TODO: Saving System
