@@ -2,7 +2,11 @@
 	"haxe.displayConfigurations": [
 		[".vscode/completion-openfl.hxml"]
 	],
-	"haxe.diagnosticsPathFilter": "${workspaceRoot}/source",
+	"haxe.diagnosticsPathFilter": "${workspaceRoot}/src",
+	"haxe.displayServer": {
+        "arguments": ["-v"],
+	},
+	"haxe.displayPort": 6000,
 	"search.exclude": {
 		"export/**/*.hx": true
 	}
