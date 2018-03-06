@@ -19,10 +19,10 @@ install:
 
 script:
   - haxelib run lime build html5
-  - cd bin/html5/bin/
 
 deploy:
   provider: pages
+  local-dir: bin/html5/bin/
   email: $email
   name: $name
   skip-cleanup: true
