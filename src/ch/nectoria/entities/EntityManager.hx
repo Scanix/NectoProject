@@ -1,8 +1,8 @@
 package ch.nectoria.entities;
 
-import com.haxepunk.HXP;
-import com.haxepunk.Entity;
-import com.haxepunk.tmx.TmxObject;
+import haxepunk.HXP;
+import haxepunk.Entity;
+import haxepunk.tmx.TmxObject;
 
 class EntityManager {
 

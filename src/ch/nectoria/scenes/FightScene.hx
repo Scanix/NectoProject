@@ -2,13 +2,12 @@ package ch.nectoria.scenes;
 
 import ch.nectoria.entities.Player;
 import ch.nectoria.ui.MessageBox;
-import com.haxepunk.Scene;
-import com.haxepunk.graphics.Backdrop;
-import com.haxepunk.tmx.TmxMap;
-import com.haxepunk.tmx.TmxEntity;
+import haxepunk.Scene;
+import haxepunk.graphics.tile.Backdrop;
+import haxepunk.tmx.TmxMap;
+import haxepunk.tmx.TmxEntity;
 import openfl.Assets;
 import openfl.geom.Point;
-import com.haxepunk.graphics.Text;
 
 /**
  * ...
@@ -27,9 +26,6 @@ class FightScene extends Scene
 	private var currentLvl:String;
 	private var mapWidth:Int;
 	private var mapHeight:Int;
-
-	//Debug
-	private var demoText:Text;
 
 	public function new() 
 	{
@@ -53,16 +49,6 @@ class FightScene extends Scene
 		
 		//Player
 		add(player = new Player(new Point(32,32)));
-
-		//Demo text
-		demoText = new Text("Fighting System is not already implemented \nPlease restart and don't touch the enemy", 15, 15);
-		demoText.font = "font/04B_03__.ttf";
-		demoText.color = 0xffffff;
-		demoText.size = 8;
-		demoText.scrollX = 0;
-		demoText.scrollY = 0;
-
-		addGraphic(demoText);
 	}
 	
 }

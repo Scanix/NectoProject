@@ -1,0 +1,12 @@
+{
+	"haxe.displayConfigurations": [
+		["bin/html5/haxe/debug.hxml"]
+	],
+	"haxe.diagnosticsPathFilter": "${workspaceRoot}/src",
+	"haxe.displayServer": {
+	},
+	"haxe.displayPort": 6000,
+	"search.exclude": {
+		"export/**/*.hx": true
+	}
+}

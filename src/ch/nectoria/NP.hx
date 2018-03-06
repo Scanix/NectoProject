@@ -2,11 +2,11 @@ package ch.nectoria;
 
 import ch.nectoria.entities.Player;
 
-import com.haxepunk.graphics.Image;
-import com.haxepunk.graphics.Spritemap;
-import com.haxepunk.tweens.misc.NumTween;
-import com.haxepunk.tweens.misc.VarTween;
-import com.haxepunk.HXP;
+import haxepunk.graphics.Image;
+import haxepunk.graphics.Spritemap;
+import haxepunk.tweens.misc.NumTween;
+import haxepunk.tweens.misc.VarTween;
+import haxepunk.HXP;
 
 import flash.geom.Point;
 

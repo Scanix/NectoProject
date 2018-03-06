@@ -1,10 +1,9 @@
 package ch.nectoria.ui;
 
-import com.haxepunk.Entity;
-import com.haxepunk.Graphic;
-import com.haxepunk.graphics.Graphiclist;
-import com.haxepunk.graphics.Text;
-import com.haxepunk.graphics.AnimatedTilemap;
+import haxepunk.Entity;
+import haxepunk.graphics.Graphiclist;
+import haxepunk.graphics.text.Text;
+import haxepunk.graphics.tile.AnimatedTilemap;
 
 /**
  * ...
@@ -40,6 +39,7 @@ class MessageBox extends Entity
 		text.size = 8;
 		text.scrollX = 0;
 		text.scrollY = 0;
+		text.smooth = false;
 		text.addStyle("red", { color: 0xFF0000 });
 		text.addStyle("big", { size: 16 });
 		
@@ -50,6 +50,7 @@ class MessageBox extends Entity
 		tilemap.y = 0;
 		tilemap.scrollX = 0;
 		tilemap.scrollY = 0;
+		tilemap.smooth = false;
 		
 		// Set up frame.
 		tilemap.setRect(1, 1, tilemap.columns - 2, 1, 81);
@@ -112,15 +113,11 @@ class MessageBox extends Entity
 	override public function update():Void
 	{
 		text.richText = typewriter;
-		var char:String = message.charAt(positionText);
 		if (textTick == 0 && !paused && positionText < message.length)
 		{
 			textTick = TEXT_SPEED;
+			var char:String = message.charAt(positionText); 
 			trace(char);
-			if(char == "<"){
-				typewriter += message.substring(positionText,message.indexOf('</red>')+5);
-				positionText = typewriter.length;
-			}
 			if (char == '*')
 			{
 				// New line.

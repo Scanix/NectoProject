@@ -221,3 +221,5 @@ src/UInt.hx
 out/
 
 NectoProject.iml
+NectoProject.hxproj
+project.hide

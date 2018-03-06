@@ -1,8 +1,8 @@
 package ch.nectoria.ui;
 
-import com.haxepunk.Entity;
-import com.haxepunk.Graphic;
-import com.haxepunk.Mask;
+import haxepunk.Entity;
+import haxepunk.Graphic;
+import haxepunk.Mask;
 
 /**
  * ...

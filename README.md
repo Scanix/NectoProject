@@ -3,9 +3,7 @@
 NectoProject
 ============
 
-An adventure-platformer game with [HaxePunk](http://haxepunk.com/)
-
-Play the actual version of the game [Here](http://scanix.github.io/NectoProject/)
+An adventure-platformer example with [HaxePunk 4](http://haxepunk.com/)
 
 Change Log
 ----------
@@ -18,6 +16,7 @@ Change Log
 Outstanding Tasks
 -----------------
 
+* TODO: Use BitmapText instead of Text
 * TODO: Enemies
 * TODO: Fighting System
 * TODO: Saving System
@@ -28,6 +27,14 @@ Outstanding Tasks
 * TODO: Music Manager
 * TODO: Clean-up code
 
+Dependencies
+-----------------
+
+* HaxePunk 4.0.1
+* HaxePunkTmx 4.0.0
+* openfl 7.1.1
+* lime 6.1.0
+
 ScreenShots
 -----------------
 ![Exclamation Mark](https://pbs.twimg.com/media/CfNXeNJXEAAo_od.jpg:large)
@@ -36,7 +43,7 @@ ScreenShots
 The MIT License (MIT)
 --------------------
 
-Copyright (c) 2015 Alexandre Bianchi
+Copyright (c) 2015-2018 Alexandre Bianchi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

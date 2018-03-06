@@ -1,0 +1,36 @@
+language: haxe
+
+haxe:
+  - 3.4.7
+
+sudo: false
+
+env:
+  matrix:
+    - OPENFL=7.1.1 LIME=6.1.0 HAXEPUNK=4.0.1 HAXEPUNKTMX=4.0.0
+
+install:
+  - if [[ $LIME ]]; then yes | haxelib install lime $LIME > log.txt || cat log.txt; fi
+  - if [[ $OPENFL ]]; then yes | haxelib install openfl $OPENFL > log.txt || cat log.txt; fi
+  - if [[ $HAXEPUNKTMX ]]; then yes | haxelib install HaxePunkTmx $HAXEPUNKTMX > log.txt || cat log.txt; fi
+  - if [[ $HAXEPUNK ]]; then yes | haxelib install HaxePunk $HAXEPUNK > log.txt || cat log.txt; fi
+  - haxelib install format > log.txt || cat log.txt
+  - haxelib list
+
+script:
+  - haxelib run lime build html5
+  - cd bin/html5/bin/
+
+deploy:
+  provider: pages
+  email: $email
+  name: $name
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN 
+  keep-history: true
+  on:
+    branch: migration4.0
+
+cache:
+  directories:
+   - $HOME/haxe/lib

@@ -3,14 +3,13 @@ package ch.nectoria.entities;
 import ch.nectoria.entities.Physics;
 import ch.nectoria.NP;
 import ch.nectoria.scenes.GameScene;
-import flash.geom.Point;
 
-import com.haxepunk.Entity;
-import com.haxepunk.graphics.Spritemap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
-import com.haxepunk.HXP;
-import com.haxepunk.tmx.TmxObject;
+import haxepunk.Entity;
+import haxepunk.graphics.Spritemap;
+import haxepunk.input.Input;
+import haxepunk.input.Key;
+import haxepunk.HXP;
+import haxepunk.tmx.TmxObject;
 
 /**
  * ...
@@ -18,7 +17,7 @@ import com.haxepunk.tmx.TmxObject;
  */
 class NPC extends Physics
 {
-	private var spPlayer:Spritemap;
+	private var sprite:Spritemap;
 	public var speed:Float = .2;
 	public var jumpSpeed:Float = 7.0;
 	public var text:String;
@@ -29,44 +28,47 @@ class NPC extends Physics
 		super(obj.x, obj.y);
 		
 		//Animations & Graphics
-		spPlayer = new Spritemap("graphics/entity/npc1.png", 16, 32);
-		spPlayer.add("idle", [8], 0, false);
-		spPlayer.add("speak", [8, 9], 5, true);
-		spPlayer.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
-		spPlayer.add("jump", [1], 0, false);
-		spPlayer.add("fall", [3], 0, false);
-		spPlayer.add("hurt", [4], 0, false);
+		sprite = new Spritemap("graphics/entity/npc1.png", 16, 32);
+		sprite.smooth = false;
+		sprite.add("idle", [8], 0, false);
+		sprite.add("speak", [8, 9], 5, true);
+		sprite.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], 10, true);
+		sprite.add("jump", [1], 0, false);
+		sprite.add("fall", [3], 0, false);
+		sprite.add("hurt", [4], 0, false);
+		sprite.centerOrigin();
+		sprite.scaleX = 1;
 		
-		graphic = spPlayer;
+		graphic = sprite;
 		text = obj.custom.resolve("text");
-		spPlayer.flipped = false;
 		
-		setHitbox(16, 23, 0, -9);
+		setHitbox(16, 23, 8, 7);
 		type = "npc";
 		layer = 3;
 	}
 	
 	override public function update():Void {
+		
 		var e:Entity = collide("player", x, y);
 		
 		var game:GameScene = cast(scene, GameScene);
-		if (e != null && Input.pressed(Key.SPACE) && !NP.displayingMessage)
+		if (e != null && Input.pressed("action") && !NP.displayingMessage)
 		{
 			game.showMessageBox(text);
-			spPlayer.play("speak");
+			sprite.play("speak");
 			speaking = true;
 		}
 		
 		if (vx != 0) {
-			spPlayer.play("walk");
+			sprite.play("walk");
 		} else if (vy > 1) {
-			spPlayer.play("fall");
+			sprite.play("fall");
 		} else if (vy < -1) {
-			spPlayer.play("jump");
+			sprite.play("jump");
 		} else if (!speaking) {
-			spPlayer.play("idle");
+			sprite.play("idle");
 		} else {
-			spPlayer.play("speak");
+			sprite.play("speak");
 		}
 		
 		if (!NP.frozenPlayer) {
@@ -92,7 +94,7 @@ class NPC extends Physics
 		{
 			collideRight = false;
 		}
-		spPlayer.flipped = true;
+		sprite.scaleX = -1;
 	}
 	
 	public function moveRight():Void
@@ -102,7 +104,7 @@ class NPC extends Physics
 		{
 			collideLeft = false;
 		}
-		spPlayer.flipped = false;
+		sprite.scaleX = 1;
 	}
 	
 }
