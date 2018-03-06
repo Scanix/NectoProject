@@ -1,5 +1,6 @@
 package ch.nectoria.scenes;
 
+import haxepunk.graphics.Graphiclist;
 import ch.nectoria.NP;
 import ch.nectoria.ui.HUD;
 import ch.nectoria.ui.MessageBox;
@@ -128,6 +129,13 @@ class GameScene extends Scene
 		var order:Array<String> = ["background", "between", "collide"];
 		var map_e = new TmxEntity(map);
 		map_e.loadGraphic(tileset, order);
+
+		// Fix smooth
+		for( g in cast( map_e.graphic, Graphiclist ).children)
+		{
+			g.smooth = false;
+		}
+
 		map_e.loadMask("collide", "solid");
 		map_e.layer = 5;
 		
