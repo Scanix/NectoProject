@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title>NectoProject Demo</title>
+	
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	
+	
+	
+	<script type="text/javascript" src="./lib/howler.min.js"></script>
+	<script type="text/javascript" src="./lib/pako.min.js"></script>
+	<script type="text/javascript" src="./lib/FileSaver.min.js"></script>
+	<script type="text/javascript" src="./NectoProject.js"></script>
+	
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, false);
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+	</script>
+	
+	<style>
+        html{
+            background-color: #000;
+            padding: 0px;
+        }
+        body {
+            text-align: center;
+            margin: 0px;
+            color: white;
+            font-family: sans-serif;
+        }
+        #content {
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+            color: white;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        a{
+            color: white;
+        }
+        a:hover{
+            color: darkgrey;
+        }
+    </style>
+	
+</head>
+<body>
+	
+	<span style="font-family: font/monofonto.ttf"> </span>
+	<span style="font-family: font/04B_03__.ttf"> </span>
+	<h1>NectoProject</h1>
+    <div id="content"></div>
+    <footer>
+        <p>© Scanix | Alexandre Bianchi | 2015-2018 | <a href="https://github.com/Scanix/NectoProject">See on GitHub</a> | <a href="https://github.com/Scanix/NectoProject/issues">Signal an issue</a></p>
+    </footer>
+	
+	<script type="text/javascript">
+		lime.embed ("NectoProject", "content", 1280, 720);
+	</script>
+	
+</body>
+</html>
