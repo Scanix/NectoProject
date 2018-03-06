@@ -18,7 +18,7 @@ install:
   - haxelib list
 
 script:
-  - haxelib run lime build html5
+  - haxelib run lime build html5 -debug
 
 deploy:
   provider: pages
