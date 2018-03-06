@@ -1,10 +1,9 @@
 {
 	"haxe.displayConfigurations": [
-		[".vscode/completion-openfl.hxml"]
+		["bin/html5/haxe/debug.hxml"]
 	],
 	"haxe.diagnosticsPathFilter": "${workspaceRoot}/src",
 	"haxe.displayServer": {
-        "arguments": ["-v"],
 	},
 	"haxe.displayPort": 6000,
 	"search.exclude": {

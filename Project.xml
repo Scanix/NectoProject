@@ -17,8 +17,6 @@
 
 	<haxedef name="hxp_debug" unless="release" />
 
-	<haxeflag name="--connect" value="6000" />	
-
 	<assets path="assets/graphics" rename="graphics" include="*.png|*.jpg" />
 	<assets path="assets/audio" rename="audio" include="*.mp3" if="flash" />
 	<assets path="assets/audio" rename="audio" include="*.wav|*.ogg" unless="flash" />
