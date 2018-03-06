@@ -1,5 +1,7 @@
 ![ScanixGame Logo](https://dl.dropbox.com/s/aey1jjcf8zlw0yd/scanixgames.png)
 
+[![Build Status](https://travis-ci.org/Scanix/NectoProject.svg?branch=master)](https://travis-ci.org/Scanix/NectoProject)
+
 NectoProject
 ============
 
