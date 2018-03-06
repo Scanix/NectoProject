@@ -16,6 +16,7 @@
 	<!--<haxelib name="format" if="html5" />-->
 
 	<haxedef name="hxp_debug" unless="release" />
+	<template path="templates/index.html" rename="index.html" />
 
 	<assets path="assets/graphics" rename="graphics" include="*.png|*.jpg" />
 	<assets path="assets/audio" rename="audio" include="*.mp3" if="flash" />

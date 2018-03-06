@@ -19,6 +19,17 @@ install:
 
 script:
   - haxelib run lime build html5
+  - cd bin/html5/bin/
+
+deploy:
+  provider: pages
+  email: $email
+  name: $name
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN 
+  keep-history: true
+  on:
+    branch: migration4.0
 
 cache:
   directories:
