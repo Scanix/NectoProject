@@ -1177,6 +1177,62 @@ haxepunk_Engine.prototype = {
 		if(this._scene != null && this._scenes.length > 0 && this._scenes[this._scenes.length - 1] != this._scene) {
 			var o = this._scene;
 			var s = "ending scene: " + Type.getClassName(o == null ? null : js_Boot.getClass(o));
+			var pos_lineNumber;
+			var pos_fileName = "Engine.hx";
+			pos_lineNumber = 257;
+			var pos_className = "haxepunk.Engine";
+			var pos_methodName = "checkScene";
+			var level = 10;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 			this._scene.end();
 			this._scene.updateLists();
 			if(this._scene.autoClear && this._scene.get_hasTween()) {
@@ -1184,7 +1240,63 @@ haxepunk_Engine.prototype = {
 			}
 			this._scene = this._scenes[this._scenes.length - 1];
 			var o1 = this._scene;
-			var s1 = "starting scene: " + Type.getClassName(o1 == null ? null : js_Boot.getClass(o1));
+			var s3 = "starting scene: " + Type.getClassName(o1 == null ? null : js_Boot.getClass(o1));
+			var pos_lineNumber1;
+			var pos_fileName1 = "Engine.hx";
+			pos_lineNumber1 = 264;
+			var pos_className1 = "haxepunk.Engine";
+			var pos_methodName1 = "checkScene";
+			var level1 = 10;
+			var minLevel1 = 10;
+			if((level1 | 0) >= (minLevel1 | 0)) {
+				var p3 = null;
+				var tmp1 = haxe_Log.trace;
+				var s4 = Std.string(s3);
+				var d2 = HxOverrides.dateStr(new Date());
+				var p4 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l2;
+				switch(level1) {
+				case 20:
+					l2 = "INF";
+					break;
+				case 30:
+					l2 = "WRN";
+					break;
+				case 40:
+					l2 = "ERR";
+					break;
+				case 50:
+					l2 = "!!!";
+					break;
+				default:
+					l2 = "DBG";
+				}
+				tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this1 = haxepunk_HXP.engine.console;
+					var s5 = Std.string(s3);
+					var d3 = HxOverrides.dateStr(new Date());
+					var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+					var l3;
+					switch(level1) {
+					case 20:
+						l3 = "INF";
+						break;
+					case 30:
+						l3 = "WRN";
+						break;
+					case 40:
+						l3 = "ERR";
+						break;
+					case 50:
+						l3 = "!!!";
+						break;
+					default:
+						l3 = "DBG";
+					}
+					_this1.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+				}
+			}
 			this._scene.updateLists();
 			this._scene.begin();
 			this._scene.assetCache.enable();
@@ -1329,6 +1441,62 @@ haxepunk_Engine.prototype = {
 		if(this._scene != null && this._scenes.length > 0 && this._scenes[this._scenes.length - 1] != this._scene) {
 			var o = this._scene;
 			var s = "ending scene: " + Type.getClassName(o == null ? null : js_Boot.getClass(o));
+			var pos_lineNumber;
+			var pos_fileName = "Engine.hx";
+			pos_lineNumber = 257;
+			var pos_className = "haxepunk.Engine";
+			var pos_methodName = "checkScene";
+			var level = 10;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 			this._scene.end();
 			this._scene.updateLists();
 			if(this._scene.autoClear && this._scene.get_hasTween()) {
@@ -1336,7 +1504,63 @@ haxepunk_Engine.prototype = {
 			}
 			this._scene = this._scenes[this._scenes.length - 1];
 			var o1 = this._scene;
-			var s1 = "starting scene: " + Type.getClassName(o1 == null ? null : js_Boot.getClass(o1));
+			var s3 = "starting scene: " + Type.getClassName(o1 == null ? null : js_Boot.getClass(o1));
+			var pos_lineNumber1;
+			var pos_fileName1 = "Engine.hx";
+			pos_lineNumber1 = 264;
+			var pos_className1 = "haxepunk.Engine";
+			var pos_methodName1 = "checkScene";
+			var level1 = 10;
+			var minLevel1 = 10;
+			if((level1 | 0) >= (minLevel1 | 0)) {
+				var p3 = null;
+				var tmp1 = haxe_Log.trace;
+				var s4 = Std.string(s3);
+				var d2 = HxOverrides.dateStr(new Date());
+				var p4 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l2;
+				switch(level1) {
+				case 20:
+					l2 = "INF";
+					break;
+				case 30:
+					l2 = "WRN";
+					break;
+				case 40:
+					l2 = "ERR";
+					break;
+				case 50:
+					l2 = "!!!";
+					break;
+				default:
+					l2 = "DBG";
+				}
+				tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this1 = haxepunk_HXP.engine.console;
+					var s5 = Std.string(s3);
+					var d3 = HxOverrides.dateStr(new Date());
+					var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+					var l3;
+					switch(level1) {
+					case 20:
+						l3 = "INF";
+						break;
+					case 30:
+						l3 = "WRN";
+						break;
+					case 40:
+						l3 = "ERR";
+						break;
+					case 50:
+						l3 = "!!!";
+						break;
+					default:
+						l3 = "DBG";
+					}
+					_this1.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+				}
+			}
 			this._scene.updateLists();
 			this._scene.begin();
 			this._scene.assetCache.enable();
@@ -1353,11 +1577,123 @@ haxepunk_Engine.prototype = {
 	,pushScene: function(value) {
 		var o = this._scene;
 		var s = "pushed scene: " + Type.getClassName(o == null ? null : js_Boot.getClass(o));
+		var pos_lineNumber;
+		var pos_fileName = "Engine.hx";
+		pos_lineNumber = 281;
+		var pos_className = "haxepunk.Engine";
+		var pos_methodName = "pushScene";
+		var level = 10;
+		var minLevel = 10;
+		if((level | 0) >= (minLevel | 0)) {
+			var p = null;
+			var tmp = haxe_Log.trace;
+			var s1 = Std.string(s);
+			var d = HxOverrides.dateStr(new Date());
+			var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l;
+			switch(level) {
+			case 20:
+				l = "INF";
+				break;
+			case 30:
+				l = "WRN";
+				break;
+			case 40:
+				l = "ERR";
+				break;
+			case 50:
+				l = "!!!";
+				break;
+			default:
+				l = "DBG";
+			}
+			tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this = haxepunk_HXP.engine.console;
+				var s2 = Std.string(s);
+				var d1 = HxOverrides.dateStr(new Date());
+				var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l1;
+				switch(level) {
+				case 20:
+					l1 = "INF";
+					break;
+				case 30:
+					l1 = "WRN";
+					break;
+				case 40:
+					l1 = "ERR";
+					break;
+				case 50:
+					l1 = "!!!";
+					break;
+				default:
+					l1 = "DBG";
+				}
+				_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+			}
+		}
 		this._scenes.push(value);
 	}
 	,popScene: function() {
 		var o = this._scene;
 		var s = "popped scene: " + Type.getClassName(o == null ? null : js_Boot.getClass(o));
+		var pos_lineNumber;
+		var pos_fileName = "Engine.hx";
+		pos_lineNumber = 291;
+		var pos_className = "haxepunk.Engine";
+		var pos_methodName = "popScene";
+		var level = 10;
+		var minLevel = 10;
+		if((level | 0) >= (minLevel | 0)) {
+			var p = null;
+			var tmp = haxe_Log.trace;
+			var s1 = Std.string(s);
+			var d = HxOverrides.dateStr(new Date());
+			var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l;
+			switch(level) {
+			case 20:
+				l = "INF";
+				break;
+			case 30:
+				l = "WRN";
+				break;
+			case 40:
+				l = "ERR";
+				break;
+			case 50:
+				l = "!!!";
+				break;
+			default:
+				l = "DBG";
+			}
+			tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this = haxepunk_HXP.engine.console;
+				var s2 = Std.string(s);
+				var d1 = HxOverrides.dateStr(new Date());
+				var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l1;
+				switch(level) {
+				case 20:
+					l1 = "INF";
+					break;
+				case 30:
+					l1 = "WRN";
+					break;
+				case 40:
+					l1 = "ERR";
+					break;
+				case 50:
+					l1 = "!!!";
+					break;
+				default:
+					l1 = "DBG";
+				}
+				_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+			}
+		}
 		var scene = this._scenes.pop();
 		if(haxepunk_assets_AssetCache.active.indexOf(scene.assetCache) > -1) {
 			scene.assetCache.dispose();
@@ -1556,6 +1892,7 @@ ch_nectoria_Main.main = function() {
 ch_nectoria_Main.__super__ = haxepunk_Engine;
 ch_nectoria_Main.prototype = $extend(haxepunk_Engine.prototype,{
 	init: function() {
+		haxepunk_debug_Console.enable();
 		haxepunk_HXP.screen.color = 16777215;
 		var value = new ch_nectoria_scenes_SplashScene();
 		haxepunk_HXP.engine.set_scene(value);
@@ -2874,6 +3211,7 @@ lime_utils_ObjectPool.prototype = {
 		if(!this.__pool.exists(object)) {
 			this.__pool.set(object,false);
 			this.clean(object);
+			this.__pool.set(object,false);
 			if(this.__inactiveObject0 == null) {
 				this.__inactiveObject0 = object;
 			} else if(this.__inactiveObject1 == null) {
@@ -2916,6 +3254,7 @@ lime_utils_ObjectPool.prototype = {
 					this.__inactiveObject1 = this.__inactiveObjectList.pop();
 				}
 			}
+			this.__pool.set(object1,true);
 			this.inactiveObjects--;
 			this.activeObjects++;
 			object = object1;
@@ -2929,9 +3268,15 @@ lime_utils_ObjectPool.prototype = {
 		return object;
 	}
 	,release: function(object) {
+		if(!this.__pool.exists(object)) {
+			lime_utils_Log.error("Object is not a member of the pool",{ fileName : "ObjectPool.hx", lineNumber : 130, className : "lime.utils.ObjectPool", methodName : "release"});
+		} else if(!this.__pool.get(object)) {
+			lime_utils_Log.error("Object has already been released",{ fileName : "ObjectPool.hx", lineNumber : 134, className : "lime.utils.ObjectPool", methodName : "release"});
+		}
 		this.activeObjects--;
 		if(this.__size == null || this.activeObjects + this.inactiveObjects < this.__size) {
 			this.clean(object);
+			this.__pool.set(object,false);
 			if(this.__inactiveObject0 == null) {
 				this.__inactiveObject0 = object;
 			} else if(this.__inactiveObject1 == null) {
@@ -2945,6 +3290,7 @@ lime_utils_ObjectPool.prototype = {
 		}
 	}
 	,__addInactive: function(object) {
+		this.__pool.set(object,false);
 		if(this.__inactiveObject0 == null) {
 			this.__inactiveObject0 = object;
 		} else if(this.__inactiveObject1 == null) {
@@ -2971,6 +3317,7 @@ lime_utils_ObjectPool.prototype = {
 				this.__inactiveObject1 = this.__inactiveObjectList.pop();
 			}
 		}
+		this.__pool.set(object,true);
 		this.inactiveObjects--;
 		this.activeObjects++;
 		return object;
@@ -18643,6 +18990,62 @@ haxepunk__$internal_FlashApp.prototype = $extend(openfl_display_Sprite.prototype
 		if(_this._scene != null && _this._scenes.length > 0 && _this._scenes[_this._scenes.length - 1] != _this._scene) {
 			var o = _this._scene;
 			var s = "ending scene: " + Type.getClassName(o == null ? null : js_Boot.getClass(o));
+			var pos_lineNumber;
+			var pos_fileName = "Engine.hx";
+			pos_lineNumber = 257;
+			var pos_className = "haxepunk.Engine";
+			var pos_methodName = "checkScene";
+			var level = 10;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this1 = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this1.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 			_this._scene.end();
 			_this._scene.updateLists();
 			if(_this._scene.autoClear && _this._scene.get_hasTween()) {
@@ -18650,7 +19053,63 @@ haxepunk__$internal_FlashApp.prototype = $extend(openfl_display_Sprite.prototype
 			}
 			_this._scene = _this._scenes[_this._scenes.length - 1];
 			var o1 = _this._scene;
-			var s1 = "starting scene: " + Type.getClassName(o1 == null ? null : js_Boot.getClass(o1));
+			var s3 = "starting scene: " + Type.getClassName(o1 == null ? null : js_Boot.getClass(o1));
+			var pos_lineNumber1;
+			var pos_fileName1 = "Engine.hx";
+			pos_lineNumber1 = 264;
+			var pos_className1 = "haxepunk.Engine";
+			var pos_methodName1 = "checkScene";
+			var level1 = 10;
+			var minLevel1 = 10;
+			if((level1 | 0) >= (minLevel1 | 0)) {
+				var p3 = null;
+				var tmp1 = haxe_Log.trace;
+				var s4 = Std.string(s3);
+				var d2 = HxOverrides.dateStr(new Date());
+				var p4 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l2;
+				switch(level1) {
+				case 20:
+					l2 = "INF";
+					break;
+				case 30:
+					l2 = "WRN";
+					break;
+				case 40:
+					l2 = "ERR";
+					break;
+				case 50:
+					l2 = "!!!";
+					break;
+				default:
+					l2 = "DBG";
+				}
+				tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this2 = haxepunk_HXP.engine.console;
+					var s5 = Std.string(s3);
+					var d3 = HxOverrides.dateStr(new Date());
+					var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+					var l3;
+					switch(level1) {
+					case 20:
+						l3 = "INF";
+						break;
+					case 30:
+						l3 = "WRN";
+						break;
+					case 40:
+						l3 = "ERR";
+						break;
+					case 50:
+						l3 = "!!!";
+						break;
+					default:
+						l3 = "DBG";
+					}
+					_this2.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+				}
+			}
 			_this._scene.updateLists();
 			_this._scene.begin();
 			_this._scene.assetCache.enable();
@@ -18927,24 +19386,136 @@ haxepunk_assets_AssetCache.prototype = {
 				var cached = __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 				if(addRef && cached != null) {
 					var s = "adding asset cache reference: " + Std.string(this) + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:51: characters 47-49) } -> " + otherCache.name + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:51: characters 47-49) }";
-					var _this4 = this.textures;
+					var pos_lineNumber;
+					var pos_fileName = "AssetMacros.hx";
+					pos_lineNumber = 22;
+					var pos_className = "haxepunk.assets.AssetCache";
+					var pos_methodName = "getTexture";
+					var level = 10;
+					var minLevel = 10;
+					if((level | 0) >= (minLevel | 0)) {
+						var p = null;
+						var tmp = haxe_Log.trace;
+						var s1 = Std.string(s);
+						var d = HxOverrides.dateStr(new Date());
+						var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l;
+						switch(level) {
+						case 20:
+							l = "INF";
+							break;
+						case 30:
+							l = "WRN";
+							break;
+						case 40:
+							l = "ERR";
+							break;
+						case 50:
+							l = "!!!";
+							break;
+						default:
+							l = "DBG";
+						}
+						tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s2 = Std.string(s);
+							var d1 = HxOverrides.dateStr(new Date());
+							var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+							var l1;
+							switch(level) {
+							case 20:
+								l1 = "INF";
+								break;
+							case 30:
+								l1 = "WRN";
+								break;
+							case 40:
+								l1 = "ERR";
+								break;
+							case 50:
+								l1 = "!!!";
+								break;
+							default:
+								l1 = "DBG";
+							}
+							_this4.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+						}
+					}
+					var _this5 = this.textures;
 					if(__map_reserved[id] != null) {
-						_this4.setReserved(id,cached);
+						_this5.setReserved(id,cached);
 					} else {
-						_this4.h[id] = cached;
+						_this5.h[id] = cached;
 					}
 				}
 				return cached;
 			}
 		}
 		var this1 = this.textures;
-		var s1 = "loading texture " + id + " into cache " + this.name;
+		var s3 = "loading texture " + id + " into cache " + this.name;
+		var pos_lineNumber1;
+		var pos_fileName1 = "AssetCache.hx";
+		pos_lineNumber1 = 52;
+		var pos_className1 = "haxepunk.assets.AssetCache";
+		var pos_methodName1 = "getTexture";
+		var level1 = 20;
+		var minLevel1 = 10;
+		if((level1 | 0) >= (minLevel1 | 0)) {
+			var p3 = null;
+			var tmp1 = haxe_Log.trace;
+			var s4 = Std.string(s3);
+			var d2 = HxOverrides.dateStr(new Date());
+			var p4 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+			var l2;
+			switch(level1) {
+			case 20:
+				l2 = "INF";
+				break;
+			case 30:
+				l2 = "WRN";
+				break;
+			case 40:
+				l2 = "ERR";
+				break;
+			case 50:
+				l2 = "!!!";
+				break;
+			default:
+				l2 = "DBG";
+			}
+			tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this6 = haxepunk_HXP.engine.console;
+				var s5 = Std.string(s3);
+				var d3 = HxOverrides.dateStr(new Date());
+				var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l3;
+				switch(level1) {
+				case 20:
+					l3 = "INF";
+					break;
+				case 30:
+					l3 = "WRN";
+					break;
+				case 40:
+					l3 = "ERR";
+					break;
+				case 50:
+					l3 = "!!!";
+					break;
+				default:
+					l3 = "DBG";
+				}
+				_this6.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+			}
+		}
 		var v = haxepunk_assets_AssetLoader.getTexture(id);
-		var _this5 = this1;
+		var _this7 = this1;
 		if(__map_reserved[id] != null) {
-			_this5.setReserved(id,v);
+			_this7.setReserved(id,v);
 		} else {
-			_this5.h[id] = v;
+			_this7.h[id] = v;
 		}
 		return v;
 	}
@@ -18965,6 +19536,63 @@ haxepunk_assets_AssetCache.prototype = {
 			}
 		}
 		if(!stillNeeded) {
+			var s = "disposing texture " + id;
+			var pos_lineNumber;
+			var pos_fileName = "AssetCache.hx";
+			pos_lineNumber = 72;
+			var pos_className = "haxepunk.assets.AssetCache";
+			var pos_methodName = "removeTexture";
+			var level = 20;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this2 = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this2.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 			texture.dispose();
 		}
 	}
@@ -19000,11 +19628,67 @@ haxepunk_assets_AssetCache.prototype = {
 				var cached = __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 				if(addRef && cached != null) {
 					var s = "adding asset cache reference: " + Std.string(this) + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:84: characters 43-45) } -> " + otherCache.name + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:84: characters 43-45) }";
-					var _this4 = this.text;
+					var pos_lineNumber;
+					var pos_fileName = "AssetMacros.hx";
+					pos_lineNumber = 22;
+					var pos_className = "haxepunk.assets.AssetCache";
+					var pos_methodName = "getText";
+					var level = 10;
+					var minLevel = 10;
+					if((level | 0) >= (minLevel | 0)) {
+						var p = null;
+						var tmp = haxe_Log.trace;
+						var s1 = Std.string(s);
+						var d = HxOverrides.dateStr(new Date());
+						var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l;
+						switch(level) {
+						case 20:
+							l = "INF";
+							break;
+						case 30:
+							l = "WRN";
+							break;
+						case 40:
+							l = "ERR";
+							break;
+						case 50:
+							l = "!!!";
+							break;
+						default:
+							l = "DBG";
+						}
+						tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s2 = Std.string(s);
+							var d1 = HxOverrides.dateStr(new Date());
+							var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+							var l1;
+							switch(level) {
+							case 20:
+								l1 = "INF";
+								break;
+							case 30:
+								l1 = "WRN";
+								break;
+							case 40:
+								l1 = "ERR";
+								break;
+							case 50:
+								l1 = "!!!";
+								break;
+							default:
+								l1 = "DBG";
+							}
+							_this4.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+						}
+					}
+					var _this5 = this.text;
 					if(__map_reserved[id] != null) {
-						_this4.setReserved(id,cached);
+						_this5.setReserved(id,cached);
 					} else {
-						_this4.h[id] = cached;
+						_this5.h[id] = cached;
 					}
 				}
 				return cached;
@@ -19012,11 +19696,11 @@ haxepunk_assets_AssetCache.prototype = {
 		}
 		var this1 = this.text;
 		var v = haxepunk_assets_AssetLoader.getText(id);
-		var _this5 = this1;
+		var _this6 = this1;
 		if(__map_reserved[id] != null) {
-			_this5.setReserved(id,v);
+			_this6.setReserved(id,v);
 		} else {
-			_this5.h[id] = v;
+			_this6.h[id] = v;
 		}
 		return v;
 	}
@@ -19057,13 +19741,69 @@ haxepunk_assets_AssetCache.prototype = {
 				var cached = __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 				if(addRef && cached != null) {
 					var s = "adding asset cache reference: " + Std.string(this) + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:99: characters 45-47) } -> " + otherCache.name + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:99: characters 45-47) }";
+					var pos_lineNumber;
+					var pos_fileName = "AssetMacros.hx";
+					pos_lineNumber = 22;
+					var pos_className = "haxepunk.assets.AssetCache";
+					var pos_methodName = "getSound";
+					var level = 10;
+					var minLevel = 10;
+					if((level | 0) >= (minLevel | 0)) {
+						var p = null;
+						var tmp = haxe_Log.trace;
+						var s1 = Std.string(s);
+						var d = HxOverrides.dateStr(new Date());
+						var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l;
+						switch(level) {
+						case 20:
+							l = "INF";
+							break;
+						case 30:
+							l = "WRN";
+							break;
+						case 40:
+							l = "ERR";
+							break;
+						case 50:
+							l = "!!!";
+							break;
+						default:
+							l = "DBG";
+						}
+						tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s2 = Std.string(s);
+							var d1 = HxOverrides.dateStr(new Date());
+							var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+							var l1;
+							switch(level) {
+							case 20:
+								l1 = "INF";
+								break;
+							case 30:
+								l1 = "WRN";
+								break;
+							case 40:
+								l1 = "ERR";
+								break;
+							case 50:
+								l1 = "!!!";
+								break;
+							default:
+								l1 = "DBG";
+							}
+							_this4.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+						}
+					}
 					var v = cached;
-					var _this4 = this.sounds;
+					var _this5 = this.sounds;
 					var value = v;
 					if(__map_reserved[id] != null) {
-						_this4.setReserved(id,value);
+						_this5.setReserved(id,value);
 					} else {
-						_this4.h[id] = value;
+						_this5.h[id] = value;
 					}
 				}
 				return cached;
@@ -19071,12 +19811,12 @@ haxepunk_assets_AssetCache.prototype = {
 		}
 		var this1 = this.sounds;
 		var v1 = haxepunk_assets_AssetLoader.getSound(id);
-		var _this5 = this1;
+		var _this6 = this1;
 		var value1 = v1;
 		if(__map_reserved[id] != null) {
-			_this5.setReserved(id,value1);
+			_this6.setReserved(id,value1);
 		} else {
-			_this5.h[id] = value1;
+			_this6.h[id] = value1;
 		}
 		return v1;
 	}
@@ -19115,11 +19855,67 @@ haxepunk_assets_AssetCache.prototype = {
 				var cached = __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 				if(addRef && cached != null) {
 					var s = "adding asset cache reference: " + Std.string(this) + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:114: characters 50-52) } -> " + otherCache.name + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:114: characters 50-52) }";
-					var _this4 = this.tileAtlases;
+					var pos_lineNumber;
+					var pos_fileName = "AssetMacros.hx";
+					pos_lineNumber = 22;
+					var pos_className = "haxepunk.assets.AssetCache";
+					var pos_methodName = "getTileAtlas";
+					var level = 10;
+					var minLevel = 10;
+					if((level | 0) >= (minLevel | 0)) {
+						var p = null;
+						var tmp = haxe_Log.trace;
+						var s1 = Std.string(s);
+						var d = HxOverrides.dateStr(new Date());
+						var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l;
+						switch(level) {
+						case 20:
+							l = "INF";
+							break;
+						case 30:
+							l = "WRN";
+							break;
+						case 40:
+							l = "ERR";
+							break;
+						case 50:
+							l = "!!!";
+							break;
+						default:
+							l = "DBG";
+						}
+						tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s2 = Std.string(s);
+							var d1 = HxOverrides.dateStr(new Date());
+							var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+							var l1;
+							switch(level) {
+							case 20:
+								l1 = "INF";
+								break;
+							case 30:
+								l1 = "WRN";
+								break;
+							case 40:
+								l1 = "ERR";
+								break;
+							case 50:
+								l1 = "!!!";
+								break;
+							default:
+								l1 = "DBG";
+							}
+							_this4.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+						}
+					}
+					var _this5 = this.tileAtlases;
 					if(__map_reserved[id] != null) {
-						_this4.setReserved(id,cached);
+						_this5.setReserved(id,cached);
 					} else {
-						_this4.h[id] = cached;
+						_this5.h[id] = cached;
 					}
 				}
 				return cached;
@@ -19130,11 +19926,11 @@ haxepunk_assets_AssetCache.prototype = {
 		var this2 = new haxepunk_graphics_atlas_AtlasData(texture);
 		var atlas = new haxepunk_graphics_atlas_TileAtlas(this2);
 		var v = atlas;
-		var _this5 = this1;
+		var _this6 = this1;
 		if(__map_reserved[id] != null) {
-			_this5.setReserved(id,v);
+			_this6.setReserved(id,v);
 		} else {
-			_this5.h[id] = v;
+			_this6.h[id] = v;
 		}
 		return v;
 	}
@@ -19173,11 +19969,67 @@ haxepunk_assets_AssetCache.prototype = {
 				var cached = __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 				if(addRef && cached != null) {
 					var s = "adding asset cache reference: " + Std.string(this) + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:133: characters 48-50) } -> " + otherCache.name + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:133: characters 48-50) }";
-					var _this4 = this.atlasData;
+					var pos_lineNumber;
+					var pos_fileName = "AssetMacros.hx";
+					pos_lineNumber = 22;
+					var pos_className = "haxepunk.assets.AssetCache";
+					var pos_methodName = "getAtlasData";
+					var level = 10;
+					var minLevel = 10;
+					if((level | 0) >= (minLevel | 0)) {
+						var p = null;
+						var tmp = haxe_Log.trace;
+						var s1 = Std.string(s);
+						var d = HxOverrides.dateStr(new Date());
+						var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l;
+						switch(level) {
+						case 20:
+							l = "INF";
+							break;
+						case 30:
+							l = "WRN";
+							break;
+						case 40:
+							l = "ERR";
+							break;
+						case 50:
+							l = "!!!";
+							break;
+						default:
+							l = "DBG";
+						}
+						tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s2 = Std.string(s);
+							var d1 = HxOverrides.dateStr(new Date());
+							var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+							var l1;
+							switch(level) {
+							case 20:
+								l1 = "INF";
+								break;
+							case 30:
+								l1 = "WRN";
+								break;
+							case 40:
+								l1 = "ERR";
+								break;
+							case 50:
+								l1 = "!!!";
+								break;
+							default:
+								l1 = "DBG";
+							}
+							_this4.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+						}
+					}
+					var _this5 = this.atlasData;
 					if(__map_reserved[id] != null) {
-						_this4.setReserved(id,cached);
+						_this5.setReserved(id,cached);
 					} else {
-						_this4.h[id] = cached;
+						_this5.h[id] = cached;
 					}
 				}
 				return cached;
@@ -19185,11 +20037,11 @@ haxepunk_assets_AssetCache.prototype = {
 		}
 		var this1 = this.atlasData;
 		var v = new haxepunk_graphics_atlas_AtlasData(this.getTexture(id),id);
-		var _this5 = this1;
+		var _this6 = this1;
 		if(__map_reserved[id] != null) {
-			_this5.setReserved(id,v);
+			_this6.setReserved(id,v);
 		} else {
-			_this5.h[id] = v;
+			_this6.h[id] = v;
 		}
 		return v;
 	}
@@ -19228,11 +20080,67 @@ haxepunk_assets_AssetCache.prototype = {
 				var cached = __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 				if(addRef && cached != null) {
 					var s = "adding asset cache reference: " + Std.string(this) + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:148: characters 46-48) } -> " + otherCache.name + ":{ expr => EConst(CIdent(id)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:148: characters 46-48) }";
-					var _this4 = this.regions;
+					var pos_lineNumber;
+					var pos_fileName = "AssetMacros.hx";
+					pos_lineNumber = 22;
+					var pos_className = "haxepunk.assets.AssetCache";
+					var pos_methodName = "getAtlasRegion";
+					var level = 10;
+					var minLevel = 10;
+					if((level | 0) >= (minLevel | 0)) {
+						var p = null;
+						var tmp = haxe_Log.trace;
+						var s1 = Std.string(s);
+						var d = HxOverrides.dateStr(new Date());
+						var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l;
+						switch(level) {
+						case 20:
+							l = "INF";
+							break;
+						case 30:
+							l = "WRN";
+							break;
+						case 40:
+							l = "ERR";
+							break;
+						case 50:
+							l = "!!!";
+							break;
+						default:
+							l = "DBG";
+						}
+						tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s2 = Std.string(s);
+							var d1 = HxOverrides.dateStr(new Date());
+							var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+							var l1;
+							switch(level) {
+							case 20:
+								l1 = "INF";
+								break;
+							case 30:
+								l1 = "WRN";
+								break;
+							case 40:
+								l1 = "ERR";
+								break;
+							case 50:
+								l1 = "!!!";
+								break;
+							default:
+								l1 = "DBG";
+							}
+							_this4.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+						}
+					}
+					var _this5 = this.regions;
 					if(__map_reserved[id] != null) {
-						_this4.setReserved(id,cached);
+						_this5.setReserved(id,cached);
 					} else {
-						_this4.h[id] = cached;
+						_this5.h[id] = cached;
 					}
 				}
 				return cached;
@@ -19242,11 +20150,11 @@ haxepunk_assets_AssetCache.prototype = {
 		var data = this.getAtlasData(id);
 		var this2 = data;
 		var v = haxepunk_graphics_atlas_Atlas.loadImageAsRegion(this2);
-		var _this5 = this1;
+		var _this6 = this1;
 		if(__map_reserved[id] != null) {
-			_this5.setReserved(id,v);
+			_this6.setReserved(id,v);
 		} else {
-			_this5.h[id] = v;
+			_this6.h[id] = v;
 		}
 		return v;
 	}
@@ -19285,21 +20193,77 @@ haxepunk_assets_AssetCache.prototype = {
 				var cached = __map_reserved[fontName] != null ? _this3.getReserved(fontName) : _this3.h[fontName];
 				if(addRef && cached != null) {
 					var s = "adding asset cache reference: " + Std.string(this) + ":{ expr => EConst(CIdent(fontName)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:166: characters 50-58) } -> " + otherCache.name + ":{ expr => EConst(CIdent(fontName)), pos => #pos(/home/travis/haxe/lib/HaxePunk/4,0,1/haxepunk/assets/AssetCache.hx:166: characters 50-58) }";
-					var _this4 = this.bitmapFonts;
+					var pos_lineNumber;
+					var pos_fileName = "AssetMacros.hx";
+					pos_lineNumber = 22;
+					var pos_className = "haxepunk.assets.AssetCache";
+					var pos_methodName = "getBitmapFont";
+					var level = 10;
+					var minLevel = 10;
+					if((level | 0) >= (minLevel | 0)) {
+						var p = null;
+						var tmp = haxe_Log.trace;
+						var s1 = Std.string(s);
+						var d = HxOverrides.dateStr(new Date());
+						var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l;
+						switch(level) {
+						case 20:
+							l = "INF";
+							break;
+						case 30:
+							l = "WRN";
+							break;
+						case 40:
+							l = "ERR";
+							break;
+						case 50:
+							l = "!!!";
+							break;
+						default:
+							l = "DBG";
+						}
+						tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s2 = Std.string(s);
+							var d1 = HxOverrides.dateStr(new Date());
+							var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+							var l1;
+							switch(level) {
+							case 20:
+								l1 = "INF";
+								break;
+							case 30:
+								l1 = "WRN";
+								break;
+							case 40:
+								l1 = "ERR";
+								break;
+							case 50:
+								l1 = "!!!";
+								break;
+							default:
+								l1 = "DBG";
+							}
+							_this4.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+						}
+					}
+					var _this5 = this.bitmapFonts;
 					if(__map_reserved[fontName] != null) {
-						_this4.setReserved(fontName,cached);
+						_this5.setReserved(fontName,cached);
 					} else {
-						_this4.h[fontName] = cached;
+						_this5.h[fontName] = cached;
 					}
 				}
 				return cached;
 			}
 		}
-		var _this5 = this.bitmapFonts;
+		var _this6 = this.bitmapFonts;
 		if(__map_reserved[fontName] != null) {
-			_this5.setReserved(fontName,null);
+			_this6.setReserved(fontName,null);
 		} else {
-			_this5.h[fontName] = null;
+			_this6.h[fontName] = null;
 		}
 		return null;
 	}
@@ -19385,12 +20349,124 @@ haxepunk_assets_AssetCache.prototype = {
 		if(haxepunk_assets_AssetCache.active.indexOf(this) <= -1) {
 			haxepunk_assets_AssetCache.active.push(this);
 			var s = "enabled asset cache " + this.name;
+			var pos_lineNumber;
+			var pos_fileName = "AssetCache.hx";
+			pos_lineNumber = 242;
+			var pos_className = "haxepunk.assets.AssetCache";
+			var pos_methodName = "enable";
+			var level = 10;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 		}
 	}
 	,dispose: function() {
 		if(haxepunk_assets_AssetCache.active.indexOf(this) > -1) {
 			var pos = haxepunk_assets_AssetCache.active.indexOf(this);
 			var s = "disposing asset cache " + this.name;
+			var pos_lineNumber;
+			var pos_fileName = "AssetCache.hx";
+			pos_lineNumber = 251;
+			var pos_className = "haxepunk.assets.AssetCache";
+			var pos_methodName = "dispose";
+			var level = 10;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 			HxOverrides.remove(haxepunk_assets_AssetCache.active,this);
 			var key = this.textures.keys();
 			while(key.hasNext()) {
@@ -24396,6 +25472,63 @@ haxepunk_graphics_atlas_TileAtlas.prototype = $extend(haxepunk_graphics_atlas_At
 		if(tileHeight == 0) {
 			tileHeight = this._data.height;
 		}
+		var s = "preparing tile atlas: " + tileWidth + " x " + tileHeight + ", margin " + tileMarginWidth + " x " + tileMarginHeight + ", offset " + tileOffsetX + " x " + tileOffsetY;
+		var pos_lineNumber;
+		var pos_fileName = "TileAtlas.hx";
+		pos_lineNumber = 148;
+		var pos_className = "haxepunk.graphics.atlas.TileAtlas";
+		var pos_methodName = "prepare";
+		var level = 10;
+		var minLevel = 10;
+		if((level | 0) >= (minLevel | 0)) {
+			var p = null;
+			var tmp = haxe_Log.trace;
+			var s1 = Std.string(s);
+			var d = HxOverrides.dateStr(new Date());
+			var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l;
+			switch(level) {
+			case 20:
+				l = "INF";
+				break;
+			case 30:
+				l = "WRN";
+				break;
+			case 40:
+				l = "ERR";
+				break;
+			case 50:
+				l = "!!!";
+				break;
+			default:
+				l = "DBG";
+			}
+			tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this = haxepunk_HXP.engine.console;
+				var s2 = Std.string(s);
+				var d1 = HxOverrides.dateStr(new Date());
+				var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l1;
+				switch(level) {
+				case 20:
+					l1 = "INF";
+					break;
+				case 30:
+					l1 = "WRN";
+					break;
+				case 40:
+					l1 = "ERR";
+					break;
+				case 50:
+					l1 = "!!!";
+					break;
+				default:
+					l1 = "DBG";
+				}
+				_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+			}
+		}
 		this._tileWidth = tileWidth;
 		this._tileHeight = tileHeight;
 		this._tileMarginWidth = tileMarginWidth;
@@ -27145,6 +28278,62 @@ haxepunk_graphics_hardware_HardwareRenderer.prototype = {
 		var error = lime_graphics_opengl_GL.context.__context.getError();
 		if(error != 0) {
 			var s = "GL Error found at " + pos_fileName + ":" + pos_lineNumber + ": " + error;
+			var pos_lineNumber1;
+			var pos_fileName1 = "GLUtils.hx";
+			pos_lineNumber1 = 35;
+			var pos_className1 = "haxepunk.graphics.hardware.opengl.GLUtils";
+			var pos_methodName1 = "checkForErrors";
+			var level = 40;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 		}
 		var x = this.x;
 		var y = this.y;
@@ -27192,37 +28381,205 @@ haxepunk_graphics_hardware_HardwareRenderer.prototype = {
 				var location = shader.uniformIndices.get("uMatrix");
 				var v1 = lime_utils__$DataPointer_DataPointer_$Impl_$.fromArrayBufferView(haxepunk_graphics_hardware_HardwareRenderer._ortho);
 				lime_graphics_opengl_GL.context.__context.uniformMatrix4fv(location,false,lime_utils__$DataPointer_DataPointer_$Impl_$.toFloat32Array(v1,64));
-				var pos_lineNumber1;
-				var pos_fileName1 = "HardwareRenderer.hx";
-				pos_lineNumber1 = 132;
-				var pos_className1 = "haxepunk.graphics.hardware.HardwareRenderer";
-				var pos_methodName1 = "render";
+				var pos_lineNumber2;
+				var pos_fileName2 = "HardwareRenderer.hx";
+				pos_lineNumber2 = 132;
+				var pos_className2 = "haxepunk.graphics.hardware.HardwareRenderer";
+				var pos_methodName2 = "render";
 				var error1 = lime_graphics_opengl_GL.context.__context.getError();
 				if(error1 != 0) {
-					var s1 = "GL Error found at " + pos_fileName1 + ":" + pos_lineNumber1 + ": " + error1;
+					var s3 = "GL Error found at " + pos_fileName2 + ":" + pos_lineNumber2 + ": " + error1;
+					var pos_lineNumber3;
+					var pos_fileName3 = "GLUtils.hx";
+					pos_lineNumber3 = 35;
+					var pos_className3 = "haxepunk.graphics.hardware.opengl.GLUtils";
+					var pos_methodName3 = "checkForErrors";
+					var level1 = 40;
+					var minLevel1 = 10;
+					if((level1 | 0) >= (minLevel1 | 0)) {
+						var p3 = null;
+						var tmp1 = haxe_Log.trace;
+						var s4 = Std.string(s3);
+						var d2 = HxOverrides.dateStr(new Date());
+						var p4 = StringTools.lpad(pos_fileName3," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber3 == null ? "null" : "" + pos_lineNumber3," ",4) + ":";
+						var l2;
+						switch(level1) {
+						case 20:
+							l2 = "INF";
+							break;
+						case 30:
+							l2 = "WRN";
+							break;
+						case 40:
+							l2 = "ERR";
+							break;
+						case 50:
+							l2 = "!!!";
+							break;
+						default:
+							l2 = "DBG";
+						}
+						tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this1 = haxepunk_HXP.engine.console;
+							var s5 = Std.string(s3);
+							var d3 = HxOverrides.dateStr(new Date());
+							var p5 = StringTools.lpad(pos_fileName3," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber3 == null ? "null" : "" + pos_lineNumber3," ",4) + ":";
+							var l3;
+							switch(level1) {
+							case 20:
+								l3 = "INF";
+								break;
+							case 30:
+								l3 = "WRN";
+								break;
+							case 40:
+								l3 = "ERR";
+								break;
+							case 50:
+								l3 = "!!!";
+								break;
+							default:
+								l3 = "DBG";
+							}
+							_this1.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+						}
+					}
 				}
 				var texture = drawCommand.texture;
 				if(texture != null) {
 					haxepunk_graphics_hardware_opengl_GLUtils.bindTexture(texture,drawCommand.smooth);
 				}
-				var pos_lineNumber2;
-				var pos_fileName2 = "HardwareRenderer.hx";
-				pos_lineNumber2 = 136;
-				var pos_className2 = "haxepunk.graphics.hardware.HardwareRenderer";
-				var pos_methodName2 = "render";
+				var pos_lineNumber4;
+				var pos_fileName4 = "HardwareRenderer.hx";
+				pos_lineNumber4 = 136;
+				var pos_className4 = "haxepunk.graphics.hardware.HardwareRenderer";
+				var pos_methodName4 = "render";
 				var error2 = lime_graphics_opengl_GL.context.__context.getError();
 				if(error2 != 0) {
-					var s2 = "GL Error found at " + pos_fileName2 + ":" + pos_lineNumber2 + ": " + error2;
+					var s6 = "GL Error found at " + pos_fileName4 + ":" + pos_lineNumber4 + ": " + error2;
+					var pos_lineNumber5;
+					var pos_fileName5 = "GLUtils.hx";
+					pos_lineNumber5 = 35;
+					var pos_className5 = "haxepunk.graphics.hardware.opengl.GLUtils";
+					var pos_methodName5 = "checkForErrors";
+					var level2 = 40;
+					var minLevel2 = 10;
+					if((level2 | 0) >= (minLevel2 | 0)) {
+						var p6 = null;
+						var tmp2 = haxe_Log.trace;
+						var s7 = Std.string(s6);
+						var d4 = HxOverrides.dateStr(new Date());
+						var p7 = StringTools.lpad(pos_fileName5," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber5 == null ? "null" : "" + pos_lineNumber5," ",4) + ":";
+						var l4;
+						switch(level2) {
+						case 20:
+							l4 = "INF";
+							break;
+						case 30:
+							l4 = "WRN";
+							break;
+						case 40:
+							l4 = "ERR";
+							break;
+						case 50:
+							l4 = "!!!";
+							break;
+						default:
+							l4 = "DBG";
+						}
+						tmp2("" + d4 + " " + p7 + "  " + l4 + ": " + s7,p6);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this2 = haxepunk_HXP.engine.console;
+							var s8 = Std.string(s6);
+							var d5 = HxOverrides.dateStr(new Date());
+							var p8 = StringTools.lpad(pos_fileName5," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber5 == null ? "null" : "" + pos_lineNumber5," ",4) + ":";
+							var l5;
+							switch(level2) {
+							case 20:
+								l5 = "INF";
+								break;
+							case 30:
+								l5 = "WRN";
+								break;
+							case 40:
+								l5 = "ERR";
+								break;
+							case 50:
+								l5 = "!!!";
+								break;
+							default:
+								l5 = "DBG";
+							}
+							_this2.logPanel.log("" + d5 + " " + p8 + "  " + l5 + ": " + s8);
+						}
+					}
 				}
 				shader.prepare(drawCommand,this.buffer);
-				var pos_lineNumber3;
-				var pos_fileName3 = "HardwareRenderer.hx";
-				pos_lineNumber3 = 140;
-				var pos_className3 = "haxepunk.graphics.hardware.HardwareRenderer";
-				var pos_methodName3 = "render";
+				var pos_lineNumber6;
+				var pos_fileName6 = "HardwareRenderer.hx";
+				pos_lineNumber6 = 140;
+				var pos_className6 = "haxepunk.graphics.hardware.HardwareRenderer";
+				var pos_methodName6 = "render";
 				var error3 = lime_graphics_opengl_GL.context.__context.getError();
 				if(error3 != 0) {
-					var s3 = "GL Error found at " + pos_fileName3 + ":" + pos_lineNumber3 + ": " + error3;
+					var s9 = "GL Error found at " + pos_fileName6 + ":" + pos_lineNumber6 + ": " + error3;
+					var pos_lineNumber7;
+					var pos_fileName7 = "GLUtils.hx";
+					pos_lineNumber7 = 35;
+					var pos_className7 = "haxepunk.graphics.hardware.opengl.GLUtils";
+					var pos_methodName7 = "checkForErrors";
+					var level3 = 40;
+					var minLevel3 = 10;
+					if((level3 | 0) >= (minLevel3 | 0)) {
+						var p9 = null;
+						var tmp3 = haxe_Log.trace;
+						var s10 = Std.string(s9);
+						var d6 = HxOverrides.dateStr(new Date());
+						var p10 = StringTools.lpad(pos_fileName7," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber7 == null ? "null" : "" + pos_lineNumber7," ",4) + ":";
+						var l6;
+						switch(level3) {
+						case 20:
+							l6 = "INF";
+							break;
+						case 30:
+							l6 = "WRN";
+							break;
+						case 40:
+							l6 = "ERR";
+							break;
+						case 50:
+							l6 = "!!!";
+							break;
+						default:
+							l6 = "DBG";
+						}
+						tmp3("" + d6 + " " + p10 + "  " + l6 + ": " + s10,p9);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this3 = haxepunk_HXP.engine.console;
+							var s11 = Std.string(s9);
+							var d7 = HxOverrides.dateStr(new Date());
+							var p11 = StringTools.lpad(pos_fileName7," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber7 == null ? "null" : "" + pos_lineNumber7," ",4) + ":";
+							var l7;
+							switch(level3) {
+							case 20:
+								l7 = "INF";
+								break;
+							case 30:
+								l7 = "WRN";
+								break;
+							case 40:
+								l7 = "ERR";
+								break;
+							case 50:
+								l7 = "!!!";
+								break;
+							default:
+								l7 = "DBG";
+							}
+							_this3.logPanel.log("" + d7 + " " + p11 + "  " + l7 + ": " + s11);
+						}
+					}
 				}
 				switch(drawCommand.blend) {
 				case 0:
@@ -27253,26 +28610,138 @@ haxepunk_graphics_hardware_HardwareRenderer.prototype = {
 				lime_graphics_opengl_GL.context.__context.scissor(x,haxepunk_HXP.windowHeight - y - height,width,height);
 				lime_graphics_opengl_GL.context.__context.enable(3089);
 				lime_graphics_opengl_GL.context.__context.drawArrays(4,0,triangles * 3);
-				var pos_lineNumber4;
-				var pos_fileName4 = "HardwareRenderer.hx";
-				pos_lineNumber4 = 155;
-				var pos_className4 = "haxepunk.graphics.hardware.HardwareRenderer";
-				var pos_methodName4 = "render";
+				var pos_lineNumber8;
+				var pos_fileName8 = "HardwareRenderer.hx";
+				pos_lineNumber8 = 155;
+				var pos_className8 = "haxepunk.graphics.hardware.HardwareRenderer";
+				var pos_methodName8 = "render";
 				var error4 = lime_graphics_opengl_GL.context.__context.getError();
 				if(error4 != 0) {
-					var s4 = "GL Error found at " + pos_fileName4 + ":" + pos_lineNumber4 + ": " + error4;
+					var s12 = "GL Error found at " + pos_fileName8 + ":" + pos_lineNumber8 + ": " + error4;
+					var pos_lineNumber9;
+					var pos_fileName9 = "GLUtils.hx";
+					pos_lineNumber9 = 35;
+					var pos_className9 = "haxepunk.graphics.hardware.opengl.GLUtils";
+					var pos_methodName9 = "checkForErrors";
+					var level4 = 40;
+					var minLevel4 = 10;
+					if((level4 | 0) >= (minLevel4 | 0)) {
+						var p12 = null;
+						var tmp4 = haxe_Log.trace;
+						var s13 = Std.string(s12);
+						var d8 = HxOverrides.dateStr(new Date());
+						var p13 = StringTools.lpad(pos_fileName9," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber9 == null ? "null" : "" + pos_lineNumber9," ",4) + ":";
+						var l8;
+						switch(level4) {
+						case 20:
+							l8 = "INF";
+							break;
+						case 30:
+							l8 = "WRN";
+							break;
+						case 40:
+							l8 = "ERR";
+							break;
+						case 50:
+							l8 = "!!!";
+							break;
+						default:
+							l8 = "DBG";
+						}
+						tmp4("" + d8 + " " + p13 + "  " + l8 + ": " + s13,p12);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this4 = haxepunk_HXP.engine.console;
+							var s14 = Std.string(s12);
+							var d9 = HxOverrides.dateStr(new Date());
+							var p14 = StringTools.lpad(pos_fileName9," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber9 == null ? "null" : "" + pos_lineNumber9," ",4) + ":";
+							var l9;
+							switch(level4) {
+							case 20:
+								l9 = "INF";
+								break;
+							case 30:
+								l9 = "WRN";
+								break;
+							case 40:
+								l9 = "ERR";
+								break;
+							case 50:
+								l9 = "!!!";
+								break;
+							default:
+								l9 = "DBG";
+							}
+							_this4.logPanel.log("" + d9 + " " + p14 + "  " + l9 + ": " + s14);
+						}
+					}
 				}
 				lime_graphics_opengl_GL.context.__context.disable(3089);
 				lime_graphics_opengl_GL.context.__context.bindBuffer(34962,null);
 				shader.unbind();
-				var pos_lineNumber5;
-				var pos_fileName5 = "HardwareRenderer.hx";
-				pos_lineNumber5 = 162;
-				var pos_className5 = "haxepunk.graphics.hardware.HardwareRenderer";
-				var pos_methodName5 = "render";
+				var pos_lineNumber10;
+				var pos_fileName10 = "HardwareRenderer.hx";
+				pos_lineNumber10 = 162;
+				var pos_className10 = "haxepunk.graphics.hardware.HardwareRenderer";
+				var pos_methodName10 = "render";
 				var error5 = lime_graphics_opengl_GL.context.__context.getError();
 				if(error5 != 0) {
-					var s5 = "GL Error found at " + pos_fileName5 + ":" + pos_lineNumber5 + ": " + error5;
+					var s15 = "GL Error found at " + pos_fileName10 + ":" + pos_lineNumber10 + ": " + error5;
+					var pos_lineNumber11;
+					var pos_fileName11 = "GLUtils.hx";
+					pos_lineNumber11 = 35;
+					var pos_className11 = "haxepunk.graphics.hardware.opengl.GLUtils";
+					var pos_methodName11 = "checkForErrors";
+					var level5 = 40;
+					var minLevel5 = 10;
+					if((level5 | 0) >= (minLevel5 | 0)) {
+						var p15 = null;
+						var tmp5 = haxe_Log.trace;
+						var s16 = Std.string(s15);
+						var d10 = HxOverrides.dateStr(new Date());
+						var p16 = StringTools.lpad(pos_fileName11," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber11 == null ? "null" : "" + pos_lineNumber11," ",4) + ":";
+						var l10;
+						switch(level5) {
+						case 20:
+							l10 = "INF";
+							break;
+						case 30:
+							l10 = "WRN";
+							break;
+						case 40:
+							l10 = "ERR";
+							break;
+						case 50:
+							l10 = "!!!";
+							break;
+						default:
+							l10 = "DBG";
+						}
+						tmp5("" + d10 + " " + p16 + "  " + l10 + ": " + s16,p15);
+						if(haxepunk_HXP.engine.console != null) {
+							var _this5 = haxepunk_HXP.engine.console;
+							var s17 = Std.string(s15);
+							var d11 = HxOverrides.dateStr(new Date());
+							var p17 = StringTools.lpad(pos_fileName11," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber11 == null ? "null" : "" + pos_lineNumber11," ",4) + ":";
+							var l11;
+							switch(level5) {
+							case 20:
+								l11 = "INF";
+								break;
+							case 30:
+								l11 = "WRN";
+								break;
+							case 40:
+								l11 = "ERR";
+								break;
+							case 50:
+								l11 = "!!!";
+								break;
+							default:
+								l11 = "DBG";
+							}
+							_this5.logPanel.log("" + d11 + " " + p17 + "  " + l11 + ": " + s17);
+						}
+					}
 				}
 			}
 		}
@@ -27626,6 +29095,62 @@ haxepunk_graphics_hardware_opengl_GLUtils.checkForErrors = function(pos) {
 	var error = lime_graphics_opengl_GL.context.__context.getError();
 	if(error != 0) {
 		var s = "GL Error found at " + pos.fileName + ":" + pos.lineNumber + ": " + error;
+		var pos_lineNumber;
+		var pos_fileName = "GLUtils.hx";
+		pos_lineNumber = 35;
+		var pos_className = "haxepunk.graphics.hardware.opengl.GLUtils";
+		var pos_methodName = "checkForErrors";
+		var level = 40;
+		var minLevel = 10;
+		if((level | 0) >= (minLevel | 0)) {
+			var p = null;
+			var tmp = haxe_Log.trace;
+			var s1 = Std.string(s);
+			var d = HxOverrides.dateStr(new Date());
+			var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l;
+			switch(level) {
+			case 20:
+				l = "INF";
+				break;
+			case 30:
+				l = "WRN";
+				break;
+			case 40:
+				l = "ERR";
+				break;
+			case 50:
+				l = "!!!";
+				break;
+			default:
+				l = "DBG";
+			}
+			tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this = haxepunk_HXP.engine.console;
+				var s2 = Std.string(s);
+				var d1 = HxOverrides.dateStr(new Date());
+				var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l1;
+				switch(level) {
+				case 20:
+					l1 = "INF";
+					break;
+				case 30:
+					l1 = "WRN";
+					break;
+				case 40:
+					l1 = "ERR";
+					break;
+				case 50:
+					l1 = "!!!";
+					break;
+				default:
+					l1 = "DBG";
+				}
+				_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+			}
+		}
 	}
 };
 haxepunk_graphics_hardware_opengl_GLUtils.invalid = function(obj) {
@@ -27645,6 +29170,62 @@ var haxepunk_graphics_shader_Shader = function(vertexSource,fragmentSource) {
 	this.build();
 	this.id = haxepunk_graphics_shader_Shader.idSeq++;
 	var s = "Shader #" + haxepunk_graphics_shader_Shader.idSeq + " initialized";
+	var pos_lineNumber;
+	var pos_fileName = "Shader.hx";
+	pos_lineNumber = 104;
+	var pos_className = "haxepunk.graphics.shader.Shader";
+	var pos_methodName = "new";
+	var level = 20;
+	var minLevel = 10;
+	if((level | 0) >= (minLevel | 0)) {
+		var p = null;
+		var tmp = haxe_Log.trace;
+		var s1 = Std.string(s);
+		var d = HxOverrides.dateStr(new Date());
+		var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+		var l;
+		switch(level) {
+		case 20:
+			l = "INF";
+			break;
+		case 30:
+			l = "WRN";
+			break;
+		case 40:
+			l = "ERR";
+			break;
+		case 50:
+			l = "!!!";
+			break;
+		default:
+			l = "DBG";
+		}
+		tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+		if(haxepunk_HXP.engine.console != null) {
+			var _this = haxepunk_HXP.engine.console;
+			var s2 = Std.string(s);
+			var d1 = HxOverrides.dateStr(new Date());
+			var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l1;
+			switch(level) {
+			case 20:
+				l1 = "INF";
+				break;
+			case 30:
+				l1 = "WRN";
+				break;
+			case 40:
+				l1 = "ERR";
+				break;
+			case 50:
+				l1 = "!!!";
+				break;
+			default:
+				l1 = "DBG";
+			}
+			_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+		}
+	}
 };
 $hxClasses["haxepunk.graphics.shader.Shader"] = haxepunk_graphics_shader_Shader;
 haxepunk_graphics_shader_Shader.__name__ = ["haxepunk","graphics","shader","Shader"];
@@ -27845,6 +29426,62 @@ haxepunk_graphics_shader_Shader.prototype = {
 		var error = lime_graphics_opengl_GL.context.__context.getError();
 		if(error != 0) {
 			var s = "GL Error found at " + pos_fileName + ":" + pos_lineNumber + ": " + error;
+			var pos_lineNumber1;
+			var pos_fileName1 = "GLUtils.hx";
+			pos_lineNumber1 = 35;
+			var pos_className1 = "haxepunk.graphics.hardware.opengl.GLUtils";
+			var pos_methodName1 = "checkForErrors";
+			var level = 40;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this3 = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this3.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 		}
 	}
 	,unbind: function() {
@@ -27913,20 +29550,76 @@ haxepunk_graphics_shader_Shader.prototype = {
 			attrib.rebind();
 			if(attrib.index == -1) {
 				var s = "attribute '" + attrib.name + "' is not declared or not used in shader source.";
+				var pos_lineNumber;
+				var pos_fileName = "Shader.hx";
+				pos_lineNumber = 36;
+				var pos_className = "haxepunk.graphics.shader.Attribute";
+				var pos_methodName = "set_name";
+				var level = 30;
+				var minLevel = 10;
+				if((level | 0) >= (minLevel | 0)) {
+					var p = null;
+					var tmp = haxe_Log.trace;
+					var s1 = Std.string(s);
+					var d = HxOverrides.dateStr(new Date());
+					var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l;
+					switch(level) {
+					case 20:
+						l = "INF";
+						break;
+					case 30:
+						l = "WRN";
+						break;
+					case 40:
+						l = "ERR";
+						break;
+					case 50:
+						l = "!!!";
+						break;
+					default:
+						l = "DBG";
+					}
+					tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+					if(haxepunk_HXP.engine.console != null) {
+						var _this1 = haxepunk_HXP.engine.console;
+						var s2 = Std.string(s);
+						var d1 = HxOverrides.dateStr(new Date());
+						var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l1;
+						switch(level) {
+						case 20:
+							l1 = "INF";
+							break;
+						case 30:
+							l1 = "WRN";
+							break;
+						case 40:
+							l1 = "ERR";
+							break;
+						case 50:
+							l1 = "!!!";
+							break;
+						default:
+							l1 = "DBG";
+						}
+						_this1.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+					}
+				}
 			}
-			var _this1 = this.attributes;
+			var _this2 = this.attributes;
 			if(__map_reserved[name] != null) {
-				_this1.setReserved(name,attrib);
+				_this2.setReserved(name,attrib);
 			} else {
-				_this1.h[name] = attrib;
+				_this2.h[name] = attrib;
 			}
 			this.attributeNames.push(name);
 		} else {
-			var _this2 = this.attributes;
+			var _this3 = this.attributes;
 			if(__map_reserved[name] != null) {
-				attrib = _this2.getReserved(name);
+				attrib = _this3.getReserved(name);
 			} else {
-				attrib = _this2.h[name];
+				attrib = _this3.h[name];
 			}
 		}
 		attrib.set_data(values);
@@ -27960,12 +29653,124 @@ var haxepunk_graphics_shader_ColorShader = function(fragment) {
 	_this.rebind();
 	if(_this.index == -1) {
 		var s = "attribute '" + _this.name + "' is not declared or not used in shader source.";
+		var pos_lineNumber;
+		var pos_fileName = "Shader.hx";
+		pos_lineNumber = 36;
+		var pos_className = "haxepunk.graphics.shader.Attribute";
+		var pos_methodName = "set_name";
+		var level = 30;
+		var minLevel = 10;
+		if((level | 0) >= (minLevel | 0)) {
+			var p = null;
+			var tmp = haxe_Log.trace;
+			var s1 = Std.string(s);
+			var d = HxOverrides.dateStr(new Date());
+			var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l;
+			switch(level) {
+			case 20:
+				l = "INF";
+				break;
+			case 30:
+				l = "WRN";
+				break;
+			case 40:
+				l = "ERR";
+				break;
+			case 50:
+				l = "!!!";
+				break;
+			default:
+				l = "DBG";
+			}
+			tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this1 = haxepunk_HXP.engine.console;
+				var s2 = Std.string(s);
+				var d1 = HxOverrides.dateStr(new Date());
+				var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l1;
+				switch(level) {
+				case 20:
+					l1 = "INF";
+					break;
+				case 30:
+					l1 = "WRN";
+					break;
+				case 40:
+					l1 = "ERR";
+					break;
+				case 50:
+					l1 = "!!!";
+					break;
+				default:
+					l1 = "DBG";
+				}
+				_this1.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+			}
+		}
 	}
-	var _this1 = this.color;
-	_this1.name = "aColor";
-	_this1.rebind();
-	if(_this1.index == -1) {
-		var s1 = "attribute '" + _this1.name + "' is not declared or not used in shader source.";
+	var _this2 = this.color;
+	_this2.name = "aColor";
+	_this2.rebind();
+	if(_this2.index == -1) {
+		var s3 = "attribute '" + _this2.name + "' is not declared or not used in shader source.";
+		var pos_lineNumber1;
+		var pos_fileName1 = "Shader.hx";
+		pos_lineNumber1 = 36;
+		var pos_className1 = "haxepunk.graphics.shader.Attribute";
+		var pos_methodName1 = "set_name";
+		var level1 = 30;
+		var minLevel1 = 10;
+		if((level1 | 0) >= (minLevel1 | 0)) {
+			var p3 = null;
+			var tmp1 = haxe_Log.trace;
+			var s4 = Std.string(s3);
+			var d2 = HxOverrides.dateStr(new Date());
+			var p4 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+			var l2;
+			switch(level1) {
+			case 20:
+				l2 = "INF";
+				break;
+			case 30:
+				l2 = "WRN";
+				break;
+			case 40:
+				l2 = "ERR";
+				break;
+			case 50:
+				l2 = "!!!";
+				break;
+			default:
+				l2 = "DBG";
+			}
+			tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this3 = haxepunk_HXP.engine.console;
+				var s5 = Std.string(s3);
+				var d3 = HxOverrides.dateStr(new Date());
+				var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l3;
+				switch(level1) {
+				case 20:
+					l3 = "INF";
+					break;
+				case 30:
+					l3 = "WRN";
+					break;
+				case 40:
+					l3 = "ERR";
+					break;
+				case 50:
+					l3 = "!!!";
+					break;
+				default:
+					l3 = "DBG";
+				}
+				_this3.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+			}
+		}
 	}
 };
 $hxClasses["haxepunk.graphics.shader.ColorShader"] = haxepunk_graphics_shader_ColorShader;
@@ -27988,12 +29793,124 @@ var haxepunk_graphics_shader_SceneShader = function(fragment) {
 	_this.rebind();
 	if(_this.index == -1) {
 		var s = "attribute '" + _this.name + "' is not declared or not used in shader source.";
+		var pos_lineNumber;
+		var pos_fileName = "Shader.hx";
+		pos_lineNumber = 36;
+		var pos_className = "haxepunk.graphics.shader.Attribute";
+		var pos_methodName = "set_name";
+		var level = 30;
+		var minLevel = 10;
+		if((level | 0) >= (minLevel | 0)) {
+			var p = null;
+			var tmp = haxe_Log.trace;
+			var s1 = Std.string(s);
+			var d = HxOverrides.dateStr(new Date());
+			var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l;
+			switch(level) {
+			case 20:
+				l = "INF";
+				break;
+			case 30:
+				l = "WRN";
+				break;
+			case 40:
+				l = "ERR";
+				break;
+			case 50:
+				l = "!!!";
+				break;
+			default:
+				l = "DBG";
+			}
+			tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this1 = haxepunk_HXP.engine.console;
+				var s2 = Std.string(s);
+				var d1 = HxOverrides.dateStr(new Date());
+				var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l1;
+				switch(level) {
+				case 20:
+					l1 = "INF";
+					break;
+				case 30:
+					l1 = "WRN";
+					break;
+				case 40:
+					l1 = "ERR";
+					break;
+				case 50:
+					l1 = "!!!";
+					break;
+				default:
+					l1 = "DBG";
+				}
+				_this1.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+			}
+		}
 	}
-	var _this1 = this.texCoord;
-	_this1.name = "aTexCoord";
-	_this1.rebind();
-	if(_this1.index == -1) {
-		var s1 = "attribute '" + _this1.name + "' is not declared or not used in shader source.";
+	var _this2 = this.texCoord;
+	_this2.name = "aTexCoord";
+	_this2.rebind();
+	if(_this2.index == -1) {
+		var s3 = "attribute '" + _this2.name + "' is not declared or not used in shader source.";
+		var pos_lineNumber1;
+		var pos_fileName1 = "Shader.hx";
+		pos_lineNumber1 = 36;
+		var pos_className1 = "haxepunk.graphics.shader.Attribute";
+		var pos_methodName1 = "set_name";
+		var level1 = 30;
+		var minLevel1 = 10;
+		if((level1 | 0) >= (minLevel1 | 0)) {
+			var p3 = null;
+			var tmp1 = haxe_Log.trace;
+			var s4 = Std.string(s3);
+			var d2 = HxOverrides.dateStr(new Date());
+			var p4 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+			var l2;
+			switch(level1) {
+			case 20:
+				l2 = "INF";
+				break;
+			case 30:
+				l2 = "WRN";
+				break;
+			case 40:
+				l2 = "ERR";
+				break;
+			case 50:
+				l2 = "!!!";
+				break;
+			default:
+				l2 = "DBG";
+			}
+			tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this3 = haxepunk_HXP.engine.console;
+				var s5 = Std.string(s3);
+				var d3 = HxOverrides.dateStr(new Date());
+				var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l3;
+				switch(level1) {
+				case 20:
+					l3 = "INF";
+					break;
+				case 30:
+					l3 = "WRN";
+					break;
+				case 40:
+					l3 = "ERR";
+					break;
+				case 50:
+					l3 = "!!!";
+					break;
+				default:
+					l3 = "DBG";
+				}
+				_this3.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+			}
+		}
 	}
 };
 $hxClasses["haxepunk.graphics.shader.SceneShader"] = haxepunk_graphics_shader_SceneShader;
@@ -28078,6 +29995,62 @@ haxepunk_graphics_shader_Attribute.prototype = {
 		this.rebind();
 		if(this.index == -1) {
 			var s = "attribute '" + this.name + "' is not declared or not used in shader source.";
+			var pos_lineNumber;
+			var pos_fileName = "Shader.hx";
+			pos_lineNumber = 36;
+			var pos_className = "haxepunk.graphics.shader.Attribute";
+			var pos_methodName = "set_name";
+			var level = 30;
+			var minLevel = 10;
+			if((level | 0) >= (minLevel | 0)) {
+				var p = null;
+				var tmp = haxe_Log.trace;
+				var s1 = Std.string(s);
+				var d = HxOverrides.dateStr(new Date());
+				var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l;
+				switch(level) {
+				case 20:
+					l = "INF";
+					break;
+				case 30:
+					l = "WRN";
+					break;
+				case 40:
+					l = "ERR";
+					break;
+				case 50:
+					l = "!!!";
+					break;
+				default:
+					l = "DBG";
+				}
+				tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this = haxepunk_HXP.engine.console;
+					var s2 = Std.string(s);
+					var d1 = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l1;
+					switch(level) {
+					case 20:
+						l1 = "INF";
+						break;
+					case 30:
+						l1 = "WRN";
+						break;
+					case 40:
+						l1 = "ERR";
+						break;
+					case 50:
+						l1 = "!!!";
+						break;
+					default:
+						l1 = "DBG";
+					}
+					_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+				}
+			}
 		}
 		return this.name;
 	}
@@ -28106,18 +30079,186 @@ var haxepunk_graphics_shader_TextureShader = function(vertex,fragment) {
 	_this.rebind();
 	if(_this.index == -1) {
 		var s = "attribute '" + _this.name + "' is not declared or not used in shader source.";
+		var pos_lineNumber;
+		var pos_fileName = "Shader.hx";
+		pos_lineNumber = 36;
+		var pos_className = "haxepunk.graphics.shader.Attribute";
+		var pos_methodName = "set_name";
+		var level = 30;
+		var minLevel = 10;
+		if((level | 0) >= (minLevel | 0)) {
+			var p = null;
+			var tmp = haxe_Log.trace;
+			var s1 = Std.string(s);
+			var d = HxOverrides.dateStr(new Date());
+			var p1 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+			var l;
+			switch(level) {
+			case 20:
+				l = "INF";
+				break;
+			case 30:
+				l = "WRN";
+				break;
+			case 40:
+				l = "ERR";
+				break;
+			case 50:
+				l = "!!!";
+				break;
+			default:
+				l = "DBG";
+			}
+			tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this1 = haxepunk_HXP.engine.console;
+				var s2 = Std.string(s);
+				var d1 = HxOverrides.dateStr(new Date());
+				var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+				var l1;
+				switch(level) {
+				case 20:
+					l1 = "INF";
+					break;
+				case 30:
+					l1 = "WRN";
+					break;
+				case 40:
+					l1 = "ERR";
+					break;
+				case 50:
+					l1 = "!!!";
+					break;
+				default:
+					l1 = "DBG";
+				}
+				_this1.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+			}
+		}
 	}
-	var _this1 = this.texCoord;
-	_this1.name = "aTexCoord";
-	_this1.rebind();
-	if(_this1.index == -1) {
-		var s1 = "attribute '" + _this1.name + "' is not declared or not used in shader source.";
-	}
-	var _this2 = this.color;
-	_this2.name = "aColor";
+	var _this2 = this.texCoord;
+	_this2.name = "aTexCoord";
 	_this2.rebind();
 	if(_this2.index == -1) {
-		var s2 = "attribute '" + _this2.name + "' is not declared or not used in shader source.";
+		var s3 = "attribute '" + _this2.name + "' is not declared or not used in shader source.";
+		var pos_lineNumber1;
+		var pos_fileName1 = "Shader.hx";
+		pos_lineNumber1 = 36;
+		var pos_className1 = "haxepunk.graphics.shader.Attribute";
+		var pos_methodName1 = "set_name";
+		var level1 = 30;
+		var minLevel1 = 10;
+		if((level1 | 0) >= (minLevel1 | 0)) {
+			var p3 = null;
+			var tmp1 = haxe_Log.trace;
+			var s4 = Std.string(s3);
+			var d2 = HxOverrides.dateStr(new Date());
+			var p4 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+			var l2;
+			switch(level1) {
+			case 20:
+				l2 = "INF";
+				break;
+			case 30:
+				l2 = "WRN";
+				break;
+			case 40:
+				l2 = "ERR";
+				break;
+			case 50:
+				l2 = "!!!";
+				break;
+			default:
+				l2 = "DBG";
+			}
+			tmp1("" + d2 + " " + p4 + "  " + l2 + ": " + s4,p3);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this3 = haxepunk_HXP.engine.console;
+				var s5 = Std.string(s3);
+				var d3 = HxOverrides.dateStr(new Date());
+				var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l3;
+				switch(level1) {
+				case 20:
+					l3 = "INF";
+					break;
+				case 30:
+					l3 = "WRN";
+					break;
+				case 40:
+					l3 = "ERR";
+					break;
+				case 50:
+					l3 = "!!!";
+					break;
+				default:
+					l3 = "DBG";
+				}
+				_this3.logPanel.log("" + d3 + " " + p5 + "  " + l3 + ": " + s5);
+			}
+		}
+	}
+	var _this4 = this.color;
+	_this4.name = "aColor";
+	_this4.rebind();
+	if(_this4.index == -1) {
+		var s6 = "attribute '" + _this4.name + "' is not declared or not used in shader source.";
+		var pos_lineNumber2;
+		var pos_fileName2 = "Shader.hx";
+		pos_lineNumber2 = 36;
+		var pos_className2 = "haxepunk.graphics.shader.Attribute";
+		var pos_methodName2 = "set_name";
+		var level2 = 30;
+		var minLevel2 = 10;
+		if((level2 | 0) >= (minLevel2 | 0)) {
+			var p6 = null;
+			var tmp2 = haxe_Log.trace;
+			var s7 = Std.string(s6);
+			var d4 = HxOverrides.dateStr(new Date());
+			var p7 = StringTools.lpad(pos_fileName2," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber2 == null ? "null" : "" + pos_lineNumber2," ",4) + ":";
+			var l4;
+			switch(level2) {
+			case 20:
+				l4 = "INF";
+				break;
+			case 30:
+				l4 = "WRN";
+				break;
+			case 40:
+				l4 = "ERR";
+				break;
+			case 50:
+				l4 = "!!!";
+				break;
+			default:
+				l4 = "DBG";
+			}
+			tmp2("" + d4 + " " + p7 + "  " + l4 + ": " + s7,p6);
+			if(haxepunk_HXP.engine.console != null) {
+				var _this5 = haxepunk_HXP.engine.console;
+				var s8 = Std.string(s6);
+				var d5 = HxOverrides.dateStr(new Date());
+				var p8 = StringTools.lpad(pos_fileName2," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber2 == null ? "null" : "" + pos_lineNumber2," ",4) + ":";
+				var l5;
+				switch(level2) {
+				case 20:
+					l5 = "INF";
+					break;
+				case 30:
+					l5 = "WRN";
+					break;
+				case 40:
+					l5 = "ERR";
+					break;
+				case 50:
+					l5 = "!!!";
+					break;
+				default:
+					l5 = "DBG";
+				}
+				_this5.logPanel.log("" + d5 + " " + p8 + "  " + l5 + ": " + s8);
+			}
+		}
 	}
 };
 $hxClasses["haxepunk.graphics.shader.TextureShader"] = haxepunk_graphics_shader_TextureShader;
@@ -28490,6 +30631,48 @@ haxepunk_graphics_text_TextOpcode.PopSize.__enum__ = haxepunk_graphics_text_Text
 haxepunk_graphics_text_TextOpcode.PopCustom = ["PopCustom",15];
 haxepunk_graphics_text_TextOpcode.PopCustom.toString = $estr;
 haxepunk_graphics_text_TextOpcode.PopCustom.__enum__ = haxepunk_graphics_text_TextOpcode;
+var haxepunk_utils__$Log_LogLevel_$Impl_$ = {};
+$hxClasses["haxepunk.utils._Log.LogLevel_Impl_"] = haxepunk_utils__$Log_LogLevel_$Impl_$;
+haxepunk_utils__$Log_LogLevel_$Impl_$.__name__ = ["haxepunk","utils","_Log","LogLevel_Impl_"];
+haxepunk_utils__$Log_LogLevel_$Impl_$.toString = function(this1) {
+	switch(this1) {
+	case 20:
+		return "INF";
+	case 30:
+		return "WRN";
+	case 40:
+		return "ERR";
+	case 50:
+		return "!!!";
+	default:
+		return "DBG";
+	}
+};
+haxepunk_utils__$Log_LogLevel_$Impl_$.format = function(this1,s,color,pos) {
+	if(color == null) {
+		color = true;
+	}
+	var d = HxOverrides.dateStr(new Date());
+	var p = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+	var l;
+	switch(this1) {
+	case 20:
+		l = "INF";
+		break;
+	case 30:
+		l = "WRN";
+		break;
+	case 40:
+		l = "ERR";
+		break;
+	case 50:
+		l = "!!!";
+		break;
+	default:
+		l = "DBG";
+	}
+	return "" + d + " " + p + "  " + l + ": " + s;
+};
 var haxepunk_graphics_text_BitmapText = function(text,x,y,width,height,options) {
 	if(height == null) {
 		height = 0;
@@ -30233,6 +32416,122 @@ haxepunk_graphics_text_Text.prototype = $extend(haxepunk_graphics_Image.prototyp
 			if(__map_reserved[tagName] != null ? _this.existsReserved(tagName) : _this.h.hasOwnProperty(tagName)) {
 				var _this1 = this._styles;
 				this._field.setTextFormat(__map_reserved[tagName] != null ? _this1.getReserved(tagName) : _this1.h[tagName],p.pos,p.pos + text.length);
+			} else {
+				var s = "Could not found text style '" + tagName + "'";
+				var pos_lineNumber;
+				var pos_fileName = "Text.hx";
+				pos_lineNumber = 187;
+				var pos_className = "haxepunk.graphics.text.Text";
+				var pos_methodName = "matchStyles";
+				var level = 30;
+				var minLevel = 10;
+				if((level | 0) >= (minLevel | 0)) {
+					var p1 = null;
+					var tmp = haxe_Log.trace;
+					var s1 = Std.string(s);
+					var d = HxOverrides.dateStr(new Date());
+					var p2 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+					var l;
+					switch(level) {
+					case 20:
+						l = "INF";
+						break;
+					case 30:
+						l = "WRN";
+						break;
+					case 40:
+						l = "ERR";
+						break;
+					case 50:
+						l = "!!!";
+						break;
+					default:
+						l = "DBG";
+					}
+					tmp("" + d + " " + p2 + "  " + l + ": " + s1,p1);
+					if(haxepunk_HXP.engine.console != null) {
+						var _this2 = haxepunk_HXP.engine.console;
+						var s2 = Std.string(s);
+						var d1 = HxOverrides.dateStr(new Date());
+						var p3 = StringTools.lpad(pos_fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber == null ? "null" : "" + pos_lineNumber," ",4) + ":";
+						var l1;
+						switch(level) {
+						case 20:
+							l1 = "INF";
+							break;
+						case 30:
+							l1 = "WRN";
+							break;
+						case 40:
+							l1 = "ERR";
+							break;
+						case 50:
+							l1 = "!!!";
+							break;
+						default:
+							l1 = "DBG";
+						}
+						_this2.logPanel.log("" + d1 + " " + p3 + "  " + l1 + ": " + s2);
+					}
+				}
+			}
+		}
+		if(this._field.get_text() != this._text) {
+			var pos_lineNumber1;
+			var pos_fileName1 = "Text.hx";
+			pos_lineNumber1 = 195;
+			var pos_className1 = "haxepunk.graphics.text.Text";
+			var pos_methodName1 = "matchStyles";
+			var level1 = 30;
+			var minLevel1 = 10;
+			if((level1 | 0) >= (minLevel1 | 0)) {
+				var p4 = null;
+				var tmp1 = haxe_Log.trace;
+				var s3 = "Text field and _text do not match!";
+				var d2 = HxOverrides.dateStr(new Date());
+				var p5 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+				var l2;
+				switch(level1) {
+				case 20:
+					l2 = "INF";
+					break;
+				case 30:
+					l2 = "WRN";
+					break;
+				case 40:
+					l2 = "ERR";
+					break;
+				case 50:
+					l2 = "!!!";
+					break;
+				default:
+					l2 = "DBG";
+				}
+				tmp1("" + d2 + " " + p5 + "  " + l2 + ": " + s3,p4);
+				if(haxepunk_HXP.engine.console != null) {
+					var _this3 = haxepunk_HXP.engine.console;
+					var s4 = "Text field and _text do not match!";
+					var d3 = HxOverrides.dateStr(new Date());
+					var p6 = StringTools.lpad(pos_fileName1," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos_lineNumber1 == null ? "null" : "" + pos_lineNumber1," ",4) + ":";
+					var l3;
+					switch(level1) {
+					case 20:
+						l3 = "INF";
+						break;
+					case 30:
+						l3 = "WRN";
+						break;
+					case 40:
+						l3 = "ERR";
+						break;
+					case 50:
+						l3 = "!!!";
+						break;
+					default:
+						l3 = "DBG";
+					}
+					_this3.logPanel.log("" + d3 + " " + p6 + "  " + l3 + ": " + s4);
+				}
 			}
 		}
 	}
@@ -36601,6 +38900,7 @@ haxepunk_tmx__$TmxEntity_Map_$Impl_$.fromMapData = function(mapData) {
 var haxepunk_tmx_TmxEntity = function(mapData) {
 	haxepunk_Entity.call(this);
 	this.map = mapData;
+	this.debugObjectMask = true;
 };
 $hxClasses["haxepunk.tmx.TmxEntity"] = haxepunk_tmx_TmxEntity;
 haxepunk_tmx_TmxEntity.__name__ = ["haxepunk","tmx","TmxEntity"];
@@ -36611,6 +38911,7 @@ haxepunk_tmx_TmxEntity.prototype = $extend(haxepunk_Entity.prototype,{
 	,loadImageLayer: function(name) {
 		var _this = this.map.imageLayers;
 		if(!(__map_reserved[name] != null ? _this.existsReserved(name) : _this.h.hasOwnProperty(name))) {
+			haxe_Log.trace("Image layer '" + name + "' doesn't exist",{ fileName : "TmxEntity.hx", lineNumber : 65, className : "haxepunk.tmx.TmxEntity", methodName : "loadImageLayer"});
 			return;
 		}
 		var _this1 = this.map.imageLayers;
@@ -36626,6 +38927,7 @@ haxepunk_tmx_TmxEntity.prototype = $extend(haxepunk_Entity.prototype,{
 			var name = layerNames[_g];
 			++_g;
 			if(!this.map.layers._map.exists(name)) {
+				haxe_Log.trace("Layer '" + name + "' doesn't exist",{ fileName : "TmxEntity.hx", lineNumber : 87, className : "haxepunk.tmx.TmxEntity", methodName : "loadGraphic"});
 				continue;
 			}
 			layer = this.map.layers._map.get(name);
@@ -36660,6 +38962,7 @@ haxepunk_tmx_TmxEntity.prototype = $extend(haxepunk_Entity.prototype,{
 		}
 		var tileCoords = [];
 		if(!this.map.layers._map.exists(collideLayer)) {
+			haxe_Log.trace("Layer '" + collideLayer + "' doesn't exist",{ fileName : "TmxEntity.hx", lineNumber : 125, className : "haxepunk.tmx.TmxEntity", methodName : "loadMask"});
 			return tileCoords;
 		}
 		var gid;
@@ -36701,6 +39004,7 @@ haxepunk_tmx_TmxEntity.prototype = $extend(haxepunk_Entity.prototype,{
 			collideLayer = "collide";
 		}
 		if(!this.map.layers._map.exists(collideLayer)) {
+			haxe_Log.trace("Layer '" + collideLayer + "' doesn't exist",{ fileName : "TmxEntity.hx", lineNumber : 171, className : "haxepunk.tmx.TmxEntity", methodName : "loadSlopedMask"});
 			return;
 		}
 		var gid;
@@ -36774,16 +39078,23 @@ haxepunk_tmx_TmxEntity.prototype = $extend(haxepunk_Entity.prototype,{
 			collideLayer = "objects";
 		}
 		if(this.map.getObjectGroup(collideLayer) == null) {
+			haxe_Log.trace("ObjectGroup '" + collideLayer + "' doesn't exist",{ fileName : "TmxEntity.hx", lineNumber : 241, className : "haxepunk.tmx.TmxEntity", methodName : "loadObjectMask"});
 			return;
 		}
 		var objectGroup = this.map.getObjectGroup(collideLayer);
 		var maskArr = [];
+		var debug_graphics_ar = [];
 		var _g = 0;
 		var _g1 = objectGroup.objects;
 		while(_g < _g1.length) {
 			var object = _g1[_g];
 			++_g;
 			maskArr.push(object.shapeMask);
+			debug_graphics_ar.push(object.debug_graphic);
+		}
+		if(this.debugObjectMask) {
+			var debug_graphicList = new haxepunk_graphics_BaseGraphicList_$haxepunk_$Graphic(debug_graphics_ar);
+			this.addGraphic(debug_graphicList);
 		}
 		var maskList = new haxepunk_masks_Masklist(maskArr);
 		this.set_mask(maskList);
@@ -37205,8 +39516,14 @@ var haxepunk_tmx_TmxObject = function(source,parent) {
 	if(source.hasNode.resolve("ellipse")) {
 		var radius = (this.width < this.height ? this.width : this.height) / 2 | 0;
 		this.shapeMask = new haxepunk_masks_Circle(radius,this.x,this.y);
+		this.debug_graphic = haxepunk_graphics_Image.createCircle(radius,16711680,.6);
+		this.debug_graphic.x = this.x;
+		this.debug_graphic.y = this.y;
 	} else {
 		this.shapeMask = new haxepunk_masks_Hitbox(this.width,this.height,this.x,this.y);
+		this.debug_graphic = haxepunk_graphics_Image.createRect(this.width,this.height,16711680,.6);
+		this.debug_graphic.x = this.x;
+		this.debug_graphic.y = this.y;
 	}
 };
 $hxClasses["haxepunk.tmx.TmxObject"] = haxepunk_tmx_TmxObject;
@@ -37223,6 +39540,7 @@ haxepunk_tmx_TmxObject.prototype = {
 	,custom: null
 	,shared: null
 	,shapeMask: null
+	,debug_graphic: null
 	,__class__: haxepunk_tmx_TmxObject
 };
 var haxepunk_tmx_TmxObjectGroup = function(source,parent) {
@@ -38612,48 +40930,6 @@ haxepunk_utils_HaxelibInfoBuilder.__name__ = ["haxepunk","utils","HaxelibInfoBui
 var haxepunk_utils_HaxelibInfo = function() { };
 $hxClasses["haxepunk.utils.HaxelibInfo"] = haxepunk_utils_HaxelibInfo;
 haxepunk_utils_HaxelibInfo.__name__ = ["haxepunk","utils","HaxelibInfo"];
-var haxepunk_utils__$Log_LogLevel_$Impl_$ = {};
-$hxClasses["haxepunk.utils._Log.LogLevel_Impl_"] = haxepunk_utils__$Log_LogLevel_$Impl_$;
-haxepunk_utils__$Log_LogLevel_$Impl_$.__name__ = ["haxepunk","utils","_Log","LogLevel_Impl_"];
-haxepunk_utils__$Log_LogLevel_$Impl_$.toString = function(this1) {
-	switch(this1) {
-	case 20:
-		return "INF";
-	case 30:
-		return "WRN";
-	case 40:
-		return "ERR";
-	case 50:
-		return "!!!";
-	default:
-		return "DBG";
-	}
-};
-haxepunk_utils__$Log_LogLevel_$Impl_$.format = function(this1,s,color,pos) {
-	if(color == null) {
-		color = true;
-	}
-	var d = HxOverrides.dateStr(new Date());
-	var p = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
-	var l;
-	switch(this1) {
-	case 20:
-		l = "INF";
-		break;
-	case 30:
-		l = "WRN";
-		break;
-	case 40:
-		l = "ERR";
-		break;
-	case 50:
-		l = "!!!";
-		break;
-	default:
-		l = "DBG";
-	}
-	return "" + d + " " + p + "  " + l + ": " + s;
-};
 var haxepunk_utils_Log = function() { };
 $hxClasses["haxepunk.utils.Log"] = haxepunk_utils_Log;
 haxepunk_utils_Log.__name__ = ["haxepunk","utils","Log"];
@@ -38661,16 +40937,321 @@ haxepunk_utils_Log.write = function(s,level,pos) {
 	if(level == null) {
 		level = 20;
 	}
+	var minLevel = 10;
+	if((level | 0) >= (minLevel | 0)) {
+		var p = null;
+		var tmp = haxe_Log.trace;
+		var s1 = Std.string(s);
+		var d = HxOverrides.dateStr(new Date());
+		var p1 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+		var l;
+		switch(level) {
+		case 20:
+			l = "INF";
+			break;
+		case 30:
+			l = "WRN";
+			break;
+		case 40:
+			l = "ERR";
+			break;
+		case 50:
+			l = "!!!";
+			break;
+		default:
+			l = "DBG";
+		}
+		tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+		if(haxepunk_HXP.engine.console != null) {
+			var _this = haxepunk_HXP.engine.console;
+			var s2 = Std.string(s);
+			var d1 = HxOverrides.dateStr(new Date());
+			var p2 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+			var l1;
+			switch(level) {
+			case 20:
+				l1 = "INF";
+				break;
+			case 30:
+				l1 = "WRN";
+				break;
+			case 40:
+				l1 = "ERR";
+				break;
+			case 50:
+				l1 = "!!!";
+				break;
+			default:
+				l1 = "DBG";
+			}
+			_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+		}
+	}
 };
 haxepunk_utils_Log.debug = function(s,pos) {
+	var level = 10;
+	var minLevel = 10;
+	if((level | 0) >= (minLevel | 0)) {
+		var p = null;
+		var tmp = haxe_Log.trace;
+		var s1 = Std.string(s);
+		var d = HxOverrides.dateStr(new Date());
+		var p1 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+		var l;
+		switch(level) {
+		case 20:
+			l = "INF";
+			break;
+		case 30:
+			l = "WRN";
+			break;
+		case 40:
+			l = "ERR";
+			break;
+		case 50:
+			l = "!!!";
+			break;
+		default:
+			l = "DBG";
+		}
+		tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+		if(haxepunk_HXP.engine.console != null) {
+			var _this = haxepunk_HXP.engine.console;
+			var s2 = Std.string(s);
+			var d1 = HxOverrides.dateStr(new Date());
+			var p2 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+			var l1;
+			switch(level) {
+			case 20:
+				l1 = "INF";
+				break;
+			case 30:
+				l1 = "WRN";
+				break;
+			case 40:
+				l1 = "ERR";
+				break;
+			case 50:
+				l1 = "!!!";
+				break;
+			default:
+				l1 = "DBG";
+			}
+			_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+		}
+	}
 };
 haxepunk_utils_Log.info = function(s,pos) {
+	var level = 20;
+	var minLevel = 10;
+	if((level | 0) >= (minLevel | 0)) {
+		var p = null;
+		var tmp = haxe_Log.trace;
+		var s1 = Std.string(s);
+		var d = HxOverrides.dateStr(new Date());
+		var p1 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+		var l;
+		switch(level) {
+		case 20:
+			l = "INF";
+			break;
+		case 30:
+			l = "WRN";
+			break;
+		case 40:
+			l = "ERR";
+			break;
+		case 50:
+			l = "!!!";
+			break;
+		default:
+			l = "DBG";
+		}
+		tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+		if(haxepunk_HXP.engine.console != null) {
+			var _this = haxepunk_HXP.engine.console;
+			var s2 = Std.string(s);
+			var d1 = HxOverrides.dateStr(new Date());
+			var p2 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+			var l1;
+			switch(level) {
+			case 20:
+				l1 = "INF";
+				break;
+			case 30:
+				l1 = "WRN";
+				break;
+			case 40:
+				l1 = "ERR";
+				break;
+			case 50:
+				l1 = "!!!";
+				break;
+			default:
+				l1 = "DBG";
+			}
+			_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+		}
+	}
 };
 haxepunk_utils_Log.warning = function(s,pos) {
+	var level = 30;
+	var minLevel = 10;
+	if((level | 0) >= (minLevel | 0)) {
+		var p = null;
+		var tmp = haxe_Log.trace;
+		var s1 = Std.string(s);
+		var d = HxOverrides.dateStr(new Date());
+		var p1 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+		var l;
+		switch(level) {
+		case 20:
+			l = "INF";
+			break;
+		case 30:
+			l = "WRN";
+			break;
+		case 40:
+			l = "ERR";
+			break;
+		case 50:
+			l = "!!!";
+			break;
+		default:
+			l = "DBG";
+		}
+		tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+		if(haxepunk_HXP.engine.console != null) {
+			var _this = haxepunk_HXP.engine.console;
+			var s2 = Std.string(s);
+			var d1 = HxOverrides.dateStr(new Date());
+			var p2 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+			var l1;
+			switch(level) {
+			case 20:
+				l1 = "INF";
+				break;
+			case 30:
+				l1 = "WRN";
+				break;
+			case 40:
+				l1 = "ERR";
+				break;
+			case 50:
+				l1 = "!!!";
+				break;
+			default:
+				l1 = "DBG";
+			}
+			_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+		}
+	}
 };
 haxepunk_utils_Log.error = function(s,pos) {
+	var level = 40;
+	var minLevel = 10;
+	if((level | 0) >= (minLevel | 0)) {
+		var p = null;
+		var tmp = haxe_Log.trace;
+		var s1 = Std.string(s);
+		var d = HxOverrides.dateStr(new Date());
+		var p1 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+		var l;
+		switch(level) {
+		case 20:
+			l = "INF";
+			break;
+		case 30:
+			l = "WRN";
+			break;
+		case 40:
+			l = "ERR";
+			break;
+		case 50:
+			l = "!!!";
+			break;
+		default:
+			l = "DBG";
+		}
+		tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+		if(haxepunk_HXP.engine.console != null) {
+			var _this = haxepunk_HXP.engine.console;
+			var s2 = Std.string(s);
+			var d1 = HxOverrides.dateStr(new Date());
+			var p2 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+			var l1;
+			switch(level) {
+			case 20:
+				l1 = "INF";
+				break;
+			case 30:
+				l1 = "WRN";
+				break;
+			case 40:
+				l1 = "ERR";
+				break;
+			case 50:
+				l1 = "!!!";
+				break;
+			default:
+				l1 = "DBG";
+			}
+			_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+		}
+	}
 };
 haxepunk_utils_Log.critical = function(s,pos) {
+	var level = 50;
+	var minLevel = 10;
+	if((level | 0) >= (minLevel | 0)) {
+		var p = null;
+		var tmp = haxe_Log.trace;
+		var s1 = Std.string(s);
+		var d = HxOverrides.dateStr(new Date());
+		var p1 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+		var l;
+		switch(level) {
+		case 20:
+			l = "INF";
+			break;
+		case 30:
+			l = "WRN";
+			break;
+		case 40:
+			l = "ERR";
+			break;
+		case 50:
+			l = "!!!";
+			break;
+		default:
+			l = "DBG";
+		}
+		tmp("" + d + " " + p1 + "  " + l + ": " + s1,p);
+		if(haxepunk_HXP.engine.console != null) {
+			var _this = haxepunk_HXP.engine.console;
+			var s2 = Std.string(s);
+			var d1 = HxOverrides.dateStr(new Date());
+			var p2 = StringTools.lpad(pos.fileName," ",haxepunk_utils__$Log_LogLevel_$Impl_$.longest) + ":" + StringTools.lpad(pos.lineNumber == null ? "null" : "" + pos.lineNumber," ",4) + ":";
+			var l1;
+			switch(level) {
+			case 20:
+				l1 = "INF";
+				break;
+			case 30:
+				l1 = "WRN";
+				break;
+			case 40:
+				l1 = "ERR";
+				break;
+			case 50:
+				l1 = "!!!";
+				break;
+			default:
+				l1 = "DBG";
+			}
+			_this.logPanel.log("" + d1 + " " + p2 + "  " + l1 + ": " + s2);
+		}
+	}
 };
 var haxepunk_utils__$Utf8String_Utf8String_$Impl_$ = {};
 $hxClasses["haxepunk.utils._Utf8String.Utf8String_Impl_"] = haxepunk_utils__$Utf8String_Utf8String_$Impl_$;
@@ -63513,7 +66094,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 758067;
+	this.version = 111435;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
@@ -105826,7 +108407,7 @@ while(_g11 < _g2) {
 }
 lime_system_CFFI.available = false;
 lime_system_CFFI.enabled = false;
-lime_utils_Log.level = 3;
+lime_utils_Log.level = 4;
 if(typeof console == "undefined") {
 	console = {}
 }
@@ -105986,6 +108567,12 @@ haxepunk_graphics_text_BitmapFontAtlas._DEFAULT_GLYPHS = " !\"#$%&'()*+,-./01234
 haxepunk_graphics_text__$BitmapText_AlignType_$Impl_$.Left = 0;
 haxepunk_graphics_text__$BitmapText_AlignType_$Impl_$.Center = 1;
 haxepunk_graphics_text__$BitmapText_AlignType_$Impl_$.Right = 2;
+haxepunk_utils__$Log_LogLevel_$Impl_$.Debug = 10;
+haxepunk_utils__$Log_LogLevel_$Impl_$.Info = 20;
+haxepunk_utils__$Log_LogLevel_$Impl_$.Warning = 30;
+haxepunk_utils__$Log_LogLevel_$Impl_$.Error = 40;
+haxepunk_utils__$Log_LogLevel_$Impl_$.Critical = 50;
+haxepunk_utils__$Log_LogLevel_$Impl_$.longest = 20;
 haxepunk_graphics_text_BitmapText.FORMAT_TAG_RE = new EReg("<(([A-Za-z_-]+)( ([a-zA-Z-_]+)=\"([^\"]*)\")?/?|(/[A-Za-z_-]+))>","");
 haxepunk_graphics_text_BitmapText.formatTags = (function($this) {
 	var $r;
@@ -106258,12 +108845,6 @@ haxepunk_utils_HaxelibInfo.releasenote = "See CHANGELOG.md";
 haxepunk_utils_HaxelibInfo.version = "4.0.1";
 haxepunk_utils_HaxelibInfo.url = "http://haxepunk.com";
 haxepunk_utils_HaxelibInfo.install = { munit : ""};
-haxepunk_utils__$Log_LogLevel_$Impl_$.Debug = 10;
-haxepunk_utils__$Log_LogLevel_$Impl_$.Info = 20;
-haxepunk_utils__$Log_LogLevel_$Impl_$.Warning = 30;
-haxepunk_utils__$Log_LogLevel_$Impl_$.Error = 40;
-haxepunk_utils__$Log_LogLevel_$Impl_$.Critical = 50;
-haxepunk_utils__$Log_LogLevel_$Impl_$.longest = 20;
 js_html_compat_Float32Array.BYTES_PER_ELEMENT = 4;
 js_html_compat_Float64Array.BYTES_PER_ELEMENT = 8;
 js_html_compat_Uint8Array.BYTES_PER_ELEMENT = 1;
@@ -108235,3 +110816,5 @@ openfl_utils__$Endian_Endian_$Impl_$.BIG_ENDIAN = 0;
 openfl_utils__$Endian_Endian_$Impl_$.LITTLE_ENDIAN = 1;
 ApplicationMain.main();
 })(typeof exports != "undefined" ? exports : typeof window != "undefined" ? window : typeof self != "undefined" ? self : this, typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this);
+
+//# sourceMappingURL=NectoProject.js.map
