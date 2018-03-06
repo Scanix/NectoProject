@@ -22,7 +22,7 @@ script:
 
 deploy:
   provider: pages
-  local-dir: $TRAVIS_BUILD_DIR/bin/html5/bin/
+  local-dir: /bin/html5/bin/
   email: $email
   name: $name
   skip-cleanup: true
