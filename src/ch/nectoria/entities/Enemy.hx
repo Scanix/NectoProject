@@ -1,15 +1,17 @@
 package ch.nectoria.entities;
 
+import haxepunk.tmx.TmxObject;
+
 /**
  * ...
- * @author ...
+ * @author Bianchi Alexandre
  */
 class Enemy extends Physics
 {
 
-	public function new(x:Float, y:Float) 
+	public function new(obj:TmxObject) 
 	{
-		super(x, y);
+		super(obj.x, obj.y);
 		
 	}
 	
