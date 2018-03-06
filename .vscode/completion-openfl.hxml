@@ -1,0 +1,16 @@
+-lib HaxePunk
+-lib openfl
+-lib lime
+-lib HaxePunkTmx
+-cp src
+-cp %haxepath%\lib\HaxePunk/4,0,1/backend/flash
+-cp %haxepath%\lib\HaxePunk/4,0,1/backend/lime
+-D source-header=haxe
+-D debug_console
+-D no-compilation
+-D lime-opengl
+-D native
+--remap flash:openfl
+--connect 6000
+--no-output
+--times

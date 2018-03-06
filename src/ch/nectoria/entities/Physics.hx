@@ -1,7 +1,7 @@
 package ch.nectoria.entities;
 
-import com.haxepunk.Entity;
-import com.haxepunk.HXP;
+import haxepunk.Entity;
+import haxepunk.HXP;
 import openfl.geom.Point;
 
 /**

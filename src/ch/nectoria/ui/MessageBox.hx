@@ -1,14 +1,9 @@
 package ch.nectoria.ui;
 
-import com.haxepunk.Entity;
-import com.haxepunk.Graphic;
-import com.haxepunk.graphics.Graphiclist;
-import com.haxepunk.graphics.Spritemap;
-import com.haxepunk.graphics.Text;
-import com.haxepunk.Mask;
-import com.haxepunk.graphics.AnimatedTilemap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
+import haxepunk.Entity;
+import haxepunk.graphics.Graphiclist;
+import haxepunk.graphics.text.Text;
+import haxepunk.graphics.tile.AnimatedTilemap;
 
 /**
  * ...
@@ -44,6 +39,7 @@ class MessageBox extends Entity
 		text.size = 8;
 		text.scrollX = 0;
 		text.scrollY = 0;
+		text.smooth = false;
 		text.addStyle("red", { color: 0xFF0000 });
 		text.addStyle("big", { size: 16 });
 		
@@ -54,6 +50,7 @@ class MessageBox extends Entity
 		tilemap.y = 0;
 		tilemap.scrollX = 0;
 		tilemap.scrollY = 0;
+		tilemap.smooth = false;
 		
 		// Set up frame.
 		tilemap.setRect(1, 1, tilemap.columns - 2, 1, 81);

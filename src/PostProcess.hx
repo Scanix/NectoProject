@@ -1,4 +1,4 @@
-import com.haxepunk.HXP;
+import haxepunk.HXP;
 import flash.geom.Rectangle;
 
 #if flash
@@ -7,7 +7,7 @@ import flash.geom.Rectangle;
  * Flash doesn't support post processing
  * This is an empty class to prevent compilation errors
  */
-class PostProcess
+/*class PostProcess
 {
 	public function new(shader:String)
 	{
@@ -22,8 +22,8 @@ class PostProcess
 #else
 
 import openfl.Assets;
-import openfl.gl.*;
-import openfl.utils.Float32Array;
+import lime.graphics.opengl.*;
+import lime.utils.Float32Array;
 import openfl.display.OpenGLView;
 
 typedef Uniform = {
@@ -282,6 +282,6 @@ void main() {
 		];
 	}
 
-}
+}*/
 
 #end

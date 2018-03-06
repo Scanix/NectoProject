@@ -1,29 +1,29 @@
 package ch.nectoria.scenes;
 
+import haxepunk.graphics.Graphiclist;
+import ch.nectoria.NP;
+import ch.nectoria.ui.HUD;
+import ch.nectoria.ui.MessageBox;
 import ch.nectoria.entities.Chest;
 import ch.nectoria.entities.Door;
 import ch.nectoria.entities.Player;
 import ch.nectoria.entities.Coin;
 import ch.nectoria.entities.Sign;
-import ch.nectoria.NP;
-import ch.nectoria.ui.HUD;
-import ch.nectoria.ui.MessageBox;
-
-import com.haxepunk.graphics.Backdrop;
-import com.haxepunk.graphics.Image;
-import com.haxepunk.Sfx;
-import com.haxepunk.graphics.Text;
-import com.haxepunk.Scene;
-import com.haxepunk.HXP;
-import com.haxepunk.tmx.TmxEntity;
-import com.haxepunk.tmx.TmxMap;
-import com.haxepunk.utils.Input;
-import com.haxepunk.utils.Key;
-import com.haxepunk.graphics.atlas.AtlasData;
-import com.haxepunk.tweens.misc.NumTween;
-import com.haxepunk.utils.Data;
-import com.haxepunk.Entity;
 import ch.nectoria.entities.NPC;
+
+import haxepunk.graphics.tile.Backdrop;
+import haxepunk.graphics.Image;
+import haxepunk.graphics.text.Text;
+import haxepunk.graphics.atlas.TileAtlas;
+import haxepunk.Scene;
+import haxepunk.HXP;
+import haxepunk.tmx.TmxEntity;
+import haxepunk.tmx.TmxMap;
+import haxepunk.input.Input;
+import haxepunk.tweens.misc.NumTween;
+import haxepunk.utils.Data;
+import haxepunk.Entity;
+import haxepunk.screen.UniformScaleMode;
 
 import openfl.Assets;
 
@@ -36,6 +36,8 @@ class GameScene extends Scene
 {	
 	private var player:Player;
 	private var messageBox:MessageBox;
+	private var tileset:TileAtlas;
+
 	public static var levelWidth:Int;
 	public static var levelHeight:Int;
 	
@@ -50,7 +52,7 @@ class GameScene extends Scene
 		// TODO: MUSIC MANAGER
 	}
 	
-	public function fadeComplete(_):Void {
+	public function fadeComplete():Void {
 		if (fadeTween.value == 1)
 		{
 			// Load next level
@@ -62,13 +64,23 @@ class GameScene extends Scene
 	
 	override public function begin():Void {
 		// DON'T FORGET TO REMOVE BITCH !
+
+		// Prepare TileSet
+		tileset = new TileAtlas("graphics/tilemap.png", 16, 16);
+
+		// New way to zoomIn
+		HXP.screen.scaleMode = new UniformScaleMode(UniformScaleType.ZoomIn, true);
+		HXP.screen.scaleMode.setBaseSize(256, 144);
+		HXP.resize(HXP.windowWidth, HXP.windowHeight);
+
 		load();
-		
+
 		// Fade to black
 		fade = Image.createRect(HXP.screen.width, HXP.screen.height, 0, 1);
 		fade.scrollX = fade.scrollY = 0;
 		addGraphic(fade, 0).type = "keep";
-		fadeTween = new NumTween(fadeComplete);
+		fadeTween = new NumTween();
+		fadeTween.onComplete.bind(fadeComplete);
 		addTween(fadeTween);
 		fadeTween.tween(1, 0, 2);
 	}
@@ -116,7 +128,14 @@ class GameScene extends Scene
 		var map:TmxMap = new TmxMap(data);
 		var order:Array<String> = ["background", "between", "collide"];
 		var map_e = new TmxEntity(map);
-		map_e.loadGraphic("graphics/tilemap.png", order);
+		map_e.loadGraphic(tileset, order);
+
+		// Fix smooth
+		for( g in cast( map_e.graphic, Graphiclist ).children)
+		{
+			g.smooth = false;
+		}
+
 		map_e.loadMask("collide", "solid");
 		map_e.layer = 5;
 		
@@ -146,7 +165,8 @@ class GameScene extends Scene
 		add(player = new Player(NP.posPlayer));
 		
 		var map_f = new TmxEntity(map);
-		map_f.loadGraphic("graphics/tilemap.png", ["front"]);
+		map_f.loadGraphic(tileset, ["front"]);
+		map_f.graphic.smooth = false;
 		map_f.layer = 2;
 		add(map_f);
 		
@@ -169,7 +189,7 @@ class GameScene extends Scene
 	override public function update():Void {
 		if (messageBox != null && messageBox.scene == this )
 		{
-			if (Input.released(Key.SPACE))
+			if (Input.released("action"))
 			{
 				messageBox.resume();
 			}
@@ -185,7 +205,7 @@ class GameScene extends Scene
 			fade.alpha = fadeTween.value;
 		}
 		
-		if (Input.pressed(Key.ESCAPE)) togglePause();
+		if (Input.pressed("pause")) togglePause();
 		
 		if (!paused) {
 			super.update();

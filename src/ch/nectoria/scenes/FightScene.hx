@@ -2,10 +2,10 @@ package ch.nectoria.scenes;
 
 import ch.nectoria.entities.Player;
 import ch.nectoria.ui.MessageBox;
-import com.haxepunk.Scene;
-import com.haxepunk.graphics.Backdrop;
-import com.haxepunk.tmx.TmxMap;
-import com.haxepunk.tmx.TmxEntity;
+import haxepunk.Scene;
+import haxepunk.graphics.tile.Backdrop;
+import haxepunk.tmx.TmxMap;
+import haxepunk.tmx.TmxEntity;
 import openfl.Assets;
 import openfl.geom.Point;
 

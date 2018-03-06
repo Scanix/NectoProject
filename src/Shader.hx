@@ -1,5 +1,5 @@
-import com.haxepunk.HXP;
-import openfl.gl.*;
+import haxepunk.utils.Log;
+import lime.graphics.opengl.*;
 
 typedef ShaderSource = {
 	var src:String;
@@ -32,9 +32,9 @@ class Shader
 
 		if (GL.getProgramParameter(program, GL.LINK_STATUS) == 0)
 		{
-			HXP.log(GL.getProgramInfoLog(program));
-			HXP.log("VALIDATE_STATUS: " + GL.getProgramParameter(program, GL.VALIDATE_STATUS));
-			HXP.log("ERROR: " + GL.getError());
+			Log.error(GL.getProgramInfoLog(program));
+			Log.error("VALIDATE_STATUS: " + GL.getProgramParameter(program, GL.VALIDATE_STATUS));
+			Log.error("ERROR: " + GL.getError());
 			return;
 		}
 	}
@@ -52,7 +52,7 @@ class Shader
 
 		if (GL.getShaderParameter(shader, GL.COMPILE_STATUS) == 0)
 		{
-			HXP.log(GL.getShaderInfoLog(shader));
+			Log.info(GL.getShaderInfoLog(shader));
 			return null;
 		}
 
