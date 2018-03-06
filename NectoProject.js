@@ -1042,7 +1042,7 @@ $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = ["ApplicationMain"];
 ApplicationMain.main = function() {
 	var projectName = "NectoProject";
-	var config = { build : "58", company : "ScanixGames", file : "NectoProject", fps : 60, name : "NectoProject", orientation : "", packageName : "ch.nectoria", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, colorDepth : 16, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : false, stencilBuffer : true, title : "NectoProject", vsync : false, width : 1280, x : null, y : null}]};
+	var config = { build : "83", company : "ScanixGames", file : "NectoProject", fps : 60, name : "NectoProject", orientation : "", packageName : "ch.nectoria", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, colorDepth : 16, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : false, stencilBuffer : true, title : "NectoProject", vsync : false, width : 1280, x : null, y : null}]};
 	lime_system_System.__registerEntryPoint(projectName,ApplicationMain.create,config);
 };
 ApplicationMain.create = function(config) {
@@ -9384,18 +9384,25 @@ ch_nectoria_scenes_GameScene.prototype = $extend(haxepunk_Scene.prototype,{
 		var this2 = map;
 		var map_e = new haxepunk_tmx_TmxEntity(this2);
 		map_e.loadGraphic(this.tileset,order);
+		var _g1 = 0;
+		var _g11 = (js_Boot.__cast(map_e.graphic , haxepunk_graphics_BaseGraphicList_$haxepunk_$Graphic)).get_children();
+		while(_g1 < _g11.length) {
+			var g = _g11[_g1];
+			++_g1;
+			g.smooth = false;
+		}
 		map_e.loadMask("collide","solid");
 		map_e.set_layer(5);
 		this.mapWidth = map_e.get_width();
 		this.mapHeight = map_e.get_height();
 		this.add(map_e);
-		var _g1 = 0;
-		var _g11 = map.getObjectGroup("objects").objects;
-		while(_g1 < _g11.length) {
-			var object = _g11[_g1];
-			++_g1;
-			var _g2 = object.gid;
-			switch(_g2) {
+		var _g2 = 0;
+		var _g12 = map.getObjectGroup("objects").objects;
+		while(_g2 < _g12.length) {
+			var object = _g12[_g2];
+			++_g2;
+			var _g21 = object.gid;
+			switch(_g21) {
 			case 35:
 				this.add(new ch_nectoria_entities_Chest(object));
 				break;
@@ -9412,7 +9419,7 @@ ch_nectoria_scenes_GameScene.prototype = $extend(haxepunk_Scene.prototype,{
 				this.add(new ch_nectoria_entities_Coin(object.x,object.y));
 				break;
 			default:
-				haxe_Log.trace("unknow type: " + object.type,{ fileName : "GameScene.hx", lineNumber : 153, className : "ch.nectoria.scenes.GameScene", methodName : "loadLevel"});
+				haxe_Log.trace("unknow type: " + object.type,{ fileName : "GameScene.hx", lineNumber : 161, className : "ch.nectoria.scenes.GameScene", methodName : "loadLevel"});
 			}
 		}
 		this.add(this.player = new ch_nectoria_entities_Player(ch_nectoria_NP.posPlayer));
@@ -66094,7 +66101,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 111435;
+	this.version = 790842;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
