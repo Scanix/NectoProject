@@ -1042,7 +1042,7 @@ $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = ["ApplicationMain"];
 ApplicationMain.main = function() {
 	var projectName = "NectoProject";
-	var config = { build : "83", company : "ScanixGames", file : "NectoProject", fps : 60, name : "NectoProject", orientation : "", packageName : "ch.nectoria", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, colorDepth : 16, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : false, stencilBuffer : true, title : "NectoProject", vsync : false, width : 1280, x : null, y : null}]};
+	var config = { build : "84", company : "ScanixGames", file : "NectoProject", fps : 60, name : "NectoProject", orientation : "", packageName : "ch.nectoria", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, colorDepth : 16, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : false, stencilBuffer : true, title : "NectoProject", vsync : false, width : 1280, x : null, y : null}]};
 	lime_system_System.__registerEntryPoint(projectName,ApplicationMain.create,config);
 };
 ApplicationMain.create = function(config) {
@@ -5617,7 +5617,10 @@ var ch_nectoria_entities_Chest = function(obj) {
 	this.sprite.add("open",[50],0,false);
 	this.sprite.play("close");
 	this.graphic = this.sprite;
-	this.setHitboxTo(this.graphic);
+	this.set_width(16);
+	this.set_height(16);
+	this.originX = 0;
+	this.originY = 0;
 	this.set_type("chest");
 	this.set_layer(4);
 };
@@ -5668,15 +5671,18 @@ ch_nectoria_entities_Coin.prototype = $extend(ch_nectoria_entities_Physics.proto
 });
 var ch_nectoria_entities_Door = function(obj) {
 	haxepunk_Entity.call(this,obj.x,obj.y - 16);
+	this.levelTo = obj.custom.resolve("level");
+	this.xTo = Std.parseInt(obj.custom.resolve("xTo")) * 16;
+	this.yTo = Std.parseInt(obj.custom.resolve("yTo")) * 16 - 16;
 	this.sprite = new haxepunk_graphics_Spritemap(haxepunk_assets_AssetCache.global.getTileAtlas("graphics/tilemap.png",false),16,16);
 	this.sprite.smooth = false;
 	this.sprite.add("close",[106],0,false);
 	this.sprite.play("close");
 	this.graphic = this.sprite;
-	this.levelTo = obj.custom.resolve("level");
-	this.xTo = Std.parseInt(obj.custom.resolve("xTo")) * 16;
-	this.yTo = Std.parseInt(obj.custom.resolve("yTo")) * 16 - 16;
-	this.setHitboxTo(this.graphic);
+	this.set_width(16);
+	this.set_height(16);
+	this.originX = 0;
+	this.originY = 0;
 	this.set_type("door");
 	this.set_layer(4);
 };
@@ -5903,15 +5909,18 @@ ch_nectoria_entities_Player.prototype = $extend(ch_nectoria_entities_Physics.pro
 });
 var ch_nectoria_entities_Sign = function(obj) {
 	haxepunk_Entity.call(this,obj.x,obj.y - 16);
+	this.text = obj.custom.resolve("text");
 	this.sprite = new haxepunk_graphics_Spritemap(haxepunk_assets_AssetCache.global.getTileAtlas("graphics/tilemap.png",false),16,16);
 	this.sprite.smooth = false;
-	this.graphic = this.sprite;
 	this.sprite.add("idle",[38],0,false);
 	this.sprite.play("idle");
+	this.graphic = this.sprite;
+	this.set_width(16);
+	this.set_height(16);
+	this.originX = 0;
+	this.originY = 0;
 	this.set_type("sign");
-	this.setHitboxTo(this.graphic);
 	this.set_layer(4);
-	this.text = obj.custom.resolve("text");
 };
 $hxClasses["ch.nectoria.entities.Sign"] = ch_nectoria_entities_Sign;
 ch_nectoria_entities_Sign.__name__ = ["ch","nectoria","entities","Sign"];
@@ -9501,7 +9510,7 @@ ch_nectoria_scenes_SplashScene.prototype = $extend(haxepunk_Scene.prototype,{
 	splashImage: null
 	,versionText: null
 	,begin: function() {
-		this.versionText = new haxepunk_graphics_text_Text("Version 0.2",2,2);
+		this.versionText = new haxepunk_graphics_text_Text("Version 0.2.1",2,2);
 		this.versionText.set_color(0);
 		var base = haxepunk_graphics_Image.createRect(haxepunk_HXP.width,haxepunk_HXP.height,16777215,1);
 		base.set_color(16777215);
@@ -66101,7 +66110,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 7914;
+	this.version = 30758;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
