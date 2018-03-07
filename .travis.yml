@@ -3,6 +3,9 @@ language: haxe
 haxe:
   - 3.4.7
 
+notifications:
+  email: false
+
 sudo: false
 
 env:
