@@ -1,5 +1,8 @@
 package ch.nectoria.entities;
 
+import ch.nectoria.scenes.GameScene;
+import ch.nectoria.NP;
+
 import haxepunk.Entity;
 import haxepunk.Graphic;
 import haxepunk.graphics.Spritemap;
@@ -7,8 +10,7 @@ import haxepunk.Mask;
 import haxepunk.tmx.TmxObject;
 import haxepunk.input.Input;
 import haxepunk.input.Key;
-import ch.nectoria.scenes.GameScene;
-import ch.nectoria.NP;
+import haxepunk.utils.Log;
 
 /**
  * ...
@@ -22,18 +24,19 @@ class Sign extends Entity
 	public function new(obj:TmxObject) 
 	{
 		super(obj.x, obj.y-16);
+
+		text = obj.custom.resolve("text");
 		
 		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
 		sprite.smooth = false;
-		graphic = sprite;
 		sprite.add("idle", [38], 0, false);
 		sprite.play("idle");
+
+		graphic = sprite;
 		
+		setHitbox(16, 16);
 		type = "sign";
-		
-		setHitboxTo(graphic);
 		layer = 4;
-		text = obj.custom.resolve("text");
 	}
 	
 	override public function update():Void {

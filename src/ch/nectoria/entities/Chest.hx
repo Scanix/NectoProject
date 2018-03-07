@@ -32,7 +32,7 @@ class Chest extends Physics
 
 		graphic = sprite;
 		
-		setHitboxTo(graphic);
+		setHitbox(16, 16);
 		type = 'chest';
 		layer = 4;
 	}

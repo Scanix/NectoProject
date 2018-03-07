@@ -25,6 +25,10 @@ class Door extends Entity
 	public function new(obj:TmxObject) 
 	{
 		super(obj.x, obj.y-16);
+
+		levelTo = obj.custom.resolve("level");
+		xTo = Std.parseInt(obj.custom.resolve("xTo"))*16;
+		yTo = Std.parseInt(obj.custom.resolve("yTo"))*16-16;
 		
 		sprite = new Spritemap("graphics/tilemap.png", 16, 16);
 		sprite.smooth = false;
@@ -32,11 +36,7 @@ class Door extends Entity
 		sprite.play("close");
 		graphic = sprite;
 		
-		levelTo = obj.custom.resolve("level");
-		xTo = Std.parseInt(obj.custom.resolve("xTo"))*16;
-		yTo = Std.parseInt(obj.custom.resolve("yTo"))*16-16;
-		
-		setHitboxTo(graphic);
+		setHitbox(16, 16);
 		type = "door";
 		layer = 4;
 	}
