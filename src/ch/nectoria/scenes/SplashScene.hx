@@ -24,7 +24,7 @@ class SplashScene extends Scene
 	}
 	
 	override public function begin():Void {
-		versionText = new Text("Version 0.2",2,2);
+		versionText = new Text("Version 0.2.1",2,2);
 		versionText.color = 0x000000;
 		
 
